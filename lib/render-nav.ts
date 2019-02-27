@@ -1,74 +1,50 @@
 import { FileTree, IndexFile, FileFolder, File } from "./types";
 import assertNever from "./assert-never";
 
-export default function renderNav(groupedFiles: FileTree<IndexFile>, level = 0):string {
+export default function renderNav(
+  groupedFiles: FileTree<IndexFile>,
+  level = 0
+): string {
+  return `<ul>
+${groupedFiles
+    .map(f => {
+      if (f.type === "dir") {
+        const childrenNav = renderNav(f.children, level + 1);
+        const indexFile = getIndexFile(f.children);
+        // Heading with link if there is an index file in the folder
+        if (indexFile) {
+          const link = renderActive(
+            f.name,
+            indexFile.value.href,
+            indexFile.value.active
+          );
+          return `<li class="heading">${link}</li>\n${childrenNav}`;
+        }
+        // Heading without link
+        return `<li class="heading"><span>${
+          f.name
+        }</span></li>\n${childrenNav}`;
+      } else if (f.type === "file") {
+        //  Leaf
+        const { text, href, active } = f.value;
 
-	// Build <li>s
-	var nav = ''
-	groupedFiles.forEach(f => {
-		/*
-			DIR
-		*/
-		if (f.type === "dir") {
-			const childrenNav = renderNav(f.children, level + 1);
+        // Skip index files on nested levels since the Heading links to them.
+        if (level > 0 && text && text.toLowerCase() === "index") return;
 
-			// Heading with link if there is an index file in the folder
-			const indexFile = getIndexFile(f.children);
-			if (indexFile) {
-				const link = renderHREF(
-					f.name,
-					indexFile.value.href,
-					indexFile.value.active
-				);
-				nav += `<li class="heading">${link}</li>\n${childrenNav}`;
-				return;
-			}
-
-			// Heading without link
-			nav += `<li class="heading"><span>${f.name}</span></li>\n${childrenNav}`;
-			return;
-		}
-		/*
-			FILE
-		*/
-		if (f.type === "file") {
-			const { text, href, active } = f.value;
-
-			// Skip index files on nested levels since the Heading links to them.
-			// if (level > 0 && text && (text.toLowerCase() === "index" || text.toLowerCase() === "readme")) {
-			// 	return;
-			// }
-
-			// Render link
-			nav += `<li>${renderHREF(text, href, active)}</li>`;
-			return;
-		}
-		/*
-			N/A
-		*/
-		return assertNever(f);
-	});
-
-	return `<ul>${nav}</ul>`;
+        return `<li>${renderActive(text, href, active)}</li>`;
+      }
+      return assertNever(f);
+    })
+    .join("\n")}
+</ul>`;
 }
 
-/*
-	<a href=...
-*/
-function renderHREF(text: string, href: string, active: boolean) {
-	if (text == "README" || text == "index") {
-		return '';
-	}
-	return `<a class="${active ? "active" : ""}" href="./${href}">${text}</a>`;
+function renderActive(text: string, href: string, active: boolean) {
+  return `<a class="${active ? "active" : ""}" href="${href}">${text}</a>`;
 }
 
-/*
-	index.html or README.html
-*/
 function getIndexFile(files: FileTree<IndexFile>): File<IndexFile> | undefined {
-	var indexFile = files.find(e => e.type === "file" && e.value.text === "index") as File<IndexFile>;
-	if (!indexFile) {
-		indexFile = files.find(e => e.type === "file" && e.value.text === "README") as File<IndexFile>;
-	};
-	return indexFile;
+  return files.find(e => e.type === "file" && e.value.text === "index") as File<
+    IndexFile
+  >; // Stupid TS
 }

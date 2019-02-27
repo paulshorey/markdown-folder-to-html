@@ -1,5 +1,0 @@
-docs/*
-!docs/template.html
-_docs/
-test/
-.travis.yml

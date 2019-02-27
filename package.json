@@ -1,7 +1,7 @@
 {
-  "name": "markdown-folder-to-html",
-  "version": "2.1.1",
-  "description": "Convert a folder with files and markdown documents to an HTML site",
+  "name": "markdown-folder-to-html-fork",
+  "version": "0.0.3",
+  "description": "Copy and experimental improvements on Joaquin Oltra's project. See his original at https://github.com/joakin/markdown-folder-to-html.",
   "main": "cli.js",
   "bin": {
     "markdown-folder-to-html": "./cli.js"
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/joakin/markdown-folder-to-html.git"
+    "url": "git+https://github.com/paulshorey/markdown-folder-to-html.git"
   },
   "keywords": [
     "markdown",
@@ -30,12 +30,12 @@
     "cli",
     "simple"
   ],
-  "author": "Joaquin Oltra <joaquin@chimeces.com> (http://chimeces.com)",
+  "author": "Paul Shorey <ps@artspaces.net> (http://paulshorey.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/joakin/markdown-folder-to-html/issues"
+    "url": "https://github.com/paulshorey/markdown-folder-to-html/issues"
   },
-  "homepage": "https://github.com/joakin/markdown-folder-to-html#readme",
+  "homepage": "https://github.com/paulshorey/markdown-folder-to-html#readme",
   "dependencies": {
     "markdown-it": "^8.4.2",
     "shelljs": "^0.8.2"

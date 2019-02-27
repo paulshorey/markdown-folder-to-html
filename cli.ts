@@ -11,15 +11,15 @@ import md2html from "./lib/markdown-to-html";
 import renderNav from "./lib/render-nav";
 import generateIndexInfo from "./lib/generate-index-info";
 import page from "./lib/render-page";
-import mdRgx from "./lib/markdown-regex";
+import mdR from "./lib/markdown-regex";
 import { FileTree, StringFile } from "./lib/types";
 
-const [argsSource, argsOutput, ...argsRest] = process.argv.slice(2);
+const [docsFolder, outputFolder, ...argsRest] = process.argv.slice(2);
 
 // Default parameters
 const defaultFolder = "docs";
-const sourceFolder = argsSource || defaultFolder;
-const outputFolder = argsOutput || `_${sourceFolder}`;
+const folder = docsFolder || defaultFolder;
+const output = outputFolder || `_${folder}`;
 const templateFilename = "template.html";
 const contentsFilename = "contents.json";
 const preferences = ["index.md", "README.md"];
@@ -31,42 +31,41 @@ if (argsRest && argsRest.length > 0) {
   usage(true);
 }
 
-// Bail out if the sourceFolder doesn't exist
-if (!sh.test("-e", sourceFolder)) {
+// Bail out if the folder doesn't exist
+if (!sh.test("-e", folder)) {
   console.error(
-    `Folder ${sourceFolder} not found at ${path.join(process.cwd(), sourceFolder)}`
+    `Folder ${folder} not found at ${path.join(process.cwd(), folder)}`
   );
   usage(true);
 }
 
 // Define template html, user's first, otherwise default
-let template = path.join(sourceFolder, templateFilename);
+let template = path.join(folder, templateFilename);
 if (!sh.test("-e", template)) {
   template = path.join(__dirname, defaultFolder, templateFilename);
 }
 const tpl = sh.cat(template);
 
-// Prepare outputFolder sourceFolder (create, clean, copy sources)
-sh.mkdir("-p", outputFolder);
-sh.rm("-rf", outputFolder + "/*");
-sh.cp("-R", sourceFolder + "/*", outputFolder);
+// Prepare output folder (create, clean, copy sources)
+sh.mkdir("-p", output);
+sh.rm("-rf", output + "/*");
+sh.cp("-R", folder + "/*", output);
 
 // Start processing. Outline:
 //
 // 1. Get all files
 // 2. Sort them
 // 3. Group them hierachically
-// 4. Parse files and generate outputFolder html files
+// 4. Parse files and generate output html files
 
-sh.cd(outputFolder);
-const allFiles = sh.find("*");
+sh.cd(output);
+const all = sh.find("*");
 
-const mdFiles = allFiles
-  .filter(file => file.match(mdRgx))
+const mds = all
+  .filter(file => file.match(mdR))
   .sort(sortByPreferences.bind(null, preferences))
   .map(file => {
     const content = sh.cat(file).toString(); // The result is a weird not-string
-    // file = file.replace('README','index');
     return {
       path: file,
       url: mdUrl(file),
@@ -75,20 +74,20 @@ const mdFiles = allFiles
     };
   });
 
-const grouped_mdFiles: FileTree<StringFile> = mdFiles.reduce( 
+const groupedMds: FileTree<StringFile> = mds.reduce(
   (grouped: FileTree<StringFile>, value) => groupByPath(grouped, value.path),
   []
 );
 
-mdFiles.forEach(({ path, url, html }) => {
-  const navHtml = renderNav(generateIndexInfo(path, grouped_mdFiles));
+mds.forEach(({ path, url, html }) => {
+  const navHtml = renderNav(generateIndexInfo(path, groupedMds));
   const pageHtml = page(tpl, navHtml, html);
   fs.writeFileSync(url, pageHtml);
 });
 
 const contentsJSON = {
-  paths: grouped_mdFiles,
-  contents: mdFiles.map((md, i) => ({ ...md, id: i }))
+  paths: groupedMds,
+  contents: mds.map((md, i) => ({ ...md, id: i }))
 };
 fs.writeFileSync(contentsFilename, JSON.stringify(contentsJSON, null, 2));
 
@@ -99,9 +98,9 @@ function usage(error: boolean) {
     `
 Usage:
 
-  markdown-sourceFolder-to-html [input-sourceFolder]
+  markdown-folder-to-html [input-folder]
 
-    input-sourceFolder [optional] defaults to \`docs\`
+    input-folder [optional] defaults to \`docs\`
   `
   );
   process.exit(error ? 1 : 0);
