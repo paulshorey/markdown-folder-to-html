@@ -362,8 +362,9 @@
     }
 
     .menu-link:hover {
-      background: /* #f4f4f4 * 0.8 */
-      #eee;
+      background:
+        /* #f4f4f4 * 0.8 */
+        #eee;
     }
 
     .menu-link span {
@@ -406,6 +407,7 @@
         /* left col width "#menu" */
         left: 0;
       }
+
       #menu {
         left: 250px;
       }
@@ -422,6 +424,7 @@
     }
 
     @media (max-width: 48em) {
+
       /* Only apply this when the window is small. Otherwise, the following case results in extra padding on the left:
        * Make the window small.
        * Tap the menu to trigger the active state.
@@ -445,7 +448,12 @@
       <span></span>
     </a>
     <nav id="menu">
-      <!--NAV-->
+      <ul>
+        <li>
+          <a href="..">..</a>
+          <!--NAV-->
+        </li>
+      </ul>
     </nav>
     <article id="main" class="content">
       <!--CONTENT-->

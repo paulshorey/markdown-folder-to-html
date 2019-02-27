@@ -1,6 +1,6 @@
 {
   "name": "markdown-folder-to-html-fork",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Copy and experimental improvements on Joaquin Oltra's project. See his original at https://github.com/joakin/markdown-folder-to-html.",
   "main": "cli.js",
   "bin": {
