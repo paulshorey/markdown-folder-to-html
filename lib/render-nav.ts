@@ -12,7 +12,7 @@ import { FileTree, StringFile, IndexFile, FileNode } from "./types";
 
 export default function renderNav(groupedFiles: any, level = 0) {
 	// Build <li>s
-	var navIsActiveClass = '';
+	var navIsActive = false;
 	var nav = '';
 	groupedFiles.forEach((f: FileNode<IndexFile>) => {
 		/*
@@ -23,9 +23,11 @@ export default function renderNav(groupedFiles: any, level = 0) {
 			// Heading with link if there is an index file in the folder
 			const indexFile = getIndexFile(f.children);
 			if (indexFile) {
-				const link = renderHREF(f.name, indexFile.value.href, indexFile.value.active);
+				const link = renderHREF(f.name, indexFile.value.href);
 				if (link) {
+					let navIsActiveClass = "";
 					if (indexFile.value.active) {
+						navIsActive = true;
 						navIsActiveClass = "active";
 					}
 					nav += `<li class="heading ${navIsActiveClass}">${link}</li>\n${childrenNav}`;
@@ -47,14 +49,16 @@ export default function renderNav(groupedFiles: any, level = 0) {
 				href,
 				active
 			} = f.value;
-			const link = renderHREF(text, href, active);
+			const link = renderHREF(text, href);
 			// Skip index files on nested levels since the Heading links to them.
 			// if (level > 0 && text && (text.toLowerCase() === "index" || text.toLowerCase() === "readme")) {
 			// 	return;
 			// }
 			// Render link
 			if (link) {
+				let navIsActiveClass = "";
 				if (active) {
+					navIsActive = true;
 					navIsActiveClass = "active";
 				}
 				nav += `<li class="${navIsActiveClass}">${link}</li>`;
@@ -66,17 +70,17 @@ export default function renderNav(groupedFiles: any, level = 0) {
 		*/
 		// return assert_never_1.default(f);
 	});
-	return `<ul class="${navIsActiveClass}">${nav}</ul>`;
+	return `<ul class="${navIsActive ? 'active' : ''}">${nav}</ul>`;
 }
 exports.default = renderNav;
 /*
 		<a href=...
 */
-function renderHREF(text: any, href: any, active: any) {
+function renderHREF(text: any, href: any) {
 	if (text == "README" || text == "index") {
 		return '';
 	}
-	return `<a class="${active ? "active" : ""}" href="./${href}">${text}</a>`;
+	return `<a href="./${href}">${text}</a>`;
 }
 /*
 		index.html or README.html
