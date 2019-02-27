@@ -1,0 +1,128 @@
+html {
+    font-size: 15px;
+}
+
+body {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-family: Geneva, Verdana, 'Segoe UI', Tahoma, sans-serif;
+    background: #FDFDFD url(/assets/the_wilderness_downtown/img/paper.jpg) repeat-x;
+}
+
+a,
+a *,
+a:visited {
+    color: hsl(190, 100%, 30%)
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin: 1.2rem -0.1rem 1.65rem;
+}
+
+h2 {
+    margin: 2.2rem 0 1.2rem;
+    padding: 2rem 0 0 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-top: solid 1px #ccc;
+}
+
+h3 {
+    margin: 3rem 0 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+h4 {
+    font-weight: bold;
+    margin: 2rem 0 1rem;
+    opacity: 0.8;
+}
+
+.page {
+    display: flex;
+    min-height: 100vh;
+}
+
+.nav {
+    display: block;
+    padding: 2rem 2rem;
+    background: rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 1);
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li.active {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+ul li {
+    list-style: none;
+    line-height: 2rem;
+    font-weight: bold;
+}
+
+ul ul li {
+    line-height: 2.5rem;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+ul ul ul li {
+    line-height: 2rem;
+    text-transform: none;
+}
+
+ul ul {
+    margin-left: 0;
+}
+
+ul ul li {
+    border-left: dotted 2px rgba(0, 0, 0, 0.1);
+    padding-left: 0.75rem;
+}
+
+ul ul ul {
+    padding-left: 0.75rem;
+    border-left: dotted 2px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+    flex-grow: 1;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+p {
+    color: rgba(15, 15, 15, 0.75);
+}
+
+code {
+    opacity: 0.85;
+    font-size: 85%;
+    line-height: 0.85rem;
+    background: rgba(210, 220, 210, 0.1);
+    color: rgba(5, 35, 5, 0.8);
+    border: solid 1px rgba(5, 35, 5, 0.1);
+    display: inline-block;
+    padding: 1px 3px 2px;
+    margin: 0 2px 0.5px;
+    vertical-align: middle;
+    border-radius: 3px;
+    font-weight: bold;
+}

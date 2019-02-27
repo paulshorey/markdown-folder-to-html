@@ -9,8 +9,7 @@ echo "export EDITOR=ne" >> ~/.zprofile
 #### Documentation:  
 [http://paulshorey.com/files/ne_docs.pdf](http://paulshorey.com/files/ne_docs.pdf)  
   
-##  
-### Keyboard Shortcuts:  
+## Keyboard Shortcuts:  
 (including the custom ~/.ne/.keys configuration below)  
   
 > **^s**, **^q** - save, quit  
@@ -21,8 +20,7 @@ echo "export EDITOR=ne" >> ~/.zprofile
 > **^d** - delete line  
 > **^w**, **^e** - start of, end of line  
   
-##  
-### Custom Key Bindings:  
+## Custom Key Bindings:  
 hit: **`^k`**  
 type: **`kc`**  
 hit **`key`** to see its hex code and currently bound command  
@@ -34,7 +32,7 @@ hit **`key`** to see its hex code and currently bound command
 [​http://www.emerson.emory.edu/services/editors/ne/Key_Bindings.html](​http://www.emerson.emory.edu/services/editors/ne/Key_Bindings.html)  
 **Defaults:** https://github.com/vigna/ne/blob/master/doc/default.keys​  
   
-### Sample ~/.ne/.keys file:  
+## Sample ~/.ne/.keys file:  
   
     # [delete]  
     KEY     0x7f    Backspace  
