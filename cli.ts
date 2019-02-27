@@ -66,6 +66,7 @@ const mds = all
   .sort(sortByPreferences.bind(null, preferences))
   .map(file => {
     const content = sh.cat(file).toString(); // The result is a weird not-string
+    file = file.replace('README', 'index');
     return {
       path: file,
       url: mdUrl(file),

@@ -1,0 +1,147 @@
+{
+  "paths": [
+    {
+      "type": "file",
+      "value": "index.md"
+    },
+    {
+      "type": "dir",
+      "name": "cli",
+      "children": [
+        {
+          "type": "file",
+          "value": "cli/index.md"
+        },
+        {
+          "type": "file",
+          "value": "cli/ne.md"
+        }
+      ]
+    },
+    {
+      "type": "dir",
+      "name": "css",
+      "children": [
+        {
+          "type": "file",
+          "value": "css/index.md"
+        }
+      ]
+    },
+    {
+      "type": "dir",
+      "name": "devops",
+      "children": [
+        {
+          "type": "file",
+          "value": "devops/index.md"
+        }
+      ]
+    },
+    {
+      "type": "dir",
+      "name": "git",
+      "children": [
+        {
+          "type": "file",
+          "value": "git/index.md"
+        }
+      ]
+    },
+    {
+      "type": "dir",
+      "name": "ide",
+      "children": [
+        {
+          "type": "file",
+          "value": "ide/index.md"
+        }
+      ]
+    },
+    {
+      "type": "dir",
+      "name": "javascript",
+      "children": [
+        {
+          "type": "file",
+          "value": "javascript/index.md"
+        }
+      ]
+    },
+    {
+      "type": "dir",
+      "name": "regex",
+      "children": [
+        {
+          "type": "file",
+          "value": "regex/index.md"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    {
+      "path": "index.md",
+      "url": "index.html",
+      "content": "### JAVASCRIPT APP-DEVELOPMENT KNOWLEDGE-BASE  \n  \n",
+      "html": "<h3>JAVASCRIPT APP-DEVELOPMENT KNOWLEDGE-BASE</h3>\n",
+      "id": 0
+    },
+    {
+      "path": "cli/index.md",
+      "url": "cli/index.html",
+      "content": "## Common Commands  \n  \n**`ls`**, **`grep`**, etc  \n  \n**`ls -a ~ | grep \"^.n\"`** to find files in current folder that start with \".n\"  \n  \n**`fg`** resume suspended process, after accidentally doing `Ctrl X`  \n  \n​  \n## Advanced Commands  \n  \n**`sudo echo \"export PATH=\\\"$PATH:/usr/local/bin\\\"\" >> /etc/profile`** write to bottom of file  \n  \n  \n",
+      "html": "<h2>Common Commands</h2>\n<p><strong><code>ls</code></strong>, <strong><code>grep</code></strong>, etc</p>\n<p><strong><code>ls -a ~ | grep &quot;^.n&quot;</code></strong> to find files in current folder that start with “.n”</p>\n<p><strong><code>fg</code></strong> resume suspended process, after accidentally doing <code>Ctrl X</code></p>\n<p>​</p>\n<h2>Advanced Commands</h2>\n<p><strong><code>sudo echo &quot;export PATH=\\&quot;$PATH:/usr/local/bin\\&quot;&quot; &gt;&gt; /etc/profile</code></strong> write to bottom of file</p>\n",
+      "id": 1
+    },
+    {
+      "path": "cli/ne.md",
+      "url": "cli/ne.html",
+      "content": "# EDITOR=ne  \nA \"nice editor\" for command line and GIT commits. By far the most intuitive CLI editor to use, supports some basic features and bindings. `Ctr S` to save. `Ctr Q` to quit. `Esc Esc` for dropdown UI, right in the terminal.  \n  \n#### Make Default:  \n```  \necho \"export EDITOR=ne\" >> ~/.zprofile  \n```  \n  \n#### Documentation:  \n[http://paulshorey.com/files/ne_docs.pdf](http://paulshorey.com/files/ne_docs.pdf)  \n  \n##  \n### Keyboard Shortcuts:  \n(including the custom ~/.ne/.keys configuration below)  \n  \n> **^s**, **^q** - save, quit  \n> **^z**, **^x**, **^c**, **^v**  - undo, cut, copy, paste  \n> **^y**  - delete current line  \n> **^u**  - paste deleted line  \n>  \n> **^d** - delete line  \n> **^w**, **^e** - start of, end of line  \n  \n##  \n### Custom Key Bindings:  \nhit: **`^k`**  \ntype: **`kc`**  \nhit **`key`** to see its hex code and currently bound command  \n**`echo 'KEY {CODE} {ACTION}' >> ~/.ne/.keys`**  \n  \n> `fn` key code is a prefix `0x`, plus the normal key code.  \n> So, `delete` key code is `115`. But, `fn + delete` key code is `0x115`.  \n  \n[​http://www.emerson.emory.edu/services/editors/ne/Key_Bindings.html](​http://www.emerson.emory.edu/services/editors/ne/Key_Bindings.html)  \n**Defaults:** https://github.com/vigna/ne/blob/master/doc/default.keys​  \n  \n### Sample ~/.ne/.keys file:  \n  \n    # [delete]  \n    KEY     0x7f    Backspace  \n    # [ctrl]+[z]  \n    KEY     0x1a    Undo  \n    # [ctrl]+[r]  \n    KEY     0x12    Redo  \n  \n    # [ctrl]+[d](delete line)  \n    KEY     0x04    DL  \n    # [ctrl]+[w]=(start of line)  \n    KEY     0x17    SOL  \n    # [ctrl]+[e]=(end of line)  \n    KEY     0x05    EOL  \n",
+      "html": "<h1>EDITOR=ne</h1>\n<p>A “nice editor” for command line and GIT commits. By far the most intuitive CLI editor to use, supports some basic features and bindings. <code>Ctr S</code> to save. <code>Ctr Q</code> to quit. <code>Esc Esc</code> for dropdown UI, right in the terminal.</p>\n<h4>Make Default:</h4>\n<pre><code>echo &quot;export EDITOR=ne&quot; &gt;&gt; ~/.zprofile  \n</code></pre>\n<h4>Documentation:</h4>\n<p><a href=\"http://paulshorey.com/files/ne_docs.pdf\">http://paulshorey.com/files/ne_docs.pdf</a></p>\n<h2></h2>\n<h3>Keyboard Shortcuts:</h3>\n<p>(including the custom ~/.ne/.keys configuration below)</p>\n<blockquote>\n<p><strong>^s</strong>, <strong>^q</strong> - save, quit<br>\n<strong>^z</strong>, <strong>^x</strong>, <strong>^c</strong>, <strong>^v</strong>  - undo, cut, copy, paste<br>\n<strong>^y</strong>  - delete current line<br>\n<strong>^u</strong>  - paste deleted line</p>\n<p><strong>^d</strong> - delete line<br>\n<strong>^w</strong>, <strong>^e</strong> - start of, end of line</p>\n</blockquote>\n<h2></h2>\n<h3>Custom Key Bindings:</h3>\n<p>hit: <strong><code>^k</code></strong><br>\ntype: <strong><code>kc</code></strong><br>\nhit <strong><code>key</code></strong> to see its hex code and currently bound command<br>\n<strong><code>echo 'KEY {CODE} {ACTION}' &gt;&gt; ~/.ne/.keys</code></strong></p>\n<blockquote>\n<p><code>fn</code> key code is a prefix <code>0x</code>, plus the normal key code.<br>\nSo, <code>delete</code> key code is <code>115</code>. But, <code>fn + delete</code> key code is <code>0x115</code>.</p>\n</blockquote>\n<p><a href=\"%E2%80%8Bhttp://www.emerson.emory.edu/services/editors/ne/Key_Bindings.html\">​http://www.emerson.emory.edu/services/editors/ne/Key_Bindings.html</a><br>\n<strong>Defaults:</strong> <a href=\"https://github.com/vigna/ne/blob/master/doc/default.keys%E2%80%8B\">https://github.com/vigna/ne/blob/master/doc/default.keys​</a></p>\n<h3>Sample ~/.ne/.keys file:</h3>\n<pre><code># [delete]  \nKEY     0x7f    Backspace  \n# [ctrl]+[z]  \nKEY     0x1a    Undo  \n# [ctrl]+[r]  \nKEY     0x12    Redo  \n\n# [ctrl]+[d](delete line)  \nKEY     0x04    DL  \n# [ctrl]+[w]=(start of line)  \nKEY     0x17    SOL  \n# [ctrl]+[e]=(end of line)  \nKEY     0x05    EOL  \n</code></pre>\n",
+      "id": 2
+    },
+    {
+      "path": "css/index.md",
+      "url": "css/index.html",
+      "content": "# CSS  \n  \n## Frameworks  \n  \nPeople only use Bootstrap because \"everyone\" uses Bootstrap, not because of the merits of that framework. Here are some better alternatives.  \n  \nGeneral: AUI (Atlassian UI)  \nProven for static sites with basic JS, maybe also good for a React or Angular SPA.  \n  \nReact: https://material-ui.com/​  \n  \nAngular: https://ng.ant.design/docs/introduce/en​",
+      "html": "<h1>CSS</h1>\n<h2>Frameworks</h2>\n<p>People only use Bootstrap because “everyone” uses Bootstrap, not because of the merits of that framework. Here are some better alternatives.</p>\n<p>General: AUI (Atlassian UI)<br>\nProven for static sites with basic JS, maybe also good for a React or Angular SPA.</p>\n<p>React: <a href=\"https://material-ui.com/%E2%80%8B\">https://material-ui.com/​</a></p>\n<p>Angular: <a href=\"https://ng.ant.design/docs/introduce/en%E2%80%8B\">https://ng.ant.design/docs/introduce/en​</a></p>\n",
+      "id": 3
+    },
+    {
+      "path": "devops/index.md",
+      "url": "devops/index.html",
+      "content": "### test 3hash  \n  \n",
+      "html": "<h3>test 3hash</h3>\n",
+      "id": 4
+    },
+    {
+      "path": "git/index.md",
+      "url": "git/index.html",
+      "content": "## Config  \n#### Install ssh key on new device  \n```  \necho \"{paste your ssh key contents}\" >> ~/.ssh/newssh  \nchmod -R 600 ~/.ssh/newssh  \n```  \n  \n#### then, every time the CLI starts:  \n```  \neval \"$(ssh-agent -s)\"  \nssh-add ~/.ssh/newssh  \nSet a value in global config  \ngit config --global color.ui true  \ngit config --global user.name Paul\\ Shorey  \ngit config --global user.email pshorey@beyond.ai  \ngit config --global push.default simple  \ngit config --global core.editor=ne  \ngit config --global submodule.recurse=true  \n```  \nWithout `--global`, it edits local `./.git/config` file.  \n  \n  \n## Best Practices  \n**`git pull `** actually does git fetch;  \n**`git merge`** actually, should do **`git pull --rebase`** which does not leave so many \"merge\" commits when working with others  \n  \n​",
+      "html": "<h2>Config</h2>\n<h4>Install ssh key on new device</h4>\n<pre><code>echo &quot;{paste your ssh key contents}&quot; &gt;&gt; ~/.ssh/newssh  \nchmod -R 600 ~/.ssh/newssh  \n</code></pre>\n<h4>then, every time the CLI starts:</h4>\n<pre><code>eval &quot;$(ssh-agent -s)&quot;  \nssh-add ~/.ssh/newssh  \nSet a value in global config  \ngit config --global color.ui true  \ngit config --global user.name Paul\\ Shorey  \ngit config --global user.email pshorey@beyond.ai  \ngit config --global push.default simple  \ngit config --global core.editor=ne  \ngit config --global submodule.recurse=true  \n</code></pre>\n<p>Without <code>--global</code>, it edits local <code>./.git/config</code> file.</p>\n<h2>Best Practices</h2>\n<p><strong><code>git pull</code></strong> actually does git fetch;<br>\n<strong><code>git merge</code></strong> actually, should do <strong><code>git pull --rebase</code></strong> which does not leave so many “merge” commits when working with others</p>\n<p>​</p>\n",
+      "id": 5
+    },
+    {
+      "path": "ide/index.md",
+      "url": "ide/index.html",
+      "content": "",
+      "html": "",
+      "id": 6
+    },
+    {
+      "path": "javascript/index.md",
+      "url": "javascript/index.html",
+      "content": "## test 2hash",
+      "html": "<h2>test 2hash</h2>\n",
+      "id": 7
+    },
+    {
+      "path": "regex/index.md",
+      "url": "regex/index.html",
+      "content": "## for IDEs  \n  \n### HTML Examples  \nsearch `(\\s*)</script>` replace `</script>` puts all closing tags on same line  \n  \n`\\ ?data-(.*?)\"(.*?)\" `  \n`\\ ?tabindex=(\".*\") `  \nmatch all tag attributes starting with with or without leading spaces  \n  \n  \n`li\\ class(.*?)\"(.*?)\" `  \nstrip out class attribute from matching elements  \n  \n`<!--(.*?)\\.(.*?)-->`  \nmatch comments containing phrase \".\"  \n  \nsearch `href=\"(.*?)\"` replace `href=\"\"` clears all href attributes  \n  \nsearch `(\\ *?)((?!\\ ).*?)><span(.*?)</span> `  \nreplace `$1$2>\\n$1  <span$3\\n$1  </span> `  \nto add indent span elements  \n  \nRemove all console.logs (or .warn .error, etc):  \n`(\\s?)console.(.?)\\n([\\w\\s\\W\\t\\n]*?)`",
+      "html": "<h2>for IDEs</h2>\n<h3>HTML Examples</h3>\n<p>search <code>(\\s*)&lt;/script&gt;</code> replace <code>&lt;/script&gt;</code> puts all closing tags on same line</p>\n<p><code>\\ ?data-(.*?)&quot;(.*?)&quot;</code><br>\n<code>\\ ?tabindex=(&quot;.*&quot;)</code><br>\nmatch all tag attributes starting with with or without leading spaces</p>\n<p><code>li\\ class(.*?)&quot;(.*?)&quot;</code><br>\nstrip out class attribute from matching elements</p>\n<p><code>&lt;!--(.*?)\\.(.*?)--&gt;</code><br>\nmatch comments containing phrase “.”</p>\n<p>search <code>href=&quot;(.*?)&quot;</code> replace <code>href=&quot;&quot;</code> clears all href attributes</p>\n<p>search <code>(\\ *?)((?!\\ ).*?)&gt;&lt;span(.*?)&lt;/span&gt;</code><br>\nreplace <code>$1$2&gt;\\n$1 &lt;span$3\\n$1 &lt;/span&gt;</code><br>\nto add indent span elements</p>\n<p>Remove all console.logs (or .warn .error, etc):<br>\n<code>(\\s?)console.(.?)\\n([\\w\\s\\W\\t\\n]*?)</code></p>\n",
+      "id": 8
+    }
+  ]
+}

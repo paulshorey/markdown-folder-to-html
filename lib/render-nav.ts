@@ -1,4 +1,5 @@
 "use strict";
+import { FileTree, StringFile, IndexFile, FileNode } from "./types";
 // var __importDefault = (this && this.__importDefault) || function (mod) {
 //   return (mod && mod.__esModule) ? mod : {
 //     "default": mod
@@ -12,7 +13,7 @@
 export default function renderNav(groupedFiles: any, level = 0) {
   // Build <li>s
   var nav = '';
-  groupedFiles.forEach((f: any) => {
+  groupedFiles.forEach((f: FileNode<IndexFile>) => {
     /*
         DIR
     */
