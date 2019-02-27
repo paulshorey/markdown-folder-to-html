@@ -12,6 +12,7 @@ import { FileTree, StringFile, IndexFile, FileNode } from "./types";
 
 export default function renderNav(groupedFiles: any, level = 0) {
 	// Build <li>s
+	var navIsActiveClass = '';
 	var nav = '';
 	groupedFiles.forEach((f: FileNode<IndexFile>) => {
 		/*
@@ -24,7 +25,10 @@ export default function renderNav(groupedFiles: any, level = 0) {
 			if (indexFile) {
 				const link = renderHREF(f.name, indexFile.value.href, indexFile.value.active);
 				if (link) {
-					nav += `<li class="heading ${indexFile.value.active ? 'active' : ''}">${link}</li>\n${childrenNav}`;
+					if (indexFile.value.active) {
+						navIsActiveClass = "active";
+					}
+					nav += `<li class="heading ${navIsActiveClass}">${link}</li>\n${childrenNav}`;
 				}
 				return;
 			}
@@ -50,7 +54,10 @@ export default function renderNav(groupedFiles: any, level = 0) {
 			// }
 			// Render link
 			if (link) {
-				nav += `<li class="${active ? 'active' : ''}">${link}</li>`;
+				if (active) {
+					navIsActiveClass = "active";
+				}
+				nav += `<li class="${navIsActiveClass}">${link}</li>`;
 			}
 			return;
 		}
@@ -59,7 +66,7 @@ export default function renderNav(groupedFiles: any, level = 0) {
 		*/
 		// return assert_never_1.default(f);
 	});
-	return `<ul>${nav}</ul>`;
+	return `<ul class="${navIsActiveClass}">${nav}</ul>`;
 }
 exports.default = renderNav;
 /*
