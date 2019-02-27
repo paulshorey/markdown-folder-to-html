@@ -24,7 +24,7 @@ export default function renderNav(groupedFiles: any, level = 0) {
 			if (indexFile) {
 				const link = renderHREF(f.name, indexFile.value.href, indexFile.value.active);
 				if (link) {
-					nav += `<li class="heading">${link}</li>\n${childrenNav}`;
+					nav += `<li class="heading ${indexFile.value.active ? 'active' : ''}">${link}</li>\n${childrenNav}`;
 				}
 				return;
 			}
@@ -50,7 +50,7 @@ export default function renderNav(groupedFiles: any, level = 0) {
 			// }
 			// Render link
 			if (link) {
-				nav += `<li>${link}</li>`;
+				nav += `<li class="${active ? 'active' : ''}">${link}</li>`;
 			}
 			return;
 		}
