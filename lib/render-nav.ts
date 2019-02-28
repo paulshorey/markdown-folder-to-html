@@ -30,13 +30,13 @@ export default function renderNav(groupedFiles: any, level = 0) {
 						navIsActive = true;
 						navIsActiveClass = "active";
 					}
-					nav += `<li class="heading ${navIsActiveClass}">${link}</li>\n${childrenNav}`;
+					nav += `<li class="heading ${navIsActiveClass}">${link}\n${childrenNav}</li>\n`;
 				}
 				return;
 			}
 			// Heading without link
 			if (f.name) {
-				nav += `<li class="heading"><span>${f.name}</span></li>\n${childrenNav}`;
+				nav += `<li class="heading"><span>${f.name}</span>\n${childrenNav}</li>\n`;
 			}
 			return;
 		}

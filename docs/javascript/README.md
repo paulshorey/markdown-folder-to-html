@@ -1,1 +1,1 @@
-## test 2hash
+# ES6 vs ES5

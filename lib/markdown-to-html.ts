@@ -11,10 +11,10 @@ const markdown = markdownIt({
 function transformLocalMdLinksToHTML(md: any) {
   const defaultLinkOpenRender =
     md.renderer.rules.link_open ||
-    function(tokens: any, idx: any, options: any, env: any, self: any) {
+    function (tokens: any, idx: any, options: any, env: any, self: any) {
       return self.renderToken(tokens, idx, options);
     };
-  md.renderer.rules.link_open = function(
+  md.renderer.rules.link_open = function (
     tokens: any,
     idx: any,
     options: any,

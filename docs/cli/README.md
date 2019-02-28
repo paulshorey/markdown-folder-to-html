@@ -1,4 +1,4 @@
-## Common Commands  
+#### Common Commands  
   
 **`ls`**, **`grep`**, etc  
   
@@ -7,7 +7,7 @@
 **`fg`** resume suspended process, after accidentally doing `Ctrl X`  
   
 ​  
-## Advanced Commands  
+#### Advanced Commands  
   
 **`sudo echo "export PATH=\"$PATH:/usr/local/bin\"" >> /etc/profile`** write to bottom of file  
   

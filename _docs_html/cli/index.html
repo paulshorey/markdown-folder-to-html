@@ -14,26 +14,31 @@
   <div class="page">
     <nav class="nav">
       <ul>
-        <li>
-          <a href="/docs">/docs</a>
+        <li class="heading" id="heading_primary">
+          <a href="/docs"><span class="emoji">📝</span>/docs</a>
           <ul class="active"><li class="heading active"><a href="./index.html">cli</a></li>
 <ul class=""><li class=""><a href="./ne.html">ne</a></li></ul><li class="heading "><a href="./../css/index.html">css</a></li>
 <ul class=""></ul><li class="heading "><a href="./../devops/index.html">devops</a></li>
 <ul class=""></ul><li class="heading "><a href="./../git/index.html">git</a></li>
 <ul class=""></ul><li class="heading "><a href="./../ide/index.html">ide</a></li>
-<ul class=""></ul><li class="heading "><a href="./../javascript/index.html">javascript</a></li>
+<ul class=""><li class=""><a href="./../ide/regex.html">regex</a></li></ul><li class="heading "><a href="./../javascript/index.html">javascript</a></li>
 <ul class=""></ul><li class="heading "><a href="./../regex/index.html">regex</a></li>
-<ul class=""></ul></ul>
+<ul class=""><li class=""><a href="./../regex/IDE-Examples.html">IDE Examples</a></li></ul></ul>
+          <script>
+            if (window.location.pathname == "/docs/" || window.location.pathname == "/docs") {
+              document.querySelector('#heading_primary').classList.add('active');
+            }
+          </script>
         </li>
       </ul>
     </nav>
     <article class="content">
-      <h2>Common Commands</h2>
+      <h4>Common Commands</h4>
 <p><strong><code>ls</code></strong>, <strong><code>grep</code></strong>, etc</p>
 <p><strong><code>ls -a ~ | grep &quot;^.n&quot;</code></strong> to find files in current folder that start with “.n”</p>
 <p><strong><code>fg</code></strong> resume suspended process, after accidentally doing <code>Ctrl X</code></p>
 <p>​</p>
-<h2>Advanced Commands</h2>
+<h4>Advanced Commands</h4>
 <p><strong><code>sudo echo &quot;export PATH=\&quot;$PATH:/usr/local/bin\&quot;&quot; &gt;&gt; /etc/profile</code></strong> write to bottom of file</p>
 
     </article>

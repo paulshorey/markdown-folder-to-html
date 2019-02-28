@@ -7,7 +7,7 @@ echo "export EDITOR=ne" >> ~/.zprofile
 ```  
   
 #### Documentation:  
-[http://paulshorey.com/files/ne_docs.pdf](http://paulshorey.com/files/ne_docs.pdf)  
+[http://paulshorey.com/files/docs_ne.pdf](http://paulshorey.com/files/docs_ne.pdf)  
   
 ## Keyboard Shortcuts:  
 (including the custom ~/.ne/.keys configuration below)  
@@ -21,15 +21,16 @@ echo "export EDITOR=ne" >> ~/.zprofile
 > **^w**, **^e** - start of, end of line  
   
 ## Custom Key Bindings:  
-hit: **`^k`**  
-type: **`kc`**  
-hit **`key`** to see its hex code and currently bound command  
-**`echo 'KEY {CODE} {ACTION}' >> ~/.ne/.keys`**  
+1. hit: **`^k`**  
+2. type: **`kc`**  
+3. hit **`key`** to see its hex code and currently bound command  
+4. **`echo 'KEY {CODE} {ACTION}' >> ~/.ne/.keys`**  
   
-> `fn` key code is a prefix `0x`, plus the normal key code.  
-> So, `delete` key code is `115`. But, `fn + delete` key code is `0x115`.  
+> **`fn + a`**  
+> To convert any key (`delete`) to fn-key (`fn + delete`), just add a prefix `0x` before the key code.  
+> Key code for `delete` is `115`. So, key code for `fn + delete` would be `0x115`.  
   
-[​http://www.emerson.emory.edu/services/editors/ne/Key_Bindings.html](​http://www.emerson.emory.edu/services/editors/ne/Key_Bindings.html)  
+**Documentation:** http://www.emerson.emory.edu/services/editors/ne/Key_Bindings.html  
 **Defaults:** https://github.com/vigna/ne/blob/master/doc/default.keys​  
   
 ## Sample ~/.ne/.keys file:  
