@@ -6,83 +6,137 @@
     },
     {
       "type": "dir",
-      "name": "cli",
+      "name": "Back End",
       "children": [
         {
-          "type": "file",
-          "value": "cli/index.md"
+          "type": "dir",
+          "name": "Basics",
+          "children": [
+            {
+              "type": "file",
+              "value": "Back End/Basics/GIT-+-SSH.md"
+            },
+            {
+              "type": "file",
+              "value": "Back End/Basics/index.md"
+            },
+            {
+              "type": "file",
+              "value": "Back End/Basics/ports.md"
+            },
+            {
+              "type": "file",
+              "value": "Back End/Basics/ssl.md"
+            }
+          ]
+        },
+        {
+          "type": "dir",
+          "name": "CLI",
+          "children": [
+            {
+              "type": "file",
+              "value": "Back End/CLI/Nice-Editor.md"
+            },
+            {
+              "type": "file",
+              "value": "Back End/CLI/index.md"
+            }
+          ]
+        },
+        {
+          "type": "dir",
+          "name": "Containers",
+          "children": [
+            {
+              "type": "file",
+              "value": "Back End/Containers/index.md"
+            }
+          ]
         },
         {
           "type": "file",
-          "value": "cli/ne.md"
+          "value": "Back End/index.md"
+        },
+        {
+          "type": "dir",
+          "name": "VPS",
+          "children": [
+            {
+              "type": "file",
+              "value": "Back End/VPS/index.md"
+            },
+            {
+              "type": "file",
+              "value": "Back End/VPS/easy-deployment.md"
+            },
+            {
+              "type": "file",
+              "value": "Back End/VPS/linux-from-scratch.md"
+            }
+          ]
         }
       ]
     },
     {
       "type": "dir",
-      "name": "css",
+      "name": "Front End",
       "children": [
         {
-          "type": "file",
-          "value": "css/index.md"
-        }
-      ]
-    },
-    {
-      "type": "dir",
-      "name": "devops",
-      "children": [
+          "type": "dir",
+          "name": "CSS",
+          "children": [
+            {
+              "type": "file",
+              "value": "Front End/CSS/index.md"
+            },
+            {
+              "type": "file",
+              "value": "Front End/CSS/frameworks.md"
+            },
+            {
+              "type": "file",
+              "value": "Front End/CSS/responsive.md"
+            }
+          ]
+        },
         {
-          "type": "file",
-          "value": "devops/index.md"
-        }
-      ]
-    },
-    {
-      "type": "dir",
-      "name": "git",
-      "children": [
+          "type": "dir",
+          "name": "IDE",
+          "children": [
+            {
+              "type": "file",
+              "value": "Front End/IDE/index.md"
+            },
+            {
+              "type": "file",
+              "value": "Front End/IDE/edit-over-SSH.md"
+            }
+          ]
+        },
         {
-          "type": "file",
-          "value": "git/index.md"
-        }
-      ]
-    },
-    {
-      "type": "dir",
-      "name": "ide",
-      "children": [
-        {
-          "type": "file",
-          "value": "ide/index.md"
+          "type": "dir",
+          "name": "JavaScript",
+          "children": [
+            {
+              "type": "file",
+              "value": "Front End/JavaScript/index.md"
+            }
+          ]
         },
         {
           "type": "file",
-          "value": "ide/regex.md"
+          "value": "Front End/index.md"
         }
       ]
     },
     {
       "type": "dir",
-      "name": "javascript",
+      "name": "RegEx",
       "children": [
         {
           "type": "file",
-          "value": "javascript/index.md"
-        }
-      ]
-    },
-    {
-      "type": "dir",
-      "name": "regex",
-      "children": [
-        {
-          "type": "file",
-          "value": "regex/IDE-Examples.md"
-        },
-        {
-          "type": "file",
-          "value": "regex/index.md"
+          "value": "RegEx/index.md"
         }
       ]
     }
@@ -91,79 +145,142 @@
     {
       "path": "index.md",
       "url": "index.html",
-      "content": "# Paul's Web Development Knowledgebase  \nA repository of useful tips, tricks, shortcuts, and general knowledge about web programming <br />~ not necessarily popular or latest, just basic requirements for web development.  \n  \n#### [CLI](./cli)  \n#### [IDE](./ide)  \n#### [GIT](./git)  \n#### [REGEX](./regex)  \n#### [Javascript](./javascript)  \n#### [CSS](./css)  \n  \n",
-      "html": "<h1>Paul’s Web Development Knowledgebase</h1>\n<p>A repository of useful tips, tricks, shortcuts, and general knowledge about web programming <br />~ not necessarily popular or latest, just basic requirements for web development.</p>\n<h4><a href=\"./cli\">CLI</a></h4>\n<h4><a href=\"./ide\">IDE</a></h4>\n<h4><a href=\"./git\">GIT</a></h4>\n<h4><a href=\"./regex\">REGEX</a></h4>\n<h4><a href=\"./javascript\">Javascript</a></h4>\n<h4><a href=\"./css\">CSS</a></h4>\n",
+      "content": "# Paul's Web Development Knowledgebase  \nA repository of useful tips, tricks, shortcuts, and general knowledge about web application development, because sometimes we forget.  \n<br /><br />  \n  \n**This is an exciting journey**  \nto find a decent solution for documenting small to medium size web projects. So far, it's a great success! Very easy to edit (markdown files), very easy to collaborate (same repository as the project), and very easy to convert to html (`npm run docs`).  \n  \n**This website was auto-generated**  \nfrom [my repository](http://github.com/paulshorey/ps) `./docs` folder, using [paulshorey/markdown-folder-to-html](https://github.com/paulshorey/markdown-folder-to-html).  \n  \n**If anyone wants to contribute**  \nto this knowledgebase, and share ownership, please contact me! I'll be happy to move this to its own repository.  \n<br /><br />  \n  \n# This is a work in progress  \n  \n**Unfortunate issues:**  \n* **Folders and files are stored and displayed in alphabetical order.**  \n* **Currently, ALL folders MUST have README or index file.** <br />In general... folders are expanded/collapsed with CSS, so the functionality is very limited. Currently, it works and looks ok though. All folder names are always visible. File names are only visible when you click to open the containing folder.  \n* File names can have spaces, but a space in the filename prevents you from linking to the file from other markdown files (this is a markdown issue).  \n  \n  \n**Todo:**  \n* Fix mobile CSS  \n* Add functionality, when compiling .html files, to modify the original .md file... to add double space at the end of every line which does not already have them. (for Github flavor compatibility)  \n* Test more edge-cases with navigation list items.  \n* Fix underlying codebase to not convert filenames to (a href=\"\") elements.",
+      "html": "<h1>Paul’s Web Development Knowledgebase</h1>\n<p>A repository of useful tips, tricks, shortcuts, and general knowledge about web application development, because sometimes we forget.<br>\n<br /><br /></p>\n<p><strong>This is an exciting journey</strong><br>\nto find a decent solution for documenting small to medium size web projects. So far, it’s a great success! Very easy to edit (markdown files), very easy to collaborate (same repository as the project), and very easy to convert to html (<code>npm run docs</code>).</p>\n<p><strong>This website was auto-generated</strong><br>\nfrom <a href=\"http://github.com/paulshorey/ps\">my repository</a> <code>./docs</code> folder, using <a href=\"https://github.com/paulshorey/markdown-folder-to-html\">paulshorey/markdown-folder-to-html</a>.</p>\n<p><strong>If anyone wants to contribute</strong><br>\nto this knowledgebase, and share ownership, please contact me! I’ll be happy to move this to its own repository.<br>\n<br /><br /></p>\n<h1>This is a work in progress</h1>\n<p><strong>Unfortunate issues:</strong></p>\n<ul>\n<li><strong>Folders and files are stored and displayed in alphabetical order.</strong></li>\n<li><strong>Currently, ALL folders MUST have README or index file.</strong> <br />In general… folders are expanded/collapsed with CSS, so the functionality is very limited. Currently, it works and looks ok though. All folder names are always visible. File names are only visible when you click to open the containing folder.</li>\n<li>File names can have spaces, but a space in the filename prevents you from linking to the file from other markdown files (this is a markdown issue).</li>\n</ul>\n<p><strong>Todo:</strong></p>\n<ul>\n<li>Fix mobile CSS</li>\n<li>Add functionality, when compiling .html files, to modify the original .md file… to add double space at the end of every line which does not already have them. (for Github flavor compatibility)</li>\n<li>Test more edge-cases with navigation list items.</li>\n<li>Fix underlying codebase to not convert filenames to (a href=&quot;&quot;) elements.</li>\n</ul>\n",
       "id": 0
     },
     {
-      "path": "cli/index.md",
-      "url": "cli/index.html",
-      "content": "#### Common Commands  \n  \n**`ls`**, **`grep`**, etc  \n  \n**`ls -a ~ | grep \"^.n\"`** to find files in current folder that start with \".n\"  \n  \n**`fg`** resume suspended process, after accidentally doing `Ctrl X`  \n  \n​  \n#### Advanced Commands  \n  \n**`sudo echo \"export PATH=\\\"$PATH:/usr/local/bin\\\"\" >> /etc/profile`** write to bottom of file  \n  \n  \n",
-      "html": "<h4>Common Commands</h4>\n<p><strong><code>ls</code></strong>, <strong><code>grep</code></strong>, etc</p>\n<p><strong><code>ls -a ~ | grep &quot;^.n&quot;</code></strong> to find files in current folder that start with “.n”</p>\n<p><strong><code>fg</code></strong> resume suspended process, after accidentally doing <code>Ctrl X</code></p>\n<p>​</p>\n<h4>Advanced Commands</h4>\n<p><strong><code>sudo echo &quot;export PATH=\\&quot;$PATH:/usr/local/bin\\&quot;&quot; &gt;&gt; /etc/profile</code></strong> write to bottom of file</p>\n",
+      "path": "Back End/Basics/GIT-+-SSH.md",
+      "url": "Back End/Basics/GIT-+-SSH.html",
+      "content": "# GIT  \n  \n## Config  \n#### Install ssh key on new device  \n```  \necho \"{paste your ssh key contents}\" >> ~/.ssh/newssh  \nchmod -R 600 ~/.ssh/newssh  \n```  \n  \n#### then, every time the CLI starts:  \n```  \neval \"$(ssh-agent -s)\"  \nssh-add ~/.ssh/newssh  \nSet a value in global config  \ngit config --global color.ui true  \ngit config --global user.name Paul\\ Shorey  \ngit config --global user.email pshorey@beyond.ai  \ngit config --global push.default simple  \ngit config --global core.editor=ne  \ngit config --global submodule.recurse=true  \n```  \nWithout `--global`, it edits local `./.git/config` file.  \n  \n  \n## Best Practices  \n**`git pull `** actually does git fetch;  \n**`git merge`** actually, should do **`git pull --rebase`** which does not leave so many \"merge\" commits when working with others  \n  \n​",
+      "html": "<h1>GIT</h1>\n<h2>Config</h2>\n<h4>Install ssh key on new device</h4>\n<pre><code>echo &quot;{paste your ssh key contents}&quot; &gt;&gt; ~/.ssh/newssh  \nchmod -R 600 ~/.ssh/newssh  \n</code></pre>\n<h4>then, every time the CLI starts:</h4>\n<pre><code>eval &quot;$(ssh-agent -s)&quot;  \nssh-add ~/.ssh/newssh  \nSet a value in global config  \ngit config --global color.ui true  \ngit config --global user.name Paul\\ Shorey  \ngit config --global user.email pshorey@beyond.ai  \ngit config --global push.default simple  \ngit config --global core.editor=ne  \ngit config --global submodule.recurse=true  \n</code></pre>\n<p>Without <code>--global</code>, it edits local <code>./.git/config</code> file.</p>\n<h2>Best Practices</h2>\n<p><strong><code>git pull</code></strong> actually does git fetch;<br>\n<strong><code>git merge</code></strong> actually, should do <strong><code>git pull --rebase</code></strong> which does not leave so many “merge” commits when working with others</p>\n<p>​</p>\n",
       "id": 1
     },
     {
-      "path": "cli/ne.md",
-      "url": "cli/ne.html",
-      "content": "# EDITOR=ne  \nA \"nice editor\" for command line and GIT commits. By far the most intuitive CLI editor to use, supports some basic features and bindings. `Ctr S` to save. `Ctr Q` to quit. `Esc Esc` for dropdown UI, right in the terminal.  \n  \n#### Make Default:  \n```  \necho \"export EDITOR=ne\" >> ~/.zprofile  \n```  \n  \n#### Documentation:  \n[http://paulshorey.com/files/docs_ne.pdf](http://paulshorey.com/files/docs_ne.pdf)  \n  \n## Keyboard Shortcuts:  \n(including the custom ~/.ne/.keys configuration below)  \n  \n> **^s**, **^q** - save, quit  \n> **^z**, **^x**, **^c**, **^v**  - undo, cut, copy, paste  \n> **^y**  - delete current line  \n> **^u**  - paste deleted line  \n>  \n> **^d** - delete line  \n> **^w**, **^e** - start of, end of line  \n  \n## Custom Key Bindings:  \n1. hit: **`^k`**  \n2. type: **`kc`**  \n3. hit **`key`** to see its hex code and currently bound command  \n4. **`echo 'KEY {CODE} {ACTION}' >> ~/.ne/.keys`**  \n  \n> **`fn + a`**  \n> To convert any key (`delete`) to fn-key (`fn + delete`), just add a prefix `0x` before the key code.  \n> Key code for `delete` is `115`. So, key code for `fn + delete` would be `0x115`.  \n  \n**Documentation:** http://www.emerson.emory.edu/services/editors/ne/Key_Bindings.html  \n**Defaults:** https://github.com/vigna/ne/blob/master/doc/default.keys​  \n  \n## Sample ~/.ne/.keys file:  \n  \n    # [delete]  \n    KEY     0x7f    Backspace  \n    # [ctrl]+[z]  \n    KEY     0x1a    Undo  \n    # [ctrl]+[r]  \n    KEY     0x12    Redo  \n  \n    # [ctrl]+[d](delete line)  \n    KEY     0x04    DL  \n    # [ctrl]+[w]=(start of line)  \n    KEY     0x17    SOL  \n    # [ctrl]+[e]=(end of line)  \n    KEY     0x05    EOL  \n",
-      "html": "<h1>EDITOR=ne</h1>\n<p>A “nice editor” for command line and GIT commits. By far the most intuitive CLI editor to use, supports some basic features and bindings. <code>Ctr S</code> to save. <code>Ctr Q</code> to quit. <code>Esc Esc</code> for dropdown UI, right in the terminal.</p>\n<h4>Make Default:</h4>\n<pre><code>echo &quot;export EDITOR=ne&quot; &gt;&gt; ~/.zprofile  \n</code></pre>\n<h4>Documentation:</h4>\n<p><a href=\"http://paulshorey.com/files/docs_ne.pdf\">http://paulshorey.com/files/docs_ne.pdf</a></p>\n<h2>Keyboard Shortcuts:</h2>\n<p>(including the custom ~/.ne/.keys configuration below)</p>\n<blockquote>\n<p><strong>^s</strong>, <strong>^q</strong> - save, quit<br>\n<strong>^z</strong>, <strong>^x</strong>, <strong>^c</strong>, <strong>^v</strong>  - undo, cut, copy, paste<br>\n<strong>^y</strong>  - delete current line<br>\n<strong>^u</strong>  - paste deleted line</p>\n<p><strong>^d</strong> - delete line<br>\n<strong>^w</strong>, <strong>^e</strong> - start of, end of line</p>\n</blockquote>\n<h2>Custom Key Bindings:</h2>\n<ol>\n<li>hit: <strong><code>^k</code></strong></li>\n<li>type: <strong><code>kc</code></strong></li>\n<li>hit <strong><code>key</code></strong> to see its hex code and currently bound command</li>\n<li><strong><code>echo 'KEY {CODE} {ACTION}' &gt;&gt; ~/.ne/.keys</code></strong></li>\n</ol>\n<blockquote>\n<p><strong><code>fn + a</code></strong><br>\nTo convert any key (<code>delete</code>) to fn-key (<code>fn + delete</code>), just add a prefix <code>0x</code> before the key code.<br>\nKey code for <code>delete</code> is <code>115</code>. So, key code for <code>fn + delete</code> would be <code>0x115</code>.</p>\n</blockquote>\n<p><strong>Documentation:</strong> <a href=\"http://www.emerson.emory.edu/services/editors/ne/Key_Bindings.html\">http://www.emerson.emory.edu/services/editors/ne/Key_Bindings.html</a><br>\n<strong>Defaults:</strong> <a href=\"https://github.com/vigna/ne/blob/master/doc/default.keys%E2%80%8B\">https://github.com/vigna/ne/blob/master/doc/default.keys​</a></p>\n<h2>Sample ~/.ne/.keys file:</h2>\n<pre><code># [delete]  \nKEY     0x7f    Backspace  \n# [ctrl]+[z]  \nKEY     0x1a    Undo  \n# [ctrl]+[r]  \nKEY     0x12    Redo  \n\n# [ctrl]+[d](delete line)  \nKEY     0x04    DL  \n# [ctrl]+[w]=(start of line)  \nKEY     0x17    SOL  \n# [ctrl]+[e]=(end of line)  \nKEY     0x05    EOL  \n</code></pre>\n",
+      "path": "Back End/Basics/index.md",
+      "url": "Back End/Basics/index.html",
+      "content": "# Coming soon  \n",
+      "html": "<h1>Coming soon</h1>\n",
       "id": 2
     },
     {
-      "path": "css/index.md",
-      "url": "css/index.html",
-      "content": "# CSS  \n  \n### Frameworks  \n  \nPeople only use Bootstrap because \"everyone\" uses Bootstrap, not because of the merits of that framework. Here are some better alternatives.  \n  \nGeneral: AUI (Atlassian UI)  \nProven for static sites with basic JS, maybe also good for a React or Angular SPA.  \n  \nReact: https://material-ui.com/​  \n  \nAngular: https://ng.ant.design/docs/introduce/en​",
-      "html": "<h1>CSS</h1>\n<h3>Frameworks</h3>\n<p>People only use Bootstrap because “everyone” uses Bootstrap, not because of the merits of that framework. Here are some better alternatives.</p>\n<p>General: AUI (Atlassian UI)<br>\nProven for static sites with basic JS, maybe also good for a React or Angular SPA.</p>\n<p>React: <a href=\"https://material-ui.com/%E2%80%8B\">https://material-ui.com/​</a></p>\n<p>Angular: <a href=\"https://ng.ant.design/docs/introduce/en%E2%80%8B\">https://ng.ant.design/docs/introduce/en​</a></p>\n",
+      "path": "Back End/Basics/ports.md",
+      "url": "Back End/Basics/ports.html",
+      "content": "",
+      "html": "",
       "id": 3
     },
     {
-      "path": "devops/index.md",
-      "url": "devops/index.html",
-      "content": "# DEV OPS  \n  \n### test 3hash  \n  \n",
-      "html": "<h1>DEV OPS</h1>\n<h3>test 3hash</h3>\n",
+      "path": "Back End/Basics/ssl.md",
+      "url": "Back End/Basics/ssl.html",
+      "content": "",
+      "html": "",
       "id": 4
     },
     {
-      "path": "git/index.md",
-      "url": "git/index.html",
-      "content": "# GIT  \n  \n## Config  \n#### Install ssh key on new device  \n```  \necho \"{paste your ssh key contents}\" >> ~/.ssh/newssh  \nchmod -R 600 ~/.ssh/newssh  \n```  \n  \n#### then, every time the CLI starts:  \n```  \neval \"$(ssh-agent -s)\"  \nssh-add ~/.ssh/newssh  \nSet a value in global config  \ngit config --global color.ui true  \ngit config --global user.name Paul\\ Shorey  \ngit config --global user.email pshorey@beyond.ai  \ngit config --global push.default simple  \ngit config --global core.editor=ne  \ngit config --global submodule.recurse=true  \n```  \nWithout `--global`, it edits local `./.git/config` file.  \n  \n  \n## Best Practices  \n**`git pull `** actually does git fetch;  \n**`git merge`** actually, should do **`git pull --rebase`** which does not leave so many \"merge\" commits when working with others  \n  \n​",
-      "html": "<h1>GIT</h1>\n<h2>Config</h2>\n<h4>Install ssh key on new device</h4>\n<pre><code>echo &quot;{paste your ssh key contents}&quot; &gt;&gt; ~/.ssh/newssh  \nchmod -R 600 ~/.ssh/newssh  \n</code></pre>\n<h4>then, every time the CLI starts:</h4>\n<pre><code>eval &quot;$(ssh-agent -s)&quot;  \nssh-add ~/.ssh/newssh  \nSet a value in global config  \ngit config --global color.ui true  \ngit config --global user.name Paul\\ Shorey  \ngit config --global user.email pshorey@beyond.ai  \ngit config --global push.default simple  \ngit config --global core.editor=ne  \ngit config --global submodule.recurse=true  \n</code></pre>\n<p>Without <code>--global</code>, it edits local <code>./.git/config</code> file.</p>\n<h2>Best Practices</h2>\n<p><strong><code>git pull</code></strong> actually does git fetch;<br>\n<strong><code>git merge</code></strong> actually, should do <strong><code>git pull --rebase</code></strong> which does not leave so many “merge” commits when working with others</p>\n<p>​</p>\n",
+      "path": "Back End/CLI/Nice-Editor.md",
+      "url": "Back End/CLI/Nice-Editor.html",
+      "content": "# EDITOR=ne  \nA \"nice\" editor. By far the most intuitive CLI editor to use, supports some basic features and bindings. `Ctr S` to save. `Ctr Q` to quit. `Esc Esc` for an actual dropdown UI, right in the terminal. It's magic!  \n  \n#### Make Default:  \n```  \necho \"export EDITOR=ne\" >> ~/.zprofile  \necho \"[core]\\n\\teditor = ne\" >> ~/.gitconfig  \n```  \n  \n#### Documentation:  \n[http://paulshorey.com/files/docs_ne.pdf](http://paulshorey.com/files/docs_ne.pdf)  \n  \n## Keyboard Shortcuts:  \n(including the custom ~/.ne/.keys configuration below)  \n  \n> **^s**, **^q** - save, quit  \n> **^z**, **^x**, **^c**, **^v**  - undo, cut, copy, paste  \n> **^y**  - delete current line  \n> **^u**  - paste deleted line  \n>  \n> **^d** - delete line  \n> **^w**, **^e** - start of, end of line  \n  \n## Custom Key Bindings:  \n1. hit: **`^k`**  \n2. type: **`kc`**  \n3. hit **`key`** to see its hex code and currently bound command  \n4. **`echo 'KEY {CODE} {ACTION}' >> ~/.ne/.keys`**  \n  \n> **`fn + a`**  \n> To convert any key (`delete`) to fn-key (`fn + delete`), just add a prefix `0x` before the key code.  \n> Key code for `delete` is `115`. So, key code for `fn + delete` would be `0x115`.  \n  \n**Documentation:** http://www.emerson.emory.edu/services/editors/ne/Key_Bindings.html  \n**Defaults:** https://github.com/vigna/ne/blob/master/doc/default.keys​  \n  \n## Sample ~/.ne/.keys file:  \n  \n    # [delete]  \n    KEY     0x7f    Backspace  \n    # [ctrl]+[z]  \n    KEY     0x1a    Undo  \n    # [ctrl]+[r]  \n    KEY     0x12    Redo  \n  \n    # [ctrl]+[d](delete line)  \n    KEY     0x04    DL  \n    # [ctrl]+[w]=(start of line)  \n    KEY     0x17    SOL  \n    # [ctrl]+[e]=(end of line)  \n    KEY     0x05    EOL  \n",
+      "html": "<h1>EDITOR=ne</h1>\n<p>A “nice” editor. By far the most intuitive CLI editor to use, supports some basic features and bindings. <code>Ctr S</code> to save. <code>Ctr Q</code> to quit. <code>Esc Esc</code> for an actual dropdown UI, right in the terminal. It’s magic!</p>\n<h4>Make Default:</h4>\n<pre><code>echo &quot;export EDITOR=ne&quot; &gt;&gt; ~/.zprofile  \necho &quot;[core]\\n\\teditor = ne&quot; &gt;&gt; ~/.gitconfig  \n</code></pre>\n<h4>Documentation:</h4>\n<p><a href=\"http://paulshorey.com/files/docs_ne.pdf\">http://paulshorey.com/files/docs_ne.pdf</a></p>\n<h2>Keyboard Shortcuts:</h2>\n<p>(including the custom ~/.ne/.keys configuration below)</p>\n<blockquote>\n<p><strong>^s</strong>, <strong>^q</strong> - save, quit<br>\n<strong>^z</strong>, <strong>^x</strong>, <strong>^c</strong>, <strong>^v</strong>  - undo, cut, copy, paste<br>\n<strong>^y</strong>  - delete current line<br>\n<strong>^u</strong>  - paste deleted line</p>\n<p><strong>^d</strong> - delete line<br>\n<strong>^w</strong>, <strong>^e</strong> - start of, end of line</p>\n</blockquote>\n<h2>Custom Key Bindings:</h2>\n<ol>\n<li>hit: <strong><code>^k</code></strong></li>\n<li>type: <strong><code>kc</code></strong></li>\n<li>hit <strong><code>key</code></strong> to see its hex code and currently bound command</li>\n<li><strong><code>echo 'KEY {CODE} {ACTION}' &gt;&gt; ~/.ne/.keys</code></strong></li>\n</ol>\n<blockquote>\n<p><strong><code>fn + a</code></strong><br>\nTo convert any key (<code>delete</code>) to fn-key (<code>fn + delete</code>), just add a prefix <code>0x</code> before the key code.<br>\nKey code for <code>delete</code> is <code>115</code>. So, key code for <code>fn + delete</code> would be <code>0x115</code>.</p>\n</blockquote>\n<p><strong>Documentation:</strong> <a href=\"http://www.emerson.emory.edu/services/editors/ne/Key_Bindings.html\">http://www.emerson.emory.edu/services/editors/ne/Key_Bindings.html</a><br>\n<strong>Defaults:</strong> <a href=\"https://github.com/vigna/ne/blob/master/doc/default.keys%E2%80%8B\">https://github.com/vigna/ne/blob/master/doc/default.keys​</a></p>\n<h2>Sample ~/.ne/.keys file:</h2>\n<pre><code># [delete]  \nKEY     0x7f    Backspace  \n# [ctrl]+[z]  \nKEY     0x1a    Undo  \n# [ctrl]+[r]  \nKEY     0x12    Redo  \n\n# [ctrl]+[d](delete line)  \nKEY     0x04    DL  \n# [ctrl]+[w]=(start of line)  \nKEY     0x17    SOL  \n# [ctrl]+[e]=(end of line)  \nKEY     0x05    EOL  \n</code></pre>\n",
       "id": 5
     },
     {
-      "path": "ide/index.md",
-      "url": "ide/index.html",
-      "content": "# IDE for Javascript  \n  \nAfter agreeing on and sticking to **tabs** or 2 spaces or 4 spaces, most important thing to is:  \n  \nMake sure your **and your teammates'** text-editor or IDE do not change your code unexpectedly.  \n  \n### If using VS CODE:  \n* Install the **`js beautify`** plugin  \n* Add **`.jsbeautifyrc`** file to the root of your project, to specify formatting rules.  \n* By default, it formats every file on save! To turn this off, toggle **`files.autoSave`** in Vs Code preferences.  \n  \n### If using Sublime Text:  \n* Install `htmlprettify` plulgin: https://github.com/victorporof/Sublime-HTMLPrettify  \n* Use the same **`.jsbeautifyrc`** file as your teammates use for Vs Code.  \n* Sublime does not format on save by default. Toggle **`format_on_save`** in HTMLPrettify plugin options.  \n  \n### If using something else:  \n* Just make sure whatever settings you use matches your teammates' settings.  \n  \n### Quick (one-off experiments) and Dirty (code):  \n* This is a great online code beautifier: <br />https://www.10bestdesign.com/dirtymarkup/  \n* Unlike others, this one actually maintains HTML tags hierarchy and indentation  \n  \n",
-      "html": "<h1>IDE for Javascript</h1>\n<p>After agreeing on and sticking to <strong>tabs</strong> or 2 spaces or 4 spaces, most important thing to is:</p>\n<p>Make sure your <strong>and your teammates’</strong> text-editor or IDE do not change your code unexpectedly.</p>\n<h3>If using VS CODE:</h3>\n<ul>\n<li>Install the <strong><code>js beautify</code></strong> plugin</li>\n<li>Add <strong><code>.jsbeautifyrc</code></strong> file to the root of your project, to specify formatting rules.</li>\n<li>By default, it formats every file on save! To turn this off, toggle <strong><code>files.autoSave</code></strong> in Vs Code preferences.</li>\n</ul>\n<h3>If using Sublime Text:</h3>\n<ul>\n<li>Install <code>htmlprettify</code> plulgin: <a href=\"https://github.com/victorporof/Sublime-HTMLPrettify\">https://github.com/victorporof/Sublime-HTMLPrettify</a></li>\n<li>Use the same <strong><code>.jsbeautifyrc</code></strong> file as your teammates use for Vs Code.</li>\n<li>Sublime does not format on save by default. Toggle <strong><code>format_on_save</code></strong> in HTMLPrettify plugin options.</li>\n</ul>\n<h3>If using something else:</h3>\n<ul>\n<li>Just make sure whatever settings you use matches your teammates’ settings.</li>\n</ul>\n<h3>Quick (one-off experiments) and Dirty (code):</h3>\n<ul>\n<li>This is a great online code beautifier: <br /><a href=\"https://www.10bestdesign.com/dirtymarkup/\">https://www.10bestdesign.com/dirtymarkup/</a></li>\n<li>Unlike others, this one actually maintains HTML tags hierarchy and indentation</li>\n</ul>\n",
+      "path": "Back End/CLI/index.md",
+      "url": "Back End/CLI/index.html",
+      "content": "#### Common Commands:  \n  \n**`mkdir -p`** recursively create directory  \n**`ls -a`** show hidden files  \n**`ls -a ~ | grep \"^.n\"`** find files in current folder that start with \".n\"  \n  \n**`ps cax | grep node`** or **`ps aux | grep node`** find running processes matching \"node\"  \n  \n**`fg`** resume suspended process, after accidentally doing `Ctrl X`  \n<br /><br />  \n  \n  \n  \n#### Files and Folders:  \n  \n**`cat file.js`** to view file contents, without bothering to open in a text editor  \n  \nor use **`rsub`** to [open the remote file](../ide/edit-over-SSH.md) in your local editor like Sublime/VsCode  \n  \n**`sudo echo \"export PATH=\\\"$PATH:/usr/local/bin\\\"\" >> /etc/profile`** write to bottom of file  \n  \n**`vim`** is a built-in and usually default text editor. [Nice Editor](../cli/ne.md) is much nicer!  \n<br /><br />  \n  \n#### Permissions:  \n  \n**`chmod -R 600 ~/.ssh/YOUR-FILE`** you'll need to apply this to any newly created SSH key file before GIT can use it  \n  \n**`chown $USER -R /www`** or whatever folder or file you want to take back ownership of, if you run into write permission issues  \n​  \n#### Advanced Commands:  \n  \n<br /><br />  \n  \n  \n",
+      "html": "<h4>Common Commands:</h4>\n<p><strong><code>mkdir -p</code></strong> recursively create directory<br>\n<strong><code>ls -a</code></strong> show hidden files<br>\n<strong><code>ls -a ~ | grep &quot;^.n&quot;</code></strong> find files in current folder that start with “.n”</p>\n<p><strong><code>ps cax | grep node</code></strong> or <strong><code>ps aux | grep node</code></strong> find running processes matching “node”</p>\n<p><strong><code>fg</code></strong> resume suspended process, after accidentally doing <code>Ctrl X</code><br>\n<br /><br /></p>\n<h4>Files and Folders:</h4>\n<p><strong><code>cat file.js</code></strong> to view file contents, without bothering to open in a text editor</p>\n<p>or use <strong><code>rsub</code></strong> to <a href=\"../ide/edit-over-SSH.html\">open the remote file</a> in your local editor like Sublime/VsCode</p>\n<p><strong><code>sudo echo &quot;export PATH=\\&quot;$PATH:/usr/local/bin\\&quot;&quot; &gt;&gt; /etc/profile</code></strong> write to bottom of file</p>\n<p><strong><code>vim</code></strong> is a built-in and usually default text editor. <a href=\"../cli/ne.html\">Nice Editor</a> is much nicer!<br>\n<br /><br /></p>\n<h4>Permissions:</h4>\n<p><strong><code>chmod -R 600 ~/.ssh/YOUR-FILE</code></strong> you’ll need to apply this to any newly created SSH key file before GIT can use it</p>\n<p><strong><code>chown $USER -R /www</code></strong> or whatever folder or file you want to take back ownership of, if you run into write permission issues<br>\n​</p>\n<h4>Advanced Commands:</h4>\n<p><br /><br /></p>\n",
       "id": 6
     },
     {
-      "path": "ide/regex.md",
-      "url": "ide/regex.html",
-      "content": "# Regular Expressions Examples for IDE (text editors)  \n  \n### See: [../regex/IDE Examples](../regex/IDE20%Examples.md)  \n  \n",
-      "html": "<h1>Regular Expressions Examples for IDE (text editors)</h1>\n<h3>See: <a href=\"../regex/IDE20%25Examples.html\">…/regex/IDE Examples</a></h3>\n",
+      "path": "Back End/Containers/index.md",
+      "url": "Back End/Containers/index.html",
+      "content": "# Container vs Image vs Traditional Servers  \n  \n",
+      "html": "<h1>Container vs Image vs Traditional Servers</h1>\n",
       "id": 7
     },
     {
-      "path": "javascript/index.md",
-      "url": "javascript/index.html",
-      "content": "# ES6 vs ES5",
-      "html": "<h1>ES6 vs ES5</h1>\n",
+      "path": "Back End/index.md",
+      "url": "Back End/index.html",
+      "content": "# VPS (Virtual Private Server) management  \nAKA: \"Linux from scratch\"",
+      "html": "<h1>VPS (Virtual Private Server) management</h1>\n<p>AKA: “Linux from scratch”</p>\n",
       "id": 8
     },
     {
-      "path": "regex/IDE-Examples.md",
-      "url": "regex/IDE-Examples.html",
-      "content": "# Examples for IDEs  \n  \n### HTML:  \nsearch `(\\s*)</script>` replace `</script>` puts all closing tags on same line  \n  \n`\\ ?data-(.*?)\"(.*?)\" `  \n`\\ ?tabindex=(\".*\") `  \nmatch all tag attributes starting with with or without leading spaces  \n  \n  \n`li\\ class(.*?)\"(.*?)\" `  \nstrip out class attribute from matching elements  \n  \n`<!--(.*?)\\.(.*?)-->`  \nmatch comments containing phrase \".\"  \n  \nsearch `href=\"(.*?)\"` replace `href=\"\"` clears all href attributes  \n  \nsearch `(\\ *?)((?!\\ ).*?)><span(.*?)</span> `  \nreplace `$1$2>\\n$1  <span$3\\n$1  </span> `  \nto add indent span elements  \n  \n### Javascript:  \nRemove all console.logs (or .warn .error, etc):  \n`(\\s?)console.(.?)\\n([\\w\\s\\W\\t\\n]*?)`",
-      "html": "<h1>Examples for IDEs</h1>\n<h3>HTML:</h3>\n<p>search <code>(\\s*)&lt;/script&gt;</code> replace <code>&lt;/script&gt;</code> puts all closing tags on same line</p>\n<p><code>\\ ?data-(.*?)&quot;(.*?)&quot;</code><br>\n<code>\\ ?tabindex=(&quot;.*&quot;)</code><br>\nmatch all tag attributes starting with with or without leading spaces</p>\n<p><code>li\\ class(.*?)&quot;(.*?)&quot;</code><br>\nstrip out class attribute from matching elements</p>\n<p><code>&lt;!--(.*?)\\.(.*?)--&gt;</code><br>\nmatch comments containing phrase “.”</p>\n<p>search <code>href=&quot;(.*?)&quot;</code> replace <code>href=&quot;&quot;</code> clears all href attributes</p>\n<p>search <code>(\\ *?)((?!\\ ).*?)&gt;&lt;span(.*?)&lt;/span&gt;</code><br>\nreplace <code>$1$2&gt;\\n$1 &lt;span$3\\n$1 &lt;/span&gt;</code><br>\nto add indent span elements</p>\n<h3>Javascript:</h3>\n<p>Remove all console.logs (or .warn .error, etc):<br>\n<code>(\\s?)console.(.?)\\n([\\w\\s\\W\\t\\n]*?)</code></p>\n",
+      "path": "Back End/VPS/index.md",
+      "url": "Back End/VPS/index.html",
+      "content": "# etc.",
+      "html": "<h1>etc.</h1>\n",
       "id": 9
     },
     {
-      "path": "regex/index.md",
-      "url": "regex/index.html",
-      "content": "# Regular Expressions  \n  \n[IDE Examples](./IDE-Examples.md)  \n  \n### Find/Replace  \nLets use the link above as an example. We want to convert local links from `.md` to `.html`...  \n#### in IDE:  \n```  \nFind: (\\[.*?\\]\\(\\./.*?).md(\\))  \nReplace: $1.html$2  \n```  \n#### using Javascript:  \n```  \nstr.replace(\\(\\[.*?\\]\\(\\./.*?).md(\\))\\g, \"$1.html$2\");  \n```  \nSo, no matter the complexity, just write the match/replace as:  \n```  \nstr.replace(\\        \\g, \"       \")  \n```",
-      "html": "<h1>Regular Expressions</h1>\n<p><a href=\"./IDE-Examples.html\">IDE Examples</a></p>\n<h3>Find/Replace</h3>\n<p>Lets use the link above as an example. We want to convert local links from <code>.md</code> to <code>.html</code>…</p>\n<h4>in IDE:</h4>\n<pre><code>Find: (\\[.*?\\]\\(\\./.*?).md(\\))  \nReplace: $1.html$2  \n</code></pre>\n<h4>using Javascript:</h4>\n<pre><code>str.replace(\\(\\[.*?\\]\\(\\./.*?).md(\\))\\g, &quot;$1.html$2&quot;);  \n</code></pre>\n<p>So, no matter the complexity, just write the match/replace as:</p>\n<pre><code>str.replace(\\        \\g, &quot;       &quot;)  \n</code></pre>\n",
+      "path": "Back End/VPS/easy-deployment.md",
+      "url": "Back End/VPS/easy-deployment.html",
+      "content": "### Continuous Integration the quick and easy way...  \nAssuming your codebase is in /www/$(hostname)  \n  \n#### Optionally, install Yarn. Othwerwise continue and use NPM:  \n```  \ncurl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add  \necho \"deb https://dl.yarnpkg.com/debian/ stable main\" | sudo tee /etc/apt/sources.list.d/yarn.list  \nsudo apt-get update && sudo apt-get install yarn  \n```  \n#### /etc/crontab:  \n```  \n@reboot root bash /www/$(hostname)/_cron/deploy.sh  \n```  \n#### /www/ps-api/_cron/deploy.sh:  \n```  \neval \"$(ssh-agent -s)\"  \nssh-add ~/.ssh/gitlab  \n  \ncd /www/$(hostname)  \ngit reset HEAD -\\-hard;  \ngit pull  \nnpm install  \n```  \n#### /www/ps-api/_deploy.js  \n```  \nvar fs = require('fs');  \nvar express = require('express');  \nvar http = require('http');  \nvar app = express();  \n  \napp.set('port', 9999);  \n  \napp.post('/_deploy', function(req, res) {  \n  \n    // done  \n    res.status(200).json({  \n        message: 'Github Hook received!'  \n    });  \n  \n    // apply  \n    var spawn = require('child_process').spawn,  \n        deploy = spawn('sh', ['_deploy.sh']);  \n  \n});  \n  \nhttp.createServer(app).listen(app.get('port'), function() {  \n    console.log('Express server listening on port ' + app.get('port'));  \n});  \n```  \n#### So,  \nyour _deploy.js Node script will be listening to port http://YOUR-DOMAIN:9999/_deploy  \n  \n#### Then,  \nyour GitHub (or GitLab, or CMS) account will make a POST request to this url, which will trigger this script to run, which will trigger the \"deploy.sh\" script to run, which will GIT reset and pull the entire directory from your latest change in your repository.  \n",
+      "html": "<h3>Continuous Integration the quick and easy way…</h3>\n<p>Assuming your codebase is in /www/$(hostname)</p>\n<h4>Optionally, install Yarn. Othwerwise continue and use NPM:</h4>\n<pre><code>curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add  \necho &quot;deb https://dl.yarnpkg.com/debian/ stable main&quot; | sudo tee /etc/apt/sources.list.d/yarn.list  \nsudo apt-get update &amp;&amp; sudo apt-get install yarn  \n</code></pre>\n<h4>/etc/crontab:</h4>\n<pre><code>@reboot root bash /www/$(hostname)/_cron/deploy.sh  \n</code></pre>\n<h4>/www/ps-api/_cron/deploy.sh:</h4>\n<pre><code>eval &quot;$(ssh-agent -s)&quot;  \nssh-add ~/.ssh/gitlab  \n  \ncd /www/$(hostname)  \ngit reset HEAD -\\-hard;  \ngit pull  \nnpm install  \n</code></pre>\n<h4>/www/ps-api/_deploy.js</h4>\n<pre><code>var fs = require('fs');  \nvar express = require('express');  \nvar http = require('http');  \nvar app = express();  \n  \napp.set('port', 9999);  \n  \napp.post('/_deploy', function(req, res) {  \n  \n    // done  \n    res.status(200).json({  \n        message: 'Github Hook received!'  \n    });  \n  \n    // apply  \n    var spawn = require('child_process').spawn,  \n        deploy = spawn('sh', ['_deploy.sh']);  \n  \n});  \n  \nhttp.createServer(app).listen(app.get('port'), function() {  \n    console.log('Express server listening on port ' + app.get('port'));  \n});  \n</code></pre>\n<h4>So,</h4>\n<p>your _deploy.js Node script will be listening to port <a href=\"http://YOUR-DOMAIN:9999/_deploy\">http://YOUR-DOMAIN:9999/_deploy</a></p>\n<h4>Then,</h4>\n<p>your GitHub (or GitLab, or CMS) account will make a POST request to this url, which will trigger this script to run, which will trigger the “<a href=\"http://deploy.sh\">deploy.sh</a>” script to run, which will GIT reset and pull the entire directory from your latest change in your repository.</p>\n",
       "id": 10
+    },
+    {
+      "path": "Back End/VPS/linux-from-scratch.md",
+      "url": "Back End/VPS/linux-from-scratch.html",
+      "content": "",
+      "html": "",
+      "id": 11
+    },
+    {
+      "path": "Front End/CSS/index.md",
+      "url": "Front End/CSS/index.html",
+      "content": "### CSS is not hard. Just review the properties at the bottom of this page.  \n  \n## If you know the basics, here are some gotchas and odditties:  \n```  \n```  \n## Properties:  \n* position:  \n    * **static** ~ default value, makes element think it has NO position property.  \n    * **relative** ~ relative to its surroundings. Lets you to add **top, left, bottom, right**, to shift it a bit to any direction  \n    * **fixed** ~ relative to the window - use **top, left, bottom, right** to position the element any number of units from the top/left/bottom/right of the screen boundaries.  \n    * **absolute** ~ same as fixed, but relative to the parent element (well, the closest parent which has a specified positon property)  \n* display:  \n    * **block** ~ wrap to their own line, and take up 100% available width! Used to layout visual blocks on the page, with height, padding, border, etc. (**div, blockquote, header, article, main** have this by default)  \n    * **inline** ~ for text elements which do not have height or width or margin or vertical padding (**span, b, i, u, img, code** have this by default)  \n    * **inline-block** ~ best of both worlds. Can have vertical height and padding, but do not wrap to their own line! So, can style a padded button or highlight in the middle of a paragraph.  \n    * **flex** ~ read about it. It will change your life. **Note:** it affects the children, not itself! Simple example: Lets you have a fixed-width left column, and a main article section which takes up the remaining page width, no matter how wide or narrow the screen is.  \n    * **inline-flex** ~ flex content inline! Like a pill-button, with left/right sections.  \n    * **grid** ~ new hotness. Not like \"masonry\", but still very useful.  \n* margin:  \n    * **0 0 0 10px** add 10px margin outside of the element to the left  \n    * **0 10px** add 10px margin to left and right. Zero to top/bottom  \n    * **10px** add to all sides  \n    * **10px 0 0 0** same as margin-top:10px  \n    * Margin adds space **outside** of the element's boundaries. So, **outside** of the element's width/height, padding, border, background.  \n* padding:  \n    * like margin, but adds space **inside** the element's boundarids. So, **inside** the border. Increases width/height, and is covered by background.  \n* float:  \n    * never copy from some answer on some website. Only use if you know its gotchas and glitches  \n* top, left, right, bottom:  \n    * move the element some distance in any direction, used with the `position` prop  \n* text-align  \n    * horizontal-align **text** or images, or any **`display:inline`**  or **`display:inline-block`** element - **left/center/right**  \n    * put this on the **parent** element!  \n* vertical-align  \n    * **vertically** align any inline or inline-block element, relative to its siblings  \n    * put this on the element itself!!! unlike text-align, which you put on the parent  \n    * this does not, unfortunately, vertically center text inside a larger container  \n  \n#### Also, read about \"flexbox\", or \"css display flex\"  \nAnd learn about its related properties, which can be used to build dynamic, responsive, flexible layouts, and center content on the page - horizontally and vertically: `flex-direction`, `flex-grow`, `align-items`, `justify-content`, etc.",
+      "html": "<h3>CSS is not hard. Just review the properties at the bottom of this page.</h3>\n<h2>If you know the basics, here are some gotchas and odditties:</h2>\n<pre><code></code></pre>\n<h2>Properties:</h2>\n<ul>\n<li>position:\n<ul>\n<li><strong>static</strong> ~ default value, makes element think it has NO position property.</li>\n<li><strong>relative</strong> ~ relative to its surroundings. Lets you to add <strong>top, left, bottom, right</strong>, to shift it a bit to any direction</li>\n<li><strong>fixed</strong> ~ relative to the window - use <strong>top, left, bottom, right</strong> to position the element any number of units from the top/left/bottom/right of the screen boundaries.</li>\n<li><strong>absolute</strong> ~ same as fixed, but relative to the parent element (well, the closest parent which has a specified positon property)</li>\n</ul>\n</li>\n<li>display:\n<ul>\n<li><strong>block</strong> ~ wrap to their own line, and take up 100% available width! Used to layout visual blocks on the page, with height, padding, border, etc. (<strong>div, blockquote, header, article, main</strong> have this by default)</li>\n<li><strong>inline</strong> ~ for text elements which do not have height or width or margin or vertical padding (<strong>span, b, i, u, img, code</strong> have this by default)</li>\n<li><strong>inline-block</strong> ~ best of both worlds. Can have vertical height and padding, but do not wrap to their own line! So, can style a padded button or highlight in the middle of a paragraph.</li>\n<li><strong>flex</strong> ~ read about it. It will change your life. <strong>Note:</strong> it affects the children, not itself! Simple example: Lets you have a fixed-width left column, and a main article section which takes up the remaining page width, no matter how wide or narrow the screen is.</li>\n<li><strong>inline-flex</strong> ~ flex content inline! Like a pill-button, with left/right sections.</li>\n<li><strong>grid</strong> ~ new hotness. Not like “masonry”, but still very useful.</li>\n</ul>\n</li>\n<li>margin:\n<ul>\n<li><strong>0 0 0 10px</strong> add 10px margin outside of the element to the left</li>\n<li><strong>0 10px</strong> add 10px margin to left and right. Zero to top/bottom</li>\n<li><strong>10px</strong> add to all sides</li>\n<li><strong>10px 0 0 0</strong> same as margin-top:10px</li>\n<li>Margin adds space <strong>outside</strong> of the element’s boundaries. So, <strong>outside</strong> of the element’s width/height, padding, border, background.</li>\n</ul>\n</li>\n<li>padding:\n<ul>\n<li>like margin, but adds space <strong>inside</strong> the element’s boundarids. So, <strong>inside</strong> the border. Increases width/height, and is covered by background.</li>\n</ul>\n</li>\n<li>float:\n<ul>\n<li>never copy from some answer on some website. Only use if you know its gotchas and glitches</li>\n</ul>\n</li>\n<li>top, left, right, bottom:\n<ul>\n<li>move the element some distance in any direction, used with the <code>position</code> prop</li>\n</ul>\n</li>\n<li>text-align\n<ul>\n<li>horizontal-align <strong>text</strong> or images, or any <strong><code>display:inline</code></strong>  or <strong><code>display:inline-block</code></strong> element - <strong>left/center/right</strong></li>\n<li>put this on the <strong>parent</strong> element!</li>\n</ul>\n</li>\n<li>vertical-align\n<ul>\n<li><strong>vertically</strong> align any inline or inline-block element, relative to its siblings</li>\n<li>put this on the element itself!!! unlike text-align, which you put on the parent</li>\n<li>this does not, unfortunately, vertically center text inside a larger container</li>\n</ul>\n</li>\n</ul>\n<h4>Also, read about “flexbox”, or “css display flex”</h4>\n<p>And learn about its related properties, which can be used to build dynamic, responsive, flexible layouts, and center content on the page - horizontally and vertically: <code>flex-direction</code>, <code>flex-grow</code>, <code>align-items</code>, <code>justify-content</code>, etc.</p>\n",
+      "id": 12
+    },
+    {
+      "path": "Front End/CSS/frameworks.md",
+      "url": "Front End/CSS/frameworks.html",
+      "content": "### Bootstrap  \n  \nPeople only use Bootstrap because \"everyone\" uses Bootstrap, and because it has a great name, not because of the merits of that framework.  \n  \nUnfortunately, Bootstrap is poorely written, buggy, not aligned (sloppy), looks cheap, and most importantly, it badly clutters your global namespace. So, when you create a new class name like `.map` or `.error`, it may or may not be taken over by one of Bootstrap's hundreds of class names on the global namespace.  \n  \nIf you must use Bootstrap, try this:  \nhttps://www.google.com/search?q=bootstrap+namespace+conflict&oq=bootstrap+namespace&aqs=chrome.2.69i57j0l5.4104j1j7&sourceid=chrome&ie=UTF-8  \n  \n  \n### Here are some better UI libraries:  \n  \n**Static sites (with jQuery):**  \n* [Bulma](https://bulma.io/alternative-to-bootstrap/)  \n* [several alternatives](https://www.agriya.com/blog/15-alternatives-bootstrap-foundation-skeleton/)  \n  \n**React app:**  \n* [Material UI](https://material-ui.com/​) (standard)  \n* [Blueprint](https://blueprintjs.com/) (Powerful and customizable! Unfortunately, their documentation/examples are difficult)  \n* [Ant design](https://ant.design/docs/react/introduce)  \n  \n**Angular app:**  \n* Angular Material (standard)  \n* [Ant design](https://ng.ant.design/docs/introduce/en​) (alternative, minimal outlined look without so much solid color)  \n  \n**Worth considering:**  \n* [AUI (Atlassian UI)](https://docs.atlassian.com/aui)  \n<br />Two ways to use:  \n    * **CSS + Javascript** - perfect for static sites. Alternative to jQueryUI.  \n    * **CSS only** - can be used with React or Angular or anything, not for dynamic components like a datepicker, but just to give the page layout (like header, nav, menus, buttons) that polished \"enterprise\" feel.",
+      "html": "<h3>Bootstrap</h3>\n<p>People only use Bootstrap because “everyone” uses Bootstrap, and because it has a great name, not because of the merits of that framework.</p>\n<p>Unfortunately, Bootstrap is poorely written, buggy, not aligned (sloppy), looks cheap, and most importantly, it badly clutters your global namespace. So, when you create a new class name like <code>.map</code> or <code>.error</code>, it may or may not be taken over by one of Bootstrap’s hundreds of class names on the global namespace.</p>\n<p>If you must use Bootstrap, try this:<br>\n<a href=\"https://www.google.com/search?q=bootstrap+namespace+conflict&amp;oq=bootstrap+namespace&amp;aqs=chrome.2.69i57j0l5.4104j1j7&amp;sourceid=chrome&amp;ie=UTF-8\">https://www.google.com/search?q=bootstrap+namespace+conflict&amp;oq=bootstrap+namespace&amp;aqs=chrome.2.69i57j0l5.4104j1j7&amp;sourceid=chrome&amp;ie=UTF-8</a></p>\n<h3>Here are some better UI libraries:</h3>\n<p><strong>Static sites (with jQuery):</strong></p>\n<ul>\n<li><a href=\"https://bulma.io/alternative-to-bootstrap/\">Bulma</a></li>\n<li><a href=\"https://www.agriya.com/blog/15-alternatives-bootstrap-foundation-skeleton/\">several alternatives</a></li>\n</ul>\n<p><strong>React app:</strong></p>\n<ul>\n<li><a href=\"https://material-ui.com/%E2%80%8B\">Material UI</a> (standard)</li>\n<li><a href=\"https://blueprintjs.com/\">Blueprint</a> (Powerful and customizable! Unfortunately, their documentation/examples are difficult)</li>\n<li><a href=\"https://ant.design/docs/react/introduce\">Ant design</a></li>\n</ul>\n<p><strong>Angular app:</strong></p>\n<ul>\n<li>Angular Material (standard)</li>\n<li><a href=\"https://ng.ant.design/docs/introduce/en%E2%80%8B\">Ant design</a> (alternative, minimal outlined look without so much solid color)</li>\n</ul>\n<p><strong>Worth considering:</strong></p>\n<ul>\n<li><a href=\"https://docs.atlassian.com/aui\">AUI (Atlassian UI)</a><br>\n<br />Two ways to use:\n<ul>\n<li><strong>CSS + Javascript</strong> - perfect for static sites. Alternative to jQueryUI.</li>\n<li><strong>CSS only</strong> - can be used with React or Angular or anything, not for dynamic components like a datepicker, but just to give the page layout (like header, nav, menus, buttons) that polished “enterprise” feel.</li>\n</ul>\n</li>\n</ul>\n",
+      "id": 13
+    },
+    {
+      "path": "Front End/CSS/responsive.md",
+      "url": "Front End/CSS/responsive.html",
+      "content": "### Units and Responsive design:  \n##### With only a little work, your text sizes can scale with the viewer's screen size.  \n  \n```  \n```",
+      "html": "<h3>Units and Responsive design:</h3>\n<h5>With only a little work, your text sizes can scale with the viewer’s screen size.</h5>\n<pre><code></code></pre>\n",
+      "id": 14
+    },
+    {
+      "path": "Front End/IDE/index.md",
+      "url": "Front End/IDE/index.html",
+      "content": "# IDE for Javascript Projects  \n  \nAfter agreeing on and sticking to **tabs** or 2 spaces or 4 spaces, most important thing to is:  \n  \nMake sure your **and your teammates'** text-editor or IDE do not change your code unexpectedly.  \n  \n### If using VS CODE:  \n* Install the **`js beautify`** plugin  \n* Add **`.jsbeautifyrc`** file to the root of your project, to specify formatting rules.  \n* By default, it formats every file on save! To turn this off, toggle **`files.autoSave`** in Vs Code preferences.  \n  \n### If using Sublime Text:  \n* Install `htmlprettify` plulgin: https://github.com/victorporof/Sublime-HTMLPrettify  \n* Use the same **`.jsbeautifyrc`** file as your teammates use for Vs Code.  \n* Sublime does not format on save by default. Toggle **`format_on_save`** in HTMLPrettify plugin options.  \n  \n### If using something else:  \n* Just make sure whatever settings you use matches your teammates' settings.  \n  \n### Quick (one-off experiments) and Dirty (code):  \n* This is a great online code beautifier: <br />https://www.10bestdesign.com/dirtymarkup/  \n* Unlike others, this one actually maintains HTML tags hierarchy and indentation  \n  \n",
+      "html": "<h1>IDE for Javascript Projects</h1>\n<p>After agreeing on and sticking to <strong>tabs</strong> or 2 spaces or 4 spaces, most important thing to is:</p>\n<p>Make sure your <strong>and your teammates’</strong> text-editor or IDE do not change your code unexpectedly.</p>\n<h3>If using VS CODE:</h3>\n<ul>\n<li>Install the <strong><code>js beautify</code></strong> plugin</li>\n<li>Add <strong><code>.jsbeautifyrc</code></strong> file to the root of your project, to specify formatting rules.</li>\n<li>By default, it formats every file on save! To turn this off, toggle <strong><code>files.autoSave</code></strong> in Vs Code preferences.</li>\n</ul>\n<h3>If using Sublime Text:</h3>\n<ul>\n<li>Install <code>htmlprettify</code> plulgin: <a href=\"https://github.com/victorporof/Sublime-HTMLPrettify\">https://github.com/victorporof/Sublime-HTMLPrettify</a></li>\n<li>Use the same <strong><code>.jsbeautifyrc</code></strong> file as your teammates use for Vs Code.</li>\n<li>Sublime does not format on save by default. Toggle <strong><code>format_on_save</code></strong> in HTMLPrettify plugin options.</li>\n</ul>\n<h3>If using something else:</h3>\n<ul>\n<li>Just make sure whatever settings you use matches your teammates’ settings.</li>\n</ul>\n<h3>Quick (one-off experiments) and Dirty (code):</h3>\n<ul>\n<li>This is a great online code beautifier: <br /><a href=\"https://www.10bestdesign.com/dirtymarkup/\">https://www.10bestdesign.com/dirtymarkup/</a></li>\n<li>Unlike others, this one actually maintains HTML tags hierarchy and indentation</li>\n</ul>\n",
+      "id": 15
+    },
+    {
+      "path": "Front End/IDE/edit-over-SSH.md",
+      "url": "Front End/IDE/edit-over-SSH.html",
+      "content": "# How To:  \n### Edit remote files over SSH connection  \n...not in the terminal, but using your favorite local IDE!  \n<br /><br />  \n  \n#### On server,  \nInstall rsub:  \n```  \nwget -O /usr/local/bin/rsub \\https://raw.github.com/aurora/rmate/master/rmate  \nchmod a+x /usr/local/bin/rsub  \n```  \n#### On local,  \nFor _SublimeText3_, or _Textmate_, install **`rsub`** package.  \nOr on _VsCode_, install **`remote-vscode`** package.  \nAdd proxy:  \n```  \necho \"RemoteForward 52698 localhost:52698\" >> ~/.ssh/config  \n```  \n#### Now you can connect to the server and edit any file:  \n```  \nssh user@hostname  \nrsub ~/.profile  \n```  \n<br /><br />  \n  \n## Emacs text editor  \nin addition to simply editing the file, it can act as the connection agent, and the remote filebrowser too ~~ so you can connect, browse, open, and edit files all in Emacs!",
+      "html": "<h1>How To:</h1>\n<h3>Edit remote files over SSH connection</h3>\n<p>…not in the terminal, but using your favorite local IDE!<br>\n<br /><br /></p>\n<h4>On server,</h4>\n<p>Install rsub:</p>\n<pre><code>wget -O /usr/local/bin/rsub \\https://raw.github.com/aurora/rmate/master/rmate  \nchmod a+x /usr/local/bin/rsub  \n</code></pre>\n<h4>On local,</h4>\n<p>For <em>SublimeText3</em>, or <em>Textmate</em>, install <strong><code>rsub</code></strong> package.<br>\nOr on <em>VsCode</em>, install <strong><code>remote-vscode</code></strong> package.<br>\nAdd proxy:</p>\n<pre><code>echo &quot;RemoteForward 52698 localhost:52698&quot; &gt;&gt; ~/.ssh/config  \n</code></pre>\n<h4>Now you can connect to the server and edit any file:</h4>\n<pre><code>ssh user@hostname  \nrsub ~/.profile  \n</code></pre>\n<p><br /><br /></p>\n<h2>Emacs text editor</h2>\n<p>in addition to simply editing the file, it can act as the connection agent, and the remote filebrowser too ~~ so you can connect, browse, open, and edit files all in Emacs!</p>\n",
+      "id": 16
+    },
+    {
+      "path": "Front End/JavaScript/index.md",
+      "url": "Front End/JavaScript/index.html",
+      "content": "# EcmaScript  \n",
+      "html": "<h1>EcmaScript</h1>\n",
+      "id": 17
+    },
+    {
+      "path": "Front End/index.md",
+      "url": "Front End/index.html",
+      "content": "# TEST - front-end folder  \ncontent...",
+      "html": "<h1>TEST - front-end folder</h1>\n<p>content…</p>\n",
+      "id": 18
+    },
+    {
+      "path": "RegEx/index.md",
+      "url": "RegEx/index.html",
+      "content": "# Regular Expressions  \n  \n[IDE Examples](./IDE-Examples.md)  \n  \n### Find/Replace  \nLets use the link above as an example. We want to convert local links from `.md` to `.html`...  \n#### in IDE:  \n```  \nFind: (\\[.*?\\]\\(\\./.*?).md(\\))  \nReplace: $1.html$2  \n```  \n#### using Javascript:  \n```  \nstr.replace(\\(\\[.*?\\]\\(\\./.*?).md(\\))\\g, \"$1.html$2\");  \n```  \nSo, no matter the complexity, just write the match/replace as:  \n```  \nstr.replace(\\        \\g, \"       \")  \n```  \n  \n## Examples  \n  \n### HTML:  \nsearch `(\\s*)</script>` replace `</script>` puts all closing tags on same line  \n  \n`\\ ?data-(.*?)\"(.*?)\" `  \n`\\ ?tabindex=(\".*\") `  \nmatch all tag attributes starting with with or without leading spaces  \n  \n  \n`li\\ class(.*?)\"(.*?)\" `  \nstrip out class attribute from matching elements  \n  \n`<!--(.*?)\\.(.*?)-->`  \nmatch comments containing phrase \".\"  \n  \nsearch `href=\"(.*?)\"` replace `href=\"\"` clears all href attributes  \n  \nsearch `(\\ *?)((?!\\ ).*?)><span(.*?)</span> `  \nreplace `$1$2>\\n$1  <span$3\\n$1  </span> `  \nto add indent span elements  \n  \n### Javascript:  \nRemove all console.logs (or .warn .error, etc):  \n`(\\s?)console.(.?)\\n([\\w\\s\\W\\t\\n]*?)`",
+      "html": "<h1>Regular Expressions</h1>\n<p><a href=\"./IDE-Examples.html\">IDE Examples</a></p>\n<h3>Find/Replace</h3>\n<p>Lets use the link above as an example. We want to convert local links from <code>.md</code> to <code>.html</code>…</p>\n<h4>in IDE:</h4>\n<pre><code>Find: (\\[.*?\\]\\(\\./.*?).md(\\))  \nReplace: $1.html$2  \n</code></pre>\n<h4>using Javascript:</h4>\n<pre><code>str.replace(\\(\\[.*?\\]\\(\\./.*?).md(\\))\\g, &quot;$1.html$2&quot;);  \n</code></pre>\n<p>So, no matter the complexity, just write the match/replace as:</p>\n<pre><code>str.replace(\\        \\g, &quot;       &quot;)  \n</code></pre>\n<h2>Examples</h2>\n<h3>HTML:</h3>\n<p>search <code>(\\s*)&lt;/script&gt;</code> replace <code>&lt;/script&gt;</code> puts all closing tags on same line</p>\n<p><code>\\ ?data-(.*?)&quot;(.*?)&quot;</code><br>\n<code>\\ ?tabindex=(&quot;.*&quot;)</code><br>\nmatch all tag attributes starting with with or without leading spaces</p>\n<p><code>li\\ class(.*?)&quot;(.*?)&quot;</code><br>\nstrip out class attribute from matching elements</p>\n<p><code>&lt;!--(.*?)\\.(.*?)--&gt;</code><br>\nmatch comments containing phrase “.”</p>\n<p>search <code>href=&quot;(.*?)&quot;</code> replace <code>href=&quot;&quot;</code> clears all href attributes</p>\n<p>search <code>(\\ *?)((?!\\ ).*?)&gt;&lt;span(.*?)&lt;/span&gt;</code><br>\nreplace <code>$1$2&gt;\\n$1 &lt;span$3\\n$1 &lt;/span&gt;</code><br>\nto add indent span elements</p>\n<h3>Javascript:</h3>\n<p>Remove all console.logs (or .warn .error, etc):<br>\n<code>(\\s?)console.(.?)\\n([\\w\\s\\W\\t\\n]*?)</code></p>\n",
+      "id": 19
     }
   ]
 }

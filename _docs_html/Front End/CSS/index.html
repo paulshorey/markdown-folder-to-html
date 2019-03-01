@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <link href="/assets/gfx/puzzle.ico" rel="shortcut icon" type="image/x-icon" />
+
+  <link rel="stylesheet" type="text/css" href="/docs/template.css" />
+</head>
+
+<body>
+  <div class="page">
+    <nav class="nav">
+      <ul>
+        <li class="heading">
+          <a href="/docs"><span class="emoji">📝</span><span class="emoji-text">/docs</span></a>
+          <ul class="active"><li class="heading "><a href="./../../Back End/index.html">Back End</a>
+<ul class=""><li class="heading "><a href="./../../Back End/Basics/index.html">Basics</a>
+<ul class=""><li class=""><a href="./../../Back End/Basics/GIT-+-SSH.html">GIT + SSH</a></li><li class=""><a href="./../../Back End/Basics/ports.html">ports</a></li><li class=""><a href="./../../Back End/Basics/ssl.html">ssl</a></li></ul></li>
+<li class="heading "><a href="./../../Back End/CLI/index.html">CLI</a>
+<ul class=""><li class=""><a href="./../../Back End/CLI/Nice-Editor.html">Nice Editor</a></li></ul></li>
+<li class="heading "><a href="./../../Back End/Containers/index.html">Containers</a>
+<ul class=""></ul></li>
+<li class="heading "><a href="./../../Back End/VPS/index.html">VPS</a>
+<ul class=""><li class=""><a href="./../../Back End/VPS/easy-deployment.html">easy deployment</a></li><li class=""><a href="./../../Back End/VPS/linux-from-scratch.html">linux from scratch</a></li></ul></li>
+</ul></li>
+<li class="heading isActive"><a href="./../index.html">Front End</a>
+<ul class="active"><li class="heading isActive"><a href="./index.html">CSS</a>
+<ul class=""><li class=""><a href="./frameworks.html">frameworks</a></li><li class=""><a href="./responsive.html">responsive</a></li></ul></li>
+<li class="heading "><a href="./../IDE/index.html">IDE</a>
+<ul class=""><li class=""><a href="./../IDE/edit-over-SSH.html">edit over SSH</a></li></ul></li>
+<li class="heading "><a href="./../JavaScript/index.html">JavaScript</a>
+<ul class=""></ul></li>
+</ul></li>
+<li class="heading "><a href="./../../RegEx/index.html">RegEx</a>
+<ul class=""></ul></li>
+</ul>
+        </li>
+      </ul>
+    </nav>
+    <main class="content">
+      <h3>CSS is not hard. Just review the properties at the bottom of this page.</h3>
+<h2>If you know the basics, here are some gotchas and odditties:</h2>
+<pre><code></code></pre>
+<h2>Properties:</h2>
+<ul>
+<li>position:
+<ul>
+<li><strong>static</strong> ~ default value, makes element think it has NO position property.</li>
+<li><strong>relative</strong> ~ relative to its surroundings. Lets you to add <strong>top, left, bottom, right</strong>, to shift it a bit to any direction</li>
+<li><strong>fixed</strong> ~ relative to the window - use <strong>top, left, bottom, right</strong> to position the element any number of units from the top/left/bottom/right of the screen boundaries.</li>
+<li><strong>absolute</strong> ~ same as fixed, but relative to the parent element (well, the closest parent which has a specified positon property)</li>
+</ul>
+</li>
+<li>display:
+<ul>
+<li><strong>block</strong> ~ wrap to their own line, and take up 100% available width! Used to layout visual blocks on the page, with height, padding, border, etc. (<strong>div, blockquote, header, article, main</strong> have this by default)</li>
+<li><strong>inline</strong> ~ for text elements which do not have height or width or margin or vertical padding (<strong>span, b, i, u, img, code</strong> have this by default)</li>
+<li><strong>inline-block</strong> ~ best of both worlds. Can have vertical height and padding, but do not wrap to their own line! So, can style a padded button or highlight in the middle of a paragraph.</li>
+<li><strong>flex</strong> ~ read about it. It will change your life. <strong>Note:</strong> it affects the children, not itself! Simple example: Lets you have a fixed-width left column, and a main article section which takes up the remaining page width, no matter how wide or narrow the screen is.</li>
+<li><strong>inline-flex</strong> ~ flex content inline! Like a pill-button, with left/right sections.</li>
+<li><strong>grid</strong> ~ new hotness. Not like “masonry”, but still very useful.</li>
+</ul>
+</li>
+<li>margin:
+<ul>
+<li><strong>0 0 0 10px</strong> add 10px margin outside of the element to the left</li>
+<li><strong>0 10px</strong> add 10px margin to left and right. Zero to top/bottom</li>
+<li><strong>10px</strong> add to all sides</li>
+<li><strong>10px 0 0 0</strong> same as margin-top:10px</li>
+<li>Margin adds space <strong>outside</strong> of the element’s boundaries. So, <strong>outside</strong> of the element’s width/height, padding, border, background.</li>
+</ul>
+</li>
+<li>padding:
+<ul>
+<li>like margin, but adds space <strong>inside</strong> the element’s boundarids. So, <strong>inside</strong> the border. Increases width/height, and is covered by background.</li>
+</ul>
+</li>
+<li>float:
+<ul>
+<li>never copy from some answer on some website. Only use if you know its gotchas and glitches</li>
+</ul>
+</li>
+<li>top, left, right, bottom:
+<ul>
+<li>move the element some distance in any direction, used with the <code>position</code> prop</li>
+</ul>
+</li>
+<li>text-align
+<ul>
+<li>horizontal-align <strong>text</strong> or images, or any <strong><code>display:inline</code></strong>  or <strong><code>display:inline-block</code></strong> element - <strong>left/center/right</strong></li>
+<li>put this on the <strong>parent</strong> element!</li>
+</ul>
+</li>
+<li>vertical-align
+<ul>
+<li><strong>vertically</strong> align any inline or inline-block element, relative to its siblings</li>
+<li>put this on the element itself!!! unlike text-align, which you put on the parent</li>
+<li>this does not, unfortunately, vertically center text inside a larger container</li>
+</ul>
+</li>
+</ul>
+<h4>Also, read about “flexbox”, or “css display flex”</h4>
+<p>And learn about its related properties, which can be used to build dynamic, responsive, flexible layouts, and center content on the page - horizontally and vertically: <code>flex-direction</code>, <code>flex-grow</code>, <code>align-items</code>, <code>justify-content</code>, etc.</p>
+
+    </main>
+  </div>
+</body>
+
+</html>

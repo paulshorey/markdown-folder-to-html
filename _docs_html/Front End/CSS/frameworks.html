@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <link href="/assets/gfx/puzzle.ico" rel="shortcut icon" type="image/x-icon" />
+
+  <link rel="stylesheet" type="text/css" href="/docs/template.css" />
+</head>
+
+<body>
+  <div class="page">
+    <nav class="nav">
+      <ul>
+        <li class="heading">
+          <a href="/docs"><span class="emoji">📝</span><span class="emoji-text">/docs</span></a>
+          <ul class="active"><li class="heading "><a href="./../../Back End/index.html">Back End</a>
+<ul class=""><li class="heading "><a href="./../../Back End/Basics/index.html">Basics</a>
+<ul class=""><li class=""><a href="./../../Back End/Basics/GIT-+-SSH.html">GIT + SSH</a></li><li class=""><a href="./../../Back End/Basics/ports.html">ports</a></li><li class=""><a href="./../../Back End/Basics/ssl.html">ssl</a></li></ul></li>
+<li class="heading "><a href="./../../Back End/CLI/index.html">CLI</a>
+<ul class=""><li class=""><a href="./../../Back End/CLI/Nice-Editor.html">Nice Editor</a></li></ul></li>
+<li class="heading "><a href="./../../Back End/Containers/index.html">Containers</a>
+<ul class=""></ul></li>
+<li class="heading "><a href="./../../Back End/VPS/index.html">VPS</a>
+<ul class=""><li class=""><a href="./../../Back End/VPS/easy-deployment.html">easy deployment</a></li><li class=""><a href="./../../Back End/VPS/linux-from-scratch.html">linux from scratch</a></li></ul></li>
+</ul></li>
+<li class="heading isActive"><a href="./../index.html">Front End</a>
+<ul class="active"><li class="heading isActive"><a href="./index.html">CSS</a>
+<ul class="active"><li class="isActive"><a href="./frameworks.html">frameworks</a></li><li class=""><a href="./responsive.html">responsive</a></li></ul></li>
+<li class="heading "><a href="./../IDE/index.html">IDE</a>
+<ul class=""><li class=""><a href="./../IDE/edit-over-SSH.html">edit over SSH</a></li></ul></li>
+<li class="heading "><a href="./../JavaScript/index.html">JavaScript</a>
+<ul class=""></ul></li>
+</ul></li>
+<li class="heading "><a href="./../../RegEx/index.html">RegEx</a>
+<ul class=""></ul></li>
+</ul>
+        </li>
+      </ul>
+    </nav>
+    <main class="content">
+      <h3>Bootstrap</h3>
+<p>People only use Bootstrap because “everyone” uses Bootstrap, and because it has a great name, not because of the merits of that framework.</p>
+<p>Unfortunately, Bootstrap is poorely written, buggy, not aligned (sloppy), looks cheap, and most importantly, it badly clutters your global namespace. So, when you create a new class name like <code>.map</code> or <code>.error</code>, it may or may not be taken over by one of Bootstrap’s hundreds of class names on the global namespace.</p>
+<p>If you must use Bootstrap, try this:<br>
+<a href="https://www.google.com/search?q=bootstrap+namespace+conflict&amp;oq=bootstrap+namespace&amp;aqs=chrome.2.69i57j0l5.4104j1j7&amp;sourceid=chrome&amp;ie=UTF-8">https://www.google.com/search?q=bootstrap+namespace+conflict&amp;oq=bootstrap+namespace&amp;aqs=chrome.2.69i57j0l5.4104j1j7&amp;sourceid=chrome&amp;ie=UTF-8</a></p>
+<h3>Here are some better UI libraries:</h3>
+<p><strong>Static sites (with jQuery):</strong></p>
+<ul>
+<li><a href="https://bulma.io/alternative-to-bootstrap/">Bulma</a></li>
+<li><a href="https://www.agriya.com/blog/15-alternatives-bootstrap-foundation-skeleton/">several alternatives</a></li>
+</ul>
+<p><strong>React app:</strong></p>
+<ul>
+<li><a href="https://material-ui.com/%E2%80%8B">Material UI</a> (standard)</li>
+<li><a href="https://blueprintjs.com/">Blueprint</a> (Powerful and customizable! Unfortunately, their documentation/examples are difficult)</li>
+<li><a href="https://ant.design/docs/react/introduce">Ant design</a></li>
+</ul>
+<p><strong>Angular app:</strong></p>
+<ul>
+<li>Angular Material (standard)</li>
+<li><a href="https://ng.ant.design/docs/introduce/en%E2%80%8B">Ant design</a> (alternative, minimal outlined look without so much solid color)</li>
+</ul>
+<p><strong>Worth considering:</strong></p>
+<ul>
+<li><a href="https://docs.atlassian.com/aui">AUI (Atlassian UI)</a><br>
+<br />Two ways to use:
+<ul>
+<li><strong>CSS + Javascript</strong> - perfect for static sites. Alternative to jQueryUI.</li>
+<li><strong>CSS only</strong> - can be used with React or Angular or anything, not for dynamic components like a datepicker, but just to give the page layout (like header, nav, menus, buttons) that polished “enterprise” feel.</li>
+</ul>
+</li>
+</ul>
+
+    </main>
+  </div>
+</body>
+
+</html>

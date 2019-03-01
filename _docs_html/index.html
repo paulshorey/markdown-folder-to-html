@@ -14,35 +14,59 @@
   <div class="page">
     <nav class="nav">
       <ul>
-        <li class="heading" id="heading_primary">
-          <a href="/docs"><span class="emoji">📝</span>/docs</a>
-          <ul class=""><li class="heading "><a href="./cli/index.html">cli</a></li>
-<ul class=""><li class=""><a href="./cli/ne.html">ne</a></li></ul><li class="heading "><a href="./css/index.html">css</a></li>
-<ul class=""></ul><li class="heading "><a href="./devops/index.html">devops</a></li>
-<ul class=""></ul><li class="heading "><a href="./git/index.html">git</a></li>
-<ul class=""></ul><li class="heading "><a href="./ide/index.html">ide</a></li>
-<ul class=""><li class=""><a href="./ide/regex.html">regex</a></li></ul><li class="heading "><a href="./javascript/index.html">javascript</a></li>
-<ul class=""></ul><li class="heading "><a href="./regex/index.html">regex</a></li>
-<ul class=""><li class=""><a href="./regex/IDE-Examples.html">IDE Examples</a></li></ul></ul>
-          <script>
-            if (window.location.pathname == "/docs/" || window.location.pathname == "/docs") {
-              document.querySelector('#heading_primary').classList.add('active');
-            }
-          </script>
+        <li class="heading">
+          <a href="/docs"><span class="emoji">📝</span><span class="emoji-text">/docs</span></a>
+          <ul class=""><li class="heading "><a href="./Back End/index.html">Back End</a>
+<ul class=""><li class="heading "><a href="./Back End/Basics/index.html">Basics</a>
+<ul class=""><li class=""><a href="./Back End/Basics/GIT-+-SSH.html">GIT + SSH</a></li><li class=""><a href="./Back End/Basics/ports.html">ports</a></li><li class=""><a href="./Back End/Basics/ssl.html">ssl</a></li></ul></li>
+<li class="heading "><a href="./Back End/CLI/index.html">CLI</a>
+<ul class=""><li class=""><a href="./Back End/CLI/Nice-Editor.html">Nice Editor</a></li></ul></li>
+<li class="heading "><a href="./Back End/Containers/index.html">Containers</a>
+<ul class=""></ul></li>
+<li class="heading "><a href="./Back End/VPS/index.html">VPS</a>
+<ul class=""><li class=""><a href="./Back End/VPS/easy-deployment.html">easy deployment</a></li><li class=""><a href="./Back End/VPS/linux-from-scratch.html">linux from scratch</a></li></ul></li>
+</ul></li>
+<li class="heading "><a href="./Front End/index.html">Front End</a>
+<ul class=""><li class="heading "><a href="./Front End/CSS/index.html">CSS</a>
+<ul class=""><li class=""><a href="./Front End/CSS/frameworks.html">frameworks</a></li><li class=""><a href="./Front End/CSS/responsive.html">responsive</a></li></ul></li>
+<li class="heading "><a href="./Front End/IDE/index.html">IDE</a>
+<ul class=""><li class=""><a href="./Front End/IDE/edit-over-SSH.html">edit over SSH</a></li></ul></li>
+<li class="heading "><a href="./Front End/JavaScript/index.html">JavaScript</a>
+<ul class=""></ul></li>
+</ul></li>
+<li class="heading "><a href="./RegEx/index.html">RegEx</a>
+<ul class=""></ul></li>
+</ul>
         </li>
       </ul>
     </nav>
-    <article class="content">
+    <main class="content">
       <h1>Paul’s Web Development Knowledgebase</h1>
-<p>A repository of useful tips, tricks, shortcuts, and general knowledge about web programming <br />~ not necessarily popular or latest, just basic requirements for web development.</p>
-<h4><a href="./cli">CLI</a></h4>
-<h4><a href="./ide">IDE</a></h4>
-<h4><a href="./git">GIT</a></h4>
-<h4><a href="./regex">REGEX</a></h4>
-<h4><a href="./javascript">Javascript</a></h4>
-<h4><a href="./css">CSS</a></h4>
+<p>A repository of useful tips, tricks, shortcuts, and general knowledge about web application development, because sometimes we forget.<br>
+<br /><br /></p>
+<p><strong>This is an exciting journey</strong><br>
+to find a decent solution for documenting small to medium size web projects. So far, it’s a great success! Very easy to edit (markdown files), very easy to collaborate (same repository as the project), and very easy to convert to html (<code>npm run docs</code>).</p>
+<p><strong>This website was auto-generated</strong><br>
+from <a href="http://github.com/paulshorey/ps">my repository</a> <code>./docs</code> folder, using <a href="https://github.com/paulshorey/markdown-folder-to-html">paulshorey/markdown-folder-to-html</a>.</p>
+<p><strong>If anyone wants to contribute</strong><br>
+to this knowledgebase, and share ownership, please contact me! I’ll be happy to move this to its own repository.<br>
+<br /><br /></p>
+<h1>This is a work in progress</h1>
+<p><strong>Unfortunate issues:</strong></p>
+<ul>
+<li><strong>Folders and files are stored and displayed in alphabetical order.</strong></li>
+<li><strong>Currently, ALL folders MUST have README or index file.</strong> <br />In general… folders are expanded/collapsed with CSS, so the functionality is very limited. Currently, it works and looks ok though. All folder names are always visible. File names are only visible when you click to open the containing folder.</li>
+<li>File names can have spaces, but a space in the filename prevents you from linking to the file from other markdown files (this is a markdown issue).</li>
+</ul>
+<p><strong>Todo:</strong></p>
+<ul>
+<li>Fix mobile CSS</li>
+<li>Add functionality, when compiling .html files, to modify the original .md file… to add double space at the end of every line which does not already have them. (for Github flavor compatibility)</li>
+<li>Test more edge-cases with navigation list items.</li>
+<li>Fix underlying codebase to not convert filenames to (a href=&quot;&quot;) elements.</li>
+</ul>
 
-    </article>
+    </main>
   </div>
 </body>
 

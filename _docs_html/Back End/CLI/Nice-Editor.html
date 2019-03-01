@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <link href="/assets/gfx/puzzle.ico" rel="shortcut icon" type="image/x-icon" />
+
+  <link rel="stylesheet" type="text/css" href="/docs/template.css" />
+</head>
+
+<body>
+  <div class="page">
+    <nav class="nav">
+      <ul>
+        <li class="heading">
+          <a href="/docs"><span class="emoji">📝</span><span class="emoji-text">/docs</span></a>
+          <ul class="active"><li class="heading isActive"><a href="./../index.html">Back End</a>
+<ul class="active"><li class="heading "><a href="./../Basics/index.html">Basics</a>
+<ul class=""><li class=""><a href="./../Basics/GIT-+-SSH.html">GIT + SSH</a></li><li class=""><a href="./../Basics/ports.html">ports</a></li><li class=""><a href="./../Basics/ssl.html">ssl</a></li></ul></li>
+<li class="heading isActive"><a href="./index.html">CLI</a>
+<ul class="active"><li class="isActive"><a href="./Nice-Editor.html">Nice Editor</a></li></ul></li>
+<li class="heading "><a href="./../Containers/index.html">Containers</a>
+<ul class=""></ul></li>
+<li class="heading "><a href="./../VPS/index.html">VPS</a>
+<ul class=""><li class=""><a href="./../VPS/easy-deployment.html">easy deployment</a></li><li class=""><a href="./../VPS/linux-from-scratch.html">linux from scratch</a></li></ul></li>
+</ul></li>
+<li class="heading "><a href="./../../Front End/index.html">Front End</a>
+<ul class=""><li class="heading "><a href="./../../Front End/CSS/index.html">CSS</a>
+<ul class=""><li class=""><a href="./../../Front End/CSS/frameworks.html">frameworks</a></li><li class=""><a href="./../../Front End/CSS/responsive.html">responsive</a></li></ul></li>
+<li class="heading "><a href="./../../Front End/IDE/index.html">IDE</a>
+<ul class=""><li class=""><a href="./../../Front End/IDE/edit-over-SSH.html">edit over SSH</a></li></ul></li>
+<li class="heading "><a href="./../../Front End/JavaScript/index.html">JavaScript</a>
+<ul class=""></ul></li>
+</ul></li>
+<li class="heading "><a href="./../../RegEx/index.html">RegEx</a>
+<ul class=""></ul></li>
+</ul>
+        </li>
+      </ul>
+    </nav>
+    <main class="content">
+      <h1>EDITOR=ne</h1>
+<p>A “nice” editor. By far the most intuitive CLI editor to use, supports some basic features and bindings. <code>Ctr S</code> to save. <code>Ctr Q</code> to quit. <code>Esc Esc</code> for an actual dropdown UI, right in the terminal. It’s magic!</p>
+<h4>Make Default:</h4>
+<pre><code>echo &quot;export EDITOR=ne&quot; &gt;&gt; ~/.zprofile  
+echo &quot;[core]\n\teditor = ne&quot; &gt;&gt; ~/.gitconfig  
+</code></pre>
+<h4>Documentation:</h4>
+<p><a href="http://paulshorey.com/files/docs_ne.pdf">http://paulshorey.com/files/docs_ne.pdf</a></p>
+<h2>Keyboard Shortcuts:</h2>
+<p>(including the custom ~/.ne/.keys configuration below)</p>
+<blockquote>
+<p><strong>^s</strong>, <strong>^q</strong> - save, quit<br>
+<strong>^z</strong>, <strong>^x</strong>, <strong>^c</strong>, <strong>^v</strong>  - undo, cut, copy, paste<br>
+<strong>^y</strong>  - delete current line<br>
+<strong>^u</strong>  - paste deleted line</p>
+<p><strong>^d</strong> - delete line<br>
+<strong>^w</strong>, <strong>^e</strong> - start of, end of line</p>
+</blockquote>
+<h2>Custom Key Bindings:</h2>
+<ol>
+<li>hit: <strong><code>^k</code></strong></li>
+<li>type: <strong><code>kc</code></strong></li>
+<li>hit <strong><code>key</code></strong> to see its hex code and currently bound command</li>
+<li><strong><code>echo 'KEY {CODE} {ACTION}' &gt;&gt; ~/.ne/.keys</code></strong></li>
+</ol>
+<blockquote>
+<p><strong><code>fn + a</code></strong><br>
+To convert any key (<code>delete</code>) to fn-key (<code>fn + delete</code>), just add a prefix <code>0x</code> before the key code.<br>
+Key code for <code>delete</code> is <code>115</code>. So, key code for <code>fn + delete</code> would be <code>0x115</code>.</p>
+</blockquote>
+<p><strong>Documentation:</strong> <a href="http://www.emerson.emory.edu/services/editors/ne/Key_Bindings.html">http://www.emerson.emory.edu/services/editors/ne/Key_Bindings.html</a><br>
+<strong>Defaults:</strong> <a href="https://github.com/vigna/ne/blob/master/doc/default.keys%E2%80%8B">https://github.com/vigna/ne/blob/master/doc/default.keys​</a></p>
+<h2>Sample ~/.ne/.keys file:</h2>
+<pre><code># [delete]  
+KEY     0x7f    Backspace  
+# [ctrl]+[z]  
+KEY     0x1a    Undo  
+# [ctrl]+[r]  
+KEY     0x12    Redo  
+
+# [ctrl]+[d](delete line)  
+KEY     0x04    DL  
+# [ctrl]+[w]=(start of line)  
+KEY     0x17    SOL  
+# [ctrl]+[e]=(end of line)  
+KEY     0x05    EOL  
+</code></pre>
+
+    </main>
+  </div>
+</body>
+
+</html>

@@ -15,20 +15,25 @@ export default function renderNav(groupedFiles: any, level = 0) {
 	var navIsActive = false;
 	var nav = '';
 	groupedFiles.forEach((f: FileNode<IndexFile>) => {
+		let navIsActiveClass = "";
 		/*
 				DIR
 		*/
 		if (f.type === "dir") {
 			const childrenNav = renderNav(f.children, level + 1);
+			// if one of the children is active, make this <ul> active
+			if (childrenNav.indexOf("isActive") !== -1) {
+				navIsActive = true;
+				navIsActiveClass = "isActive";
+			}
 			// Heading with link if there is an index file in the folder
 			const indexFile = getIndexFile(f.children);
 			if (indexFile) {
 				const link = renderHREF(f.name, indexFile.value.href);
 				if (link) {
-					let navIsActiveClass = "";
 					if (indexFile.value.active) {
 						navIsActive = true;
-						navIsActiveClass = "active";
+						navIsActiveClass = "isActive";
 					}
 					nav += `<li class="heading ${navIsActiveClass}">${link}\n${childrenNav}</li>\n`;
 				}
@@ -59,7 +64,7 @@ export default function renderNav(groupedFiles: any, level = 0) {
 				let navIsActiveClass = "";
 				if (active) {
 					navIsActive = true;
-					navIsActiveClass = "active";
+					navIsActiveClass = "isActive";
 				}
 				nav += `<li class="${navIsActiveClass}">${link}</li>`;
 			}

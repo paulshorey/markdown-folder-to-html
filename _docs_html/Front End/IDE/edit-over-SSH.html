@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <link href="/assets/gfx/puzzle.ico" rel="shortcut icon" type="image/x-icon" />
+
+  <link rel="stylesheet" type="text/css" href="/docs/template.css" />
+</head>
+
+<body>
+  <div class="page">
+    <nav class="nav">
+      <ul>
+        <li class="heading">
+          <a href="/docs"><span class="emoji">📝</span><span class="emoji-text">/docs</span></a>
+          <ul class="active"><li class="heading "><a href="./../../Back End/index.html">Back End</a>
+<ul class=""><li class="heading "><a href="./../../Back End/Basics/index.html">Basics</a>
+<ul class=""><li class=""><a href="./../../Back End/Basics/GIT-+-SSH.html">GIT + SSH</a></li><li class=""><a href="./../../Back End/Basics/ports.html">ports</a></li><li class=""><a href="./../../Back End/Basics/ssl.html">ssl</a></li></ul></li>
+<li class="heading "><a href="./../../Back End/CLI/index.html">CLI</a>
+<ul class=""><li class=""><a href="./../../Back End/CLI/Nice-Editor.html">Nice Editor</a></li></ul></li>
+<li class="heading "><a href="./../../Back End/Containers/index.html">Containers</a>
+<ul class=""></ul></li>
+<li class="heading "><a href="./../../Back End/VPS/index.html">VPS</a>
+<ul class=""><li class=""><a href="./../../Back End/VPS/easy-deployment.html">easy deployment</a></li><li class=""><a href="./../../Back End/VPS/linux-from-scratch.html">linux from scratch</a></li></ul></li>
+</ul></li>
+<li class="heading isActive"><a href="./../index.html">Front End</a>
+<ul class="active"><li class="heading "><a href="./../CSS/index.html">CSS</a>
+<ul class=""><li class=""><a href="./../CSS/frameworks.html">frameworks</a></li><li class=""><a href="./../CSS/responsive.html">responsive</a></li></ul></li>
+<li class="heading isActive"><a href="./index.html">IDE</a>
+<ul class="active"><li class="isActive"><a href="./edit-over-SSH.html">edit over SSH</a></li></ul></li>
+<li class="heading "><a href="./../JavaScript/index.html">JavaScript</a>
+<ul class=""></ul></li>
+</ul></li>
+<li class="heading "><a href="./../../RegEx/index.html">RegEx</a>
+<ul class=""></ul></li>
+</ul>
+        </li>
+      </ul>
+    </nav>
+    <main class="content">
+      <h1>How To:</h1>
+<h3>Edit remote files over SSH connection</h3>
+<p>…not in the terminal, but using your favorite local IDE!<br>
+<br /><br /></p>
+<h4>On server,</h4>
+<p>Install rsub:</p>
+<pre><code>wget -O /usr/local/bin/rsub \https://raw.github.com/aurora/rmate/master/rmate  
+chmod a+x /usr/local/bin/rsub  
+</code></pre>
+<h4>On local,</h4>
+<p>For <em>SublimeText3</em>, or <em>Textmate</em>, install <strong><code>rsub</code></strong> package.<br>
+Or on <em>VsCode</em>, install <strong><code>remote-vscode</code></strong> package.<br>
+Add proxy:</p>
+<pre><code>echo &quot;RemoteForward 52698 localhost:52698&quot; &gt;&gt; ~/.ssh/config  
+</code></pre>
+<h4>Now you can connect to the server and edit any file:</h4>
+<pre><code>ssh user@hostname  
+rsub ~/.profile  
+</code></pre>
+<p><br /><br /></p>
+<h2>Emacs text editor</h2>
+<p>in addition to simply editing the file, it can act as the connection agent, and the remote filebrowser too ~~ so you can connect, browse, open, and edit files all in Emacs!</p>
+
+    </main>
+  </div>
+</body>
+
+</html>

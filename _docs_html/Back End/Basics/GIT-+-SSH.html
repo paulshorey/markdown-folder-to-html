@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <link href="/assets/gfx/puzzle.ico" rel="shortcut icon" type="image/x-icon" />
+
+  <link rel="stylesheet" type="text/css" href="/docs/template.css" />
+</head>
+
+<body>
+  <div class="page">
+    <nav class="nav">
+      <ul>
+        <li class="heading">
+          <a href="/docs"><span class="emoji">📝</span><span class="emoji-text">/docs</span></a>
+          <ul class="active"><li class="heading isActive"><a href="./../index.html">Back End</a>
+<ul class="active"><li class="heading isActive"><a href="./index.html">Basics</a>
+<ul class="active"><li class="isActive"><a href="./GIT-+-SSH.html">GIT + SSH</a></li><li class=""><a href="./ports.html">ports</a></li><li class=""><a href="./ssl.html">ssl</a></li></ul></li>
+<li class="heading "><a href="./../CLI/index.html">CLI</a>
+<ul class=""><li class=""><a href="./../CLI/Nice-Editor.html">Nice Editor</a></li></ul></li>
+<li class="heading "><a href="./../Containers/index.html">Containers</a>
+<ul class=""></ul></li>
+<li class="heading "><a href="./../VPS/index.html">VPS</a>
+<ul class=""><li class=""><a href="./../VPS/easy-deployment.html">easy deployment</a></li><li class=""><a href="./../VPS/linux-from-scratch.html">linux from scratch</a></li></ul></li>
+</ul></li>
+<li class="heading "><a href="./../../Front End/index.html">Front End</a>
+<ul class=""><li class="heading "><a href="./../../Front End/CSS/index.html">CSS</a>
+<ul class=""><li class=""><a href="./../../Front End/CSS/frameworks.html">frameworks</a></li><li class=""><a href="./../../Front End/CSS/responsive.html">responsive</a></li></ul></li>
+<li class="heading "><a href="./../../Front End/IDE/index.html">IDE</a>
+<ul class=""><li class=""><a href="./../../Front End/IDE/edit-over-SSH.html">edit over SSH</a></li></ul></li>
+<li class="heading "><a href="./../../Front End/JavaScript/index.html">JavaScript</a>
+<ul class=""></ul></li>
+</ul></li>
+<li class="heading "><a href="./../../RegEx/index.html">RegEx</a>
+<ul class=""></ul></li>
+</ul>
+        </li>
+      </ul>
+    </nav>
+    <main class="content">
+      <h1>GIT</h1>
+<h2>Config</h2>
+<h4>Install ssh key on new device</h4>
+<pre><code>echo &quot;{paste your ssh key contents}&quot; &gt;&gt; ~/.ssh/newssh  
+chmod -R 600 ~/.ssh/newssh  
+</code></pre>
+<h4>then, every time the CLI starts:</h4>
+<pre><code>eval &quot;$(ssh-agent -s)&quot;  
+ssh-add ~/.ssh/newssh  
+Set a value in global config  
+git config --global color.ui true  
+git config --global user.name Paul\ Shorey  
+git config --global user.email pshorey@beyond.ai  
+git config --global push.default simple  
+git config --global core.editor=ne  
+git config --global submodule.recurse=true  
+</code></pre>
+<p>Without <code>--global</code>, it edits local <code>./.git/config</code> file.</p>
+<h2>Best Practices</h2>
+<p><strong><code>git pull</code></strong> actually does git fetch;<br>
+<strong><code>git merge</code></strong> actually, should do <strong><code>git pull --rebase</code></strong> which does not leave so many “merge” commits when working with others</p>
+<p>​</p>
+
+    </main>
+  </div>
+</body>
+
+</html>
