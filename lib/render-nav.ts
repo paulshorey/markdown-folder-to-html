@@ -23,8 +23,8 @@ export default function renderNav(groupedFiles: any, level = 0) {
 			const childrenNav = renderNav(f.children, level + 1);
 			// if one of the children is active, make this <ul> active
 			if (childrenNav.indexOf("isActive") !== -1) {
-				navIsActive = true;
-				navIsActiveClass = "isActive";
+				// navIsActive = true;
+				navIsActiveClass = "childIsActive";
 			}
 			// Heading with link if there is an index file in the folder
 			const indexFile = getIndexFile(f.children);
@@ -35,13 +35,13 @@ export default function renderNav(groupedFiles: any, level = 0) {
 						navIsActive = true;
 						navIsActiveClass = "isActive";
 					}
-					nav += `<li class="heading ${navIsActiveClass}">${link}\n${childrenNav}</li>\n`;
+					nav += `<li class="heading ${navIsActiveClass}">${link}</li>\n${childrenNav}\n`;
 				}
 				return;
 			}
 			// Heading without link
 			if (f.name) {
-				nav += `<li class="heading"><span>${f.name}</span>\n${childrenNav}</li>\n`;
+				nav += `<li class="heading"><span>${f.name}</span></li>\n${childrenNav}\n`;
 			}
 			return;
 		}
@@ -64,8 +64,8 @@ export default function renderNav(groupedFiles: any, level = 0) {
 				let navIsActiveClass = "";
 				if (active) {
 					navIsActive = true;
-					navIsActiveClass = "isActive";
 				}
+				navIsActiveClass = "isActive"; // always, to auto-expand folders which do not contain README/index file
 				nav += `<li class="${navIsActiveClass}">${link}</li>`;
 			}
 			return;
@@ -75,7 +75,7 @@ export default function renderNav(groupedFiles: any, level = 0) {
 		*/
 		// return assert_never_1.default(f);
 	});
-	return `<ul class="${navIsActive ? 'active' : ''}">${nav}</ul>`;
+	return nav ? `<ul class="${navIsActive ? 'isActive' : ''}">${nav}</ul>` : '';
 }
 exports.default = renderNav;
 /*
