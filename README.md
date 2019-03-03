@@ -1,3 +1,8 @@
+# IMPORTANT UPDATE:  
+  
+This is a copy of https://github.com/joakin/markdown-folder-to-html. Adding experimental changes. Did 'npm install paulshorey/markdown-folder-to-html', so am able to experiment with 'latest' version of this module in my npm projects. When stable, will open an issue and pull request contact Joakin.  
+  
+  
 # markdown-folder-to-html  
   
 Simplest zero-config way to generate html docs from markdown files.  
