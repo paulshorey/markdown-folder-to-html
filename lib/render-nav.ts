@@ -41,7 +41,8 @@ export default function renderNav(groupedFiles: any, level = 0) {
 			}
 			// Heading without link
 			if (f.name) {
-				nav += `<li class="heading"><span>${f.name}</span></li>\n${childrenNav}\n`;
+				/* notice isActive class below - to always expand a folder if it does not contain a link to open itself (because it doesn't contain a README or index file inside) */
+				nav += `<li class="heading isActive"><span>${f.name}</span></li>\n${childrenNav}\n`;
 			}
 			return;
 		}
@@ -64,8 +65,8 @@ export default function renderNav(groupedFiles: any, level = 0) {
 				let navIsActiveClass = "";
 				if (active) {
 					navIsActive = true;
+					navIsActiveClass = "isActive";
 				}
-				navIsActiveClass = "isActive"; // always, to auto-expand folders which do not contain README/index file
 				nav += `<li class="${navIsActiveClass}">${link}</li>`;
 			}
 			return;
