@@ -57,7 +57,7 @@ const mds = all
     .sort(sort_by_preferences_1.default.bind(null, preferences))
     .map(file => {
     const content = shelljs_1.default.cat(file).toString(); // The result is a weird not-string
-    file = file.replace('README', 'index');
+    file = file.replace("README", "index");
     return {
         path: file,
         url: markdown_url_to_html_1.default(file),
@@ -68,7 +68,11 @@ const mds = all
 const groupedMds = mds.reduce((grouped, value) => group_by_path_1.default(grouped, value.path), []);
 mds.forEach(({ path, url, html }) => {
     const navHtml = render_nav_1.default(generate_index_info_1.default(path, groupedMds));
-    const pageHtml = render_page_1.default(tpl, navHtml, html);
+    let pageHtml = render_page_1.default(tpl, navHtml, html);
+    /*
+      Add to <code> class="prettyprint", only if it already has a class name (if syntax specified)
+    */
+    pageHtml = pageHtml.replace(/<code class="(.*?)"/g, "<code class=\"$1 prettyprint\"");
     fs_1.default.writeFileSync(url, pageHtml);
 });
 const contentsJSON = {
