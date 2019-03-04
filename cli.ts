@@ -66,7 +66,7 @@ const mds = all
   .sort(sortByPreferences.bind(null, preferences))
   .map(file => {
     const content = sh.cat(file).toString(); // The result is a weird not-string
-    file = file.replace('README', 'index');
+    file = file.replace("README", "index");
     return {
       path: file,
       url: mdUrl(file),
@@ -82,7 +82,11 @@ const groupedMds: FileTree<StringFile> = mds.reduce(
 
 mds.forEach(({ path, url, html }) => {
   const navHtml = renderNav(generateIndexInfo(path, groupedMds));
-  const pageHtml = page(tpl, navHtml, html);
+  let pageHtml = page(tpl, navHtml, html);
+  /*
+    Add to <code> class="prettyprint", only if it already has a class name (if syntax specified)
+  */
+  pageHtml = pageHtml.replace(/<code class="(.*?)"/g, "<code class=\"$1 prettyprint\"");
   fs.writeFileSync(url, pageHtml);
 });
 

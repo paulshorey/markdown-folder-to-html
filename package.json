@@ -1,6 +1,6 @@
 {
   "name": "markdown-folder-to-html-fork",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "This is a copy of https://github.com/joakin/markdown-folder-to-html. Adding experimental changes. Did 'npm install paulshorey/markdown-folder-to-html', so am able to experiment with 'latest' version of this module in my npm projects. When stable, will open an issue and pull request contact Joakin.",
   "main": "cli.js",
   "bin": {
