@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link href="/assets/gfx/puzzle.ico" rel="shortcut icon" type="image/x-icon"/>
+
+    <link rel="stylesheet" type="text/css" href="/assets/template.css"/>
+    <link rel="stylesheet" type="text/css" href="/docs/assets/template.css"/>
+</head>
+
+<body>
+<div class="page">
+    <nav class="nav">
+        <ul>
+            <li class="heading">
+                <a class="title-items" href="/docs"><span class="emoji">📝</span><span class="emoji-text">/docs</span></a>
+            </li>
+            <ul class=""><li class="heading isActive"><span>Basics</span></li>
+<ul class=""><li class=""><a href="./../../../../Basics/GIT + SSH.html">GIT + SSH</a></li><li class=""><a href="./../../../../Basics/CLI.html">CLI</a></li><li class="heading isActive"><span>Front End</span></li>
+<ul class=""><li class="heading "><a href="./../../../../Basics/Front End/CSS/index.html">CSS</a></li>
+
+<li class="heading "><a href="./../../../../Basics/Front End/JavaScript/index.html">JavaScript</a></li>
+
+</ul>
+</ul>
+<li class="heading isActive"><span>Pro Tips</span></li>
+<ul class=""><li class="heading isActive"><span>Basics</span></li>
+<ul class=""><li class="heading "><a href="./../../../Basics/CLI/index.html">CLI</a></li>
+<ul class=""><li class=""><a href="./../../../Basics/CLI/Nice-Editor.html">Nice Editor</a></li></ul>
+<li class="heading "><a href="./../../../Basics/GIT + SSH/index.html">GIT + SSH</a></li>
+
+<li class="heading "><a href="./../../../Basics/IDE + Code/index.html">IDE + Code</a></li>
+<ul class=""><li class=""><a href="./../../../Basics/IDE + Code/edit-over-SSH.html">edit over SSH</a></li><li class=""><a href="./../../../Basics/IDE + Code/auto-formatting.html">auto formatting</a></li></ul>
+<li class="heading "><a href="./../../../Basics/RegEx/index.html">RegEx</a></li>
+<ul class=""><li class=""><a href="./../../../Basics/RegEx/Markdown.html">Markdown</a></li><li class=""><a href="./../../../Basics/RegEx/Javascript.html">Javascript</a></li><li class=""><a href="./../../../Basics/RegEx/HTML.html">HTML</a></li><li class=""><a href="./../../../Basics/RegEx/Basics.html">Basics</a></li></ul>
+</ul>
+<li class="heading isActive"><span>Front End</span></li>
+<ul class=""><li class="heading "><a href="./../../CSS/index.html">CSS</a></li>
+<ul class=""><li class=""><a href="./../../CSS/unusually responsive.html">unusually responsive</a></li><li class=""><a href="./../../CSS/frameworks.html">frameworks</a></li></ul>
+<li class="heading childIsActive"><a href="./../index.html">JavaScript</a></li>
+<ul class="isActive"><li class=""><a href="./../sorting.html">sorting</a></li><li class=""><a href="./../looping.html">looping</a></li><li class=""><a href="./../ES6.html">ES6</a></li><li class="heading isActive"><a href="./index.html">React</a></li>
+
+</ul>
+</ul>
+</ul>
+<li class="heading isActive"><span>SysAdmin</span></li>
+<ul class=""><li class=""><a href="./../../../../SysAdmin/SSL.html">SSL</a></li><li class=""><a href="./../../../../SysAdmin/Ports.html">Ports</a></li><li class="heading isActive"><span>Containers</span></li>
+<ul class=""><li class="heading "><a href="./../../../../SysAdmin/Containers/Docker/index.html">Docker</a></li>
+<ul class=""><li class=""><a href="./../../../../SysAdmin/Containers/Docker/help docker.html">help docker</a></li><li class=""><a href="./../../../../SysAdmin/Containers/Docker/help docker-run.html">help docker run</a></li><li class=""><a href="./../../../../SysAdmin/Containers/Docker/help docker-compose.html">help docker compose</a></li><li class=""><a href="./../../../../SysAdmin/Containers/Docker/docker.html">docker</a></li><li class=""><a href="./../../../../SysAdmin/Containers/Docker/docker-compose.html">docker compose</a></li></ul>
+</ul>
+<li class="heading isActive"><span>Linux</span></li>
+<ul class=""><li class=""><a href="./../../../../SysAdmin/Linux/linux-from-scratch.html">linux from scratch</a></li><li class=""><a href="./../../../../SysAdmin/Linux/easy-deployment.html">easy deployment</a></li></ul>
+</ul>
+</ul>
+        </ul>
+    </nav>
+    <main class="content">
+        <h1>React</h1>
+<h3>Shorthand (only render method, no lifecycle):</h3>
+<pre><code class="language-javascript prettyprint">const Profile = props =&gt; {
+    
+  // validate inputs
+  if (!props.someList || !props.someList.length) {
+      return null;
+  }
+  
+  // what are we rendering?
+  const Items = [];
+  for (let i=0; i&lt;props.someList.length; i++) {
+      Items.push(&lt;li&gt;{props.someList[i]}&lt;/li&gt;);
+  };
+  
+  // ok, lets render it
+  return (&lt;ol&gt;{Items}&lt;/ol&gt;);
+};
+</code></pre>
+<h2></h2>
+<h3>this.state</h3>
+<p><strong>Set state only after render(), in componentDidUpdate() and custom methods.</strong>, always being paranoid to avoid infinite loops.</p>
+<p><strong>Also,</strong><br>
+Because <code>this.props</code> and <code>this.state</code> may be updated asynchronously, you should not rely on their values for calculating the next state.</p>
+<pre><code class="language-javascript prettyprint">    /* do this if there's any possibility of vars changing in the meanwhile */
+    this.setState((state, props)=&gt;(
+        { counter: state.counter + props.increment }
+    ));
+</code></pre>
+<p><a href="https://medium.freecodecamp.org/get-pro-with-react-setstate-in-10-minutes-d38251d1c781">https://medium.freecodecamp.org/get-pro-with-react-setstate-in-10-minutes-d38251d1c781</a></p>
+<h2></h2>
+<h3>Version 17 (new and renamed lifecycle methods):</h3>
+<ul>
+<li>UNSAFE_componentWillMount</li>
+<li>UNSAFE_componentWillRecieveProps</li>
+<li>UNSAFE_componentWillUpdate</li>
+<li><strong>getDerivedStateFromProps</strong> (prevProps, prevState) {}
+<ul>
+<li>This method is going to handle what <strong>componentWillRecieveProps</strong> was able to do along with <strong>componentDidUpdate</strong>. It is static. It is called after a component is created and also called when it receives a new prop. This will be the safer alternative to <strong>componentWillRecieveProps</strong>.</li>
+</ul>
+</li>
+<li><strong>getSnapshotBeforeUpdate</strong> (prevProps, prevState) {}
+<ul>
+<li>This is going to handle what <strong>componentWillUpdate</strong> was able to do along with <strong>componentDidUpdate</strong>. This is called right before the DOM is updated. The value that is returned from <strong>getSnapshotBeforeUpdate</strong> is passed on to <strong>componentDidUpdate</strong>.</li>
+</ul>
+</li>
+</ul>
+
+    </main>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+</html>

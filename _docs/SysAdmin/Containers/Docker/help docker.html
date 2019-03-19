@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link href="/assets/gfx/puzzle.ico" rel="shortcut icon" type="image/x-icon"/>
+
+    <link rel="stylesheet" type="text/css" href="/assets/template.css"/>
+    <link rel="stylesheet" type="text/css" href="/docs/assets/template.css"/>
+</head>
+
+<body>
+<div class="page">
+    <nav class="nav">
+        <ul>
+            <li class="heading">
+                <a class="title-items" href="/docs"><span class="emoji">📝</span><span class="emoji-text">/docs</span></a>
+            </li>
+            <ul class=""><li class="heading isActive"><span>Basics</span></li>
+<ul class=""><li class=""><a href="./../../../Basics/GIT + SSH.html">GIT + SSH</a></li><li class=""><a href="./../../../Basics/CLI.html">CLI</a></li><li class="heading isActive"><span>Front End</span></li>
+<ul class=""><li class="heading "><a href="./../../../Basics/Front End/CSS/index.html">CSS</a></li>
+
+<li class="heading "><a href="./../../../Basics/Front End/JavaScript/index.html">JavaScript</a></li>
+
+</ul>
+</ul>
+<li class="heading isActive"><span>Pro Tips</span></li>
+<ul class=""><li class="heading isActive"><span>Basics</span></li>
+<ul class=""><li class="heading "><a href="./../../../Pro Tips/Basics/CLI/index.html">CLI</a></li>
+<ul class=""><li class=""><a href="./../../../Pro Tips/Basics/CLI/Nice-Editor.html">Nice Editor</a></li></ul>
+<li class="heading "><a href="./../../../Pro Tips/Basics/GIT + SSH/index.html">GIT + SSH</a></li>
+
+<li class="heading "><a href="./../../../Pro Tips/Basics/IDE + Code/index.html">IDE + Code</a></li>
+<ul class=""><li class=""><a href="./../../../Pro Tips/Basics/IDE + Code/edit-over-SSH.html">edit over SSH</a></li><li class=""><a href="./../../../Pro Tips/Basics/IDE + Code/auto-formatting.html">auto formatting</a></li></ul>
+<li class="heading "><a href="./../../../Pro Tips/Basics/RegEx/index.html">RegEx</a></li>
+<ul class=""><li class=""><a href="./../../../Pro Tips/Basics/RegEx/Markdown.html">Markdown</a></li><li class=""><a href="./../../../Pro Tips/Basics/RegEx/Javascript.html">Javascript</a></li><li class=""><a href="./../../../Pro Tips/Basics/RegEx/HTML.html">HTML</a></li><li class=""><a href="./../../../Pro Tips/Basics/RegEx/Basics.html">Basics</a></li></ul>
+</ul>
+<li class="heading isActive"><span>Front End</span></li>
+<ul class=""><li class="heading "><a href="./../../../Pro Tips/Front End/CSS/index.html">CSS</a></li>
+<ul class=""><li class=""><a href="./../../../Pro Tips/Front End/CSS/unusually responsive.html">unusually responsive</a></li><li class=""><a href="./../../../Pro Tips/Front End/CSS/frameworks.html">frameworks</a></li></ul>
+<li class="heading "><a href="./../../../Pro Tips/Front End/JavaScript/index.html">JavaScript</a></li>
+<ul class=""><li class=""><a href="./../../../Pro Tips/Front End/JavaScript/sorting.html">sorting</a></li><li class=""><a href="./../../../Pro Tips/Front End/JavaScript/looping.html">looping</a></li><li class=""><a href="./../../../Pro Tips/Front End/JavaScript/ES6.html">ES6</a></li><li class="heading "><a href="./../../../Pro Tips/Front End/JavaScript/React/index.html">React</a></li>
+
+</ul>
+</ul>
+</ul>
+<li class="heading isActive"><span>SysAdmin</span></li>
+<ul class=""><li class=""><a href="./../../SSL.html">SSL</a></li><li class=""><a href="./../../Ports.html">Ports</a></li><li class="heading isActive"><span>Containers</span></li>
+<ul class=""><li class="heading childIsActive"><a href="./index.html">Docker</a></li>
+<ul class="isActive"><li class="isActive"><a href="./help docker.html">help docker</a></li><li class=""><a href="./help docker-run.html">help docker run</a></li><li class=""><a href="./help docker-compose.html">help docker compose</a></li><li class=""><a href="./docker.html">docker</a></li><li class=""><a href="./docker-compose.html">docker compose</a></li></ul>
+</ul>
+<li class="heading isActive"><span>Linux</span></li>
+<ul class=""><li class=""><a href="./../../Linux/linux-from-scratch.html">linux from scratch</a></li><li class=""><a href="./../../Linux/easy-deployment.html">easy deployment</a></li></ul>
+</ul>
+</ul>
+        </ul>
+    </nav>
+    <main class="content">
+        <script>window.scrollTo(0,document.body.scrollHeight);</script>
+<h1>docker --help</h1>
+<pre><code>Usage:	docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Options:
+      --config string      Location of client config files (default &quot;/Users/admin/.docker&quot;)
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level (&quot;debug&quot;|&quot;info&quot;|&quot;warn&quot;|&quot;error&quot;|&quot;fatal&quot;) (default &quot;info&quot;)
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default &quot;/Users/admin/.docker/ca.pem&quot;)
+      --tlscert string     Path to TLS certificate file (default &quot;/Users/admin/.docker/cert.pem&quot;)
+      --tlskey string      Path to TLS key file (default &quot;/Users/admin/.docker/key.pem&quot;)
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Management Commands:
+  builder     Manage builds
+  checkpoint  Manage checkpoints
+  config      Manage Docker configs
+  container   Manage containers
+  image       Manage images
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  deploy      Deploy a new stack or update an existing stack
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+</code></pre>
+
+    </main>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+</html>

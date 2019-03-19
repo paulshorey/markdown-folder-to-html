@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link href="/assets/gfx/puzzle.ico" rel="shortcut icon" type="image/x-icon"/>
+
+    <link rel="stylesheet" type="text/css" href="/assets/template.css"/>
+    <link rel="stylesheet" type="text/css" href="/docs/assets/template.css"/>
+</head>
+
+<body>
+<div class="page">
+    <nav class="nav">
+        <ul>
+            <li class="heading">
+                <a class="title-items" href="/docs"><span class="emoji">📝</span><span class="emoji-text">/docs</span></a>
+            </li>
+            <ul class=""><li class="heading isActive"><span>Basics</span></li>
+<ul class=""><li class=""><a href="./Basics/GIT + SSH.html">GIT + SSH</a></li><li class=""><a href="./Basics/CLI.html">CLI</a></li><li class="heading isActive"><span>Front End</span></li>
+<ul class=""><li class="heading "><a href="./Basics/Front End/CSS/index.html">CSS</a></li>
+
+<li class="heading "><a href="./Basics/Front End/JavaScript/index.html">JavaScript</a></li>
+
+</ul>
+</ul>
+<li class="heading isActive"><span>Pro Tips</span></li>
+<ul class=""><li class="heading isActive"><span>Basics</span></li>
+<ul class=""><li class="heading "><a href="./Pro Tips/Basics/CLI/index.html">CLI</a></li>
+<ul class=""><li class=""><a href="./Pro Tips/Basics/CLI/Nice-Editor.html">Nice Editor</a></li></ul>
+<li class="heading "><a href="./Pro Tips/Basics/GIT + SSH/index.html">GIT + SSH</a></li>
+
+<li class="heading "><a href="./Pro Tips/Basics/IDE + Code/index.html">IDE + Code</a></li>
+<ul class=""><li class=""><a href="./Pro Tips/Basics/IDE + Code/edit-over-SSH.html">edit over SSH</a></li><li class=""><a href="./Pro Tips/Basics/IDE + Code/auto-formatting.html">auto formatting</a></li></ul>
+<li class="heading "><a href="./Pro Tips/Basics/RegEx/index.html">RegEx</a></li>
+<ul class=""><li class=""><a href="./Pro Tips/Basics/RegEx/Markdown.html">Markdown</a></li><li class=""><a href="./Pro Tips/Basics/RegEx/Javascript.html">Javascript</a></li><li class=""><a href="./Pro Tips/Basics/RegEx/HTML.html">HTML</a></li><li class=""><a href="./Pro Tips/Basics/RegEx/Basics.html">Basics</a></li></ul>
+</ul>
+<li class="heading isActive"><span>Front End</span></li>
+<ul class=""><li class="heading "><a href="./Pro Tips/Front End/CSS/index.html">CSS</a></li>
+<ul class=""><li class=""><a href="./Pro Tips/Front End/CSS/unusually responsive.html">unusually responsive</a></li><li class=""><a href="./Pro Tips/Front End/CSS/frameworks.html">frameworks</a></li></ul>
+<li class="heading "><a href="./Pro Tips/Front End/JavaScript/index.html">JavaScript</a></li>
+<ul class=""><li class=""><a href="./Pro Tips/Front End/JavaScript/sorting.html">sorting</a></li><li class=""><a href="./Pro Tips/Front End/JavaScript/looping.html">looping</a></li><li class=""><a href="./Pro Tips/Front End/JavaScript/ES6.html">ES6</a></li><li class="heading "><a href="./Pro Tips/Front End/JavaScript/React/index.html">React</a></li>
+
+</ul>
+</ul>
+</ul>
+<li class="heading isActive"><span>SysAdmin</span></li>
+<ul class=""><li class=""><a href="./SysAdmin/SSL.html">SSL</a></li><li class=""><a href="./SysAdmin/Ports.html">Ports</a></li><li class="heading isActive"><span>Containers</span></li>
+<ul class=""><li class="heading "><a href="./SysAdmin/Containers/Docker/index.html">Docker</a></li>
+<ul class=""><li class=""><a href="./SysAdmin/Containers/Docker/help docker.html">help docker</a></li><li class=""><a href="./SysAdmin/Containers/Docker/help docker-run.html">help docker run</a></li><li class=""><a href="./SysAdmin/Containers/Docker/help docker-compose.html">help docker compose</a></li><li class=""><a href="./SysAdmin/Containers/Docker/docker.html">docker</a></li><li class=""><a href="./SysAdmin/Containers/Docker/docker-compose.html">docker compose</a></li></ul>
+</ul>
+<li class="heading isActive"><span>Linux</span></li>
+<ul class=""><li class=""><a href="./SysAdmin/Linux/linux-from-scratch.html">linux from scratch</a></li><li class=""><a href="./SysAdmin/Linux/easy-deployment.html">easy deployment</a></li></ul>
+</ul>
+</ul>
+        </ul>
+    </nav>
+    <main class="content">
+        <h1>Paul’s Web Development Notes</h1>
+<ol>
+<li><strong>From a front-end perspective, for a JavaScript tech stack…</strong> a repository of useful tips, tricks, shortcuts, and general knowledge about web application development. I’ve been doing this for 10 years now, and have regularly found myself coming back to a set of technologies after 6 months or more, and forgetting their settings and gotchas. Maybe this will also help others.</li>
+<li><strong>This is an experiment, and a WIP…</strong> I’ve been trying to find a decent solution for documenting small web projects. So far, this is a great success! Very easy to edit (markdown files), very easy to collaborate (same repository as the project), and very easy to convert to html (<code>npm run docs</code>).<br>
+<br /></li>
+</ol>
+<h1>This is not a replacement for real documentation</h1>
+<h3>Still use <a href="https://github.com/documentationjs/documentation/blob/master/docs/GETTING_STARTED.md">Documentation.JS</a></h3>
+<pre><code class="language-javascript prettyprint">    /**  
+     * This function adds one to its input.  
+     * @param {number} input any number  
+     * @returns {number} that number, plus one.  
+     */  
+    function addOne(input) {  
+      return input + 1;  
+    }  
+</code></pre>
+<p>Instead, this is a way to document more abstract or trivial ideas, in a more literary format.<br>
+<br /><br /></p>
+<h1>This is a work in progress</h1>
+<p><strong>Unfortunate issues:</strong></p>
+<ul>
+<li><strong>Folders and files must be in alphabetical order.</strong> So, naming is like writing poetry.</li>
+<li>File names can have spaces, but a space in the filename prevents you from linking to the file from other markdown files (this is a markdown issue).</li>
+</ul>
+<p><strong>Todo:</strong></p>
+<ul>
+<li>Fix mobile layout</li>
+<li>When compiling .html files, to modify the original .md file… add double space at the end of every line (for Github-flavor compatibility). Currently implemented as a <code>git commit</code> hook, but needs to first remove spaces before adding new ones.</li>
+<li>Maybe fix underlying codebase to not convert filename strings to (a href=&quot;&quot;) elements</li>
+<li>Experiment with this: <a href="https://markdowntomedium.com/">https://markdowntomedium.com/</a><br>
+<br /><br /></li>
+</ul>
+<h1>This website was auto-generated</h1>
+<p>from <a href="http://github.com/paulshorey/ps">my repository</a> <code>./docs</code> folder, using <a href="https://github.com/paulshorey/markdown-folder-to-html">paulshorey/markdown-folder-to-html</a>, which is an experimental copy of <a href="https://github.com/joakin/markdown-folder-to-html">joakin/markdown-folder-to-html</a>.<br>
+<br /><br /></p>
+
+    </main>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+</html>

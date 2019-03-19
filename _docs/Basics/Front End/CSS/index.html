@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link href="/assets/gfx/puzzle.ico" rel="shortcut icon" type="image/x-icon"/>
+
+    <link rel="stylesheet" type="text/css" href="/assets/template.css"/>
+    <link rel="stylesheet" type="text/css" href="/docs/assets/template.css"/>
+</head>
+
+<body>
+<div class="page">
+    <nav class="nav">
+        <ul>
+            <li class="heading">
+                <a class="title-items" href="/docs"><span class="emoji">📝</span><span class="emoji-text">/docs</span></a>
+            </li>
+            <ul class=""><li class="heading isActive"><span>Basics</span></li>
+<ul class=""><li class=""><a href="./../../GIT + SSH.html">GIT + SSH</a></li><li class=""><a href="./../../CLI.html">CLI</a></li><li class="heading isActive"><span>Front End</span></li>
+<ul class="isActive"><li class="heading isActive"><a href="./index.html">CSS</a></li>
+
+<li class="heading "><a href="./../JavaScript/index.html">JavaScript</a></li>
+
+</ul>
+</ul>
+<li class="heading isActive"><span>Pro Tips</span></li>
+<ul class=""><li class="heading isActive"><span>Basics</span></li>
+<ul class=""><li class="heading "><a href="./../../../Pro Tips/Basics/CLI/index.html">CLI</a></li>
+<ul class=""><li class=""><a href="./../../../Pro Tips/Basics/CLI/Nice-Editor.html">Nice Editor</a></li></ul>
+<li class="heading "><a href="./../../../Pro Tips/Basics/GIT + SSH/index.html">GIT + SSH</a></li>
+
+<li class="heading "><a href="./../../../Pro Tips/Basics/IDE + Code/index.html">IDE + Code</a></li>
+<ul class=""><li class=""><a href="./../../../Pro Tips/Basics/IDE + Code/edit-over-SSH.html">edit over SSH</a></li><li class=""><a href="./../../../Pro Tips/Basics/IDE + Code/auto-formatting.html">auto formatting</a></li></ul>
+<li class="heading "><a href="./../../../Pro Tips/Basics/RegEx/index.html">RegEx</a></li>
+<ul class=""><li class=""><a href="./../../../Pro Tips/Basics/RegEx/Markdown.html">Markdown</a></li><li class=""><a href="./../../../Pro Tips/Basics/RegEx/Javascript.html">Javascript</a></li><li class=""><a href="./../../../Pro Tips/Basics/RegEx/HTML.html">HTML</a></li><li class=""><a href="./../../../Pro Tips/Basics/RegEx/Basics.html">Basics</a></li></ul>
+</ul>
+<li class="heading isActive"><span>Front End</span></li>
+<ul class=""><li class="heading "><a href="./../../../Pro Tips/Front End/CSS/index.html">CSS</a></li>
+<ul class=""><li class=""><a href="./../../../Pro Tips/Front End/CSS/unusually responsive.html">unusually responsive</a></li><li class=""><a href="./../../../Pro Tips/Front End/CSS/frameworks.html">frameworks</a></li></ul>
+<li class="heading "><a href="./../../../Pro Tips/Front End/JavaScript/index.html">JavaScript</a></li>
+<ul class=""><li class=""><a href="./../../../Pro Tips/Front End/JavaScript/sorting.html">sorting</a></li><li class=""><a href="./../../../Pro Tips/Front End/JavaScript/looping.html">looping</a></li><li class=""><a href="./../../../Pro Tips/Front End/JavaScript/ES6.html">ES6</a></li><li class="heading "><a href="./../../../Pro Tips/Front End/JavaScript/React/index.html">React</a></li>
+
+</ul>
+</ul>
+</ul>
+<li class="heading isActive"><span>SysAdmin</span></li>
+<ul class=""><li class=""><a href="./../../../SysAdmin/SSL.html">SSL</a></li><li class=""><a href="./../../../SysAdmin/Ports.html">Ports</a></li><li class="heading isActive"><span>Containers</span></li>
+<ul class=""><li class="heading "><a href="./../../../SysAdmin/Containers/Docker/index.html">Docker</a></li>
+<ul class=""><li class=""><a href="./../../../SysAdmin/Containers/Docker/help docker.html">help docker</a></li><li class=""><a href="./../../../SysAdmin/Containers/Docker/help docker-run.html">help docker run</a></li><li class=""><a href="./../../../SysAdmin/Containers/Docker/help docker-compose.html">help docker compose</a></li><li class=""><a href="./../../../SysAdmin/Containers/Docker/docker.html">docker</a></li><li class=""><a href="./../../../SysAdmin/Containers/Docker/docker-compose.html">docker compose</a></li></ul>
+</ul>
+<li class="heading isActive"><span>Linux</span></li>
+<ul class=""><li class=""><a href="./../../../SysAdmin/Linux/linux-from-scratch.html">linux from scratch</a></li><li class=""><a href="./../../../SysAdmin/Linux/easy-deployment.html">easy deployment</a></li></ul>
+</ul>
+</ul>
+        </ul>
+    </nav>
+    <main class="content">
+        <h3>CSS is not hard. Just review the properties at the bottom of this page, and know these gotchas/oddities:</h3>
+<h4>Aligning vs. Centering</h4>
+<ul>
+<li>To <strong>“vertically-align”</strong> something, we mean to align some text or image, or icon relative to its siblings. To make text or a link look good next to a button or icon. To accomplish this, simply put <strong><code>vertical-align:middle</code></strong> on every <strong>SIBLING</strong>. The container doesn’t matter.</li>
+<li>To <strong>“vertically-center”</strong> something is to actually place a small element visibly in the middle of a larger element. You may think to off-set the child from the top with <code>padding</code> or <code>margin-top</code> or just <code>top</code>, but that would require you to know the exact height of the parent and child, and any other contents which could shove the child out of center. Instead, use  <strong><code>display:flex;align-items:center</code></strong> on the <strong>PARENT</strong>, and the web browser will take care of the sizing.</li>
+<li>To <strong>“horizontally align”</strong> or <strong>“horizontally center”</strong> something is usually the same thing, but is done differently for “inline” vs “block” level elements.
+<ul>
+<li>To center some text or an image in a line, you would add <strong><code>text-align:center</code></strong> to its <strong>PARENT</strong>.</li>
+<li>To center some block (like a div) on the page, add <strong><code>margin-left:auto;margin-right:auto;</code></strong> on <strong>ITSELF</strong>, the <strong>CHILD</strong>. For this block centering to work, the child must have some width, and the parent must also be a block element, with a greater width.</li>
+</ul>
+</li>
+</ul>
+<h4>Negative Margin-Top vs. Negative Top</h4>
+<ul>
+<li><strong><code>margin-left: -10px</code></strong> or <strong><code>margin-top: -10px</code></strong> is totally allowed, and can make your UI pixel perfect by nudging your element slightly to the side. But <strong>BEWARE</strong>. It is a hack. It will shift the element you’re nudging in unpredictable ways, and thus shift all its children and parents. <strong>INSTEAD</strong>, you may use <strong><code>position:relative; top:-10px</code></strong> to accomplish the same thing. This will nudge the element just as well, but will not affect any other elements. To the sibling and parent elements, it will be as if the child was never nudged at all.</li>
+</ul>
+<h4>Box-Sizing, and Width Surprises</h4>
+<ul>
+<li>You make a button of <strong><code>width:100px</code></strong>. It fits nicely into your UI. But then you add a <strong><code>padding: 20px</code></strong>, and it no longer fits. In fact, it looks now more like <strong><code>140px</code></strong>. <strong>Why?</strong> The padding was added to the element’s width. If you now add a border of <strong><code>2px</code></strong>, now the total width grows again to <strong><code>144px</code></strong>. This is because your container element has property <strong><code>box-sizing: content-box;</code></strong>. To make the <strong>padding</strong> and <strong>border</strong> widths fit <strong>INSIDE</strong> the specified element width (and height), change the parent (or entire page) to use <strong><code>box-sizing: border-box;</code></strong>.</li>
+</ul>
+<h2></h2>
+<h1>Basic Properties:</h1>
+<ul>
+<li>position:
+<ul>
+<li><strong>static</strong> ~ default value, makes element think it has NO position property.</li>
+<li><strong>relative</strong> ~ relative to its surroundings. Lets you to add <strong>top, left, bottom, right</strong>, to shift it a bit to any direction</li>
+<li><strong>fixed</strong> ~ relative to the window - use <strong>top, left, bottom, right</strong> to position the element any number of units from the top/left/bottom/right of the screen boundaries.</li>
+<li><strong>absolute</strong> ~ same as fixed, but relative to the parent element (well, the closest parent which has a specified positon property)</li>
+</ul>
+</li>
+<li>display:
+<ul>
+<li><strong>block</strong> ~ wrap to their own line, and take up 100% available width! Used to layout visual blocks on the page, with height, padding, border, etc. (<strong>div, blockquote, header, article, main</strong> have this by default)</li>
+<li><strong>inline</strong> ~ for text elements which do not have height or width or margin or vertical padding (<strong>span, b, i, u, img, code</strong> have this by default)</li>
+<li><strong>inline-block</strong> ~ best of both worlds. Can have vertical height and padding, but do not wrap to their own line! So, can style a padded button or highlight in the middle of a paragraph.</li>
+<li><strong>flex</strong> ~ read about it. It will change your life. <strong>Note:</strong> it affects the children, not itself! Simple example: Lets you have a fixed-width left column, and a main article section which takes up the remaining page width, no matter how wide or narrow the screen is.</li>
+<li><strong>inline-flex</strong> ~ flex content inline! Like a pill-button, with left/right sections.</li>
+<li><strong>grid</strong> ~ new hotness. Not like “masonry”, but still very useful.</li>
+</ul>
+</li>
+<li>margin:
+<ul>
+<li><strong>0 0 0 10px</strong> add 10px margin outside of the element to the left</li>
+<li><strong>0 10px</strong> add 10px margin to left and right. Zero to top/bottom</li>
+<li><strong>10px</strong> add to all sides</li>
+<li><strong>10px 0 0 0</strong> same as margin-top:10px</li>
+<li>Margin adds space <strong>outside</strong> of the element’s boundaries. So, <strong>outside</strong> of the element’s width/height, padding, border, background.</li>
+</ul>
+</li>
+<li>padding:
+<ul>
+<li>like margin, but adds space <strong>inside</strong> the element’s boundarids. So, <strong>inside</strong> the border. Increases width/height, and is covered by background.</li>
+</ul>
+</li>
+<li>float:
+<ul>
+<li>never copy from some answer on some website. Only use if you know its gotchas and glitches</li>
+</ul>
+</li>
+<li>top, left, right, bottom:
+<ul>
+<li>move the element some distance in any direction, used with the <code>position</code> prop</li>
+</ul>
+</li>
+<li>text-align
+<ul>
+<li>horizontal-align <strong>text</strong> or images, or any <strong><code>display:inline</code></strong>  or <strong><code>display:inline-block</code></strong> element - <strong>left/center/right</strong></li>
+<li>put this on the <strong>parent</strong> element!</li>
+</ul>
+</li>
+<li>vertical-align
+<ul>
+<li><strong>vertically</strong> align any inline or inline-block element, relative to its siblings</li>
+<li>put this on the element itself!!! unlike text-align, which you put on the parent</li>
+<li>this does not, unfortunately, vertically center text inside a larger container</li>
+</ul>
+</li>
+<li>box-sizing
+<ul>
+<li>see in the top gotchas/oddities</li>
+</ul>
+</li>
+</ul>
+<h4>Also, read about “flexbox”, or “css display flex”</h4>
+<p>And learn about its related properties, which can be used to build dynamic, responsive, flexible layouts, and center content on the page - horizontally and vertically: <code>flex-direction</code>, <code>flex-grow</code>, <code>align-items</code>, <code>justify-content</code>, etc.</p>
+
+    </main>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+</html>

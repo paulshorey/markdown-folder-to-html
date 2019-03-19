@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link href="/assets/gfx/puzzle.ico" rel="shortcut icon" type="image/x-icon"/>
+
+    <link rel="stylesheet" type="text/css" href="/assets/template.css"/>
+    <link rel="stylesheet" type="text/css" href="/docs/assets/template.css"/>
+</head>
+
+<body>
+<div class="page">
+    <nav class="nav">
+        <ul>
+            <li class="heading">
+                <a class="title-items" href="/docs"><span class="emoji">📝</span><span class="emoji-text">/docs</span></a>
+            </li>
+            <ul class=""><li class="heading isActive"><span>Basics</span></li>
+<ul class=""><li class=""><a href="./../../Basics/GIT + SSH.html">GIT + SSH</a></li><li class=""><a href="./../../Basics/CLI.html">CLI</a></li><li class="heading isActive"><span>Front End</span></li>
+<ul class=""><li class="heading "><a href="./../../Basics/Front End/CSS/index.html">CSS</a></li>
+
+<li class="heading "><a href="./../../Basics/Front End/JavaScript/index.html">JavaScript</a></li>
+
+</ul>
+</ul>
+<li class="heading isActive"><span>Pro Tips</span></li>
+<ul class=""><li class="heading isActive"><span>Basics</span></li>
+<ul class=""><li class="heading "><a href="./../../Pro Tips/Basics/CLI/index.html">CLI</a></li>
+<ul class=""><li class=""><a href="./../../Pro Tips/Basics/CLI/Nice-Editor.html">Nice Editor</a></li></ul>
+<li class="heading "><a href="./../../Pro Tips/Basics/GIT + SSH/index.html">GIT + SSH</a></li>
+
+<li class="heading "><a href="./../../Pro Tips/Basics/IDE + Code/index.html">IDE + Code</a></li>
+<ul class=""><li class=""><a href="./../../Pro Tips/Basics/IDE + Code/edit-over-SSH.html">edit over SSH</a></li><li class=""><a href="./../../Pro Tips/Basics/IDE + Code/auto-formatting.html">auto formatting</a></li></ul>
+<li class="heading "><a href="./../../Pro Tips/Basics/RegEx/index.html">RegEx</a></li>
+<ul class=""><li class=""><a href="./../../Pro Tips/Basics/RegEx/Markdown.html">Markdown</a></li><li class=""><a href="./../../Pro Tips/Basics/RegEx/Javascript.html">Javascript</a></li><li class=""><a href="./../../Pro Tips/Basics/RegEx/HTML.html">HTML</a></li><li class=""><a href="./../../Pro Tips/Basics/RegEx/Basics.html">Basics</a></li></ul>
+</ul>
+<li class="heading isActive"><span>Front End</span></li>
+<ul class=""><li class="heading "><a href="./../../Pro Tips/Front End/CSS/index.html">CSS</a></li>
+<ul class=""><li class=""><a href="./../../Pro Tips/Front End/CSS/unusually responsive.html">unusually responsive</a></li><li class=""><a href="./../../Pro Tips/Front End/CSS/frameworks.html">frameworks</a></li></ul>
+<li class="heading "><a href="./../../Pro Tips/Front End/JavaScript/index.html">JavaScript</a></li>
+<ul class=""><li class=""><a href="./../../Pro Tips/Front End/JavaScript/sorting.html">sorting</a></li><li class=""><a href="./../../Pro Tips/Front End/JavaScript/looping.html">looping</a></li><li class=""><a href="./../../Pro Tips/Front End/JavaScript/ES6.html">ES6</a></li><li class="heading "><a href="./../../Pro Tips/Front End/JavaScript/React/index.html">React</a></li>
+
+</ul>
+</ul>
+</ul>
+<li class="heading isActive"><span>SysAdmin</span></li>
+<ul class=""><li class=""><a href="./../SSL.html">SSL</a></li><li class=""><a href="./../Ports.html">Ports</a></li><li class="heading isActive"><span>Containers</span></li>
+<ul class=""><li class="heading "><a href="./../Containers/Docker/index.html">Docker</a></li>
+<ul class=""><li class=""><a href="./../Containers/Docker/help docker.html">help docker</a></li><li class=""><a href="./../Containers/Docker/help docker-run.html">help docker run</a></li><li class=""><a href="./../Containers/Docker/help docker-compose.html">help docker compose</a></li><li class=""><a href="./../Containers/Docker/docker.html">docker</a></li><li class=""><a href="./../Containers/Docker/docker-compose.html">docker compose</a></li></ul>
+</ul>
+<li class="heading isActive"><span>Linux</span></li>
+<ul class="isActive"><li class=""><a href="./linux-from-scratch.html">linux from scratch</a></li><li class="isActive"><a href="./easy-deployment.html">easy deployment</a></li></ul>
+</ul>
+</ul>
+        </ul>
+    </nav>
+    <main class="content">
+        <script>window.scrollTo(0,document.body.scrollHeight);</script>  
+<h3>Continuous Integration the quick and easy way…</h3>
+<p>Assuming your codebase is in /www/$(hostname)</p>
+<h4>Optionally, install Yarn. Othwerwise continue and use NPM:</h4>
+<pre><code>curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add  
+echo &quot;deb https://dl.yarnpkg.com/debian/ stable main&quot; | sudo tee /etc/apt/sources.list.d/yarn.list  
+sudo apt-get update &amp;&amp; sudo apt-get install yarn  
+</code></pre>
+<h4>/etc/crontab:</h4>
+<pre><code>@reboot root bash /www/$(hostname)/_cron/deploy.sh  
+</code></pre>
+<h4>/www/ps-api/_cron/deploy.sh:</h4>
+<pre><code>eval &quot;$(ssh-agent -s)&quot;  
+ssh-add ~/.ssh/gitlab  
+  
+cd /www/$(hostname)  
+git reset HEAD -\-hard;  
+git pull  
+npm install  
+</code></pre>
+<h4>/www/ps-api/_deploy.js</h4>
+<pre><code>var fs = require('fs');  
+var express = require('express');  
+var http = require('http');  
+var app = express();  
+  
+app.set('port', 9999);  
+  
+app.post('/_deploy', function(req, res) {  
+  
+    // done  
+    res.status(200).json({  
+        message: 'Github Hook received!'  
+    });  
+  
+    // apply  
+    var spawn = require('child_process').spawn,  
+        deploy = spawn('sh', ['_deploy.sh']);  
+  
+});  
+  
+http.createServer(app).listen(app.get('port'), function() {  
+    console.log('Express server listening on port ' + app.get('port'));  
+});  
+</code></pre>
+<h4>So,</h4>
+<p>your _deploy.js Node script will be listening to port <a href="http://YOUR-DOMAIN:9999/_deploy">http://YOUR-DOMAIN:9999/_deploy</a></p>
+<h4>Then,</h4>
+<p>your GitHub (or GitLab, or CMS) account will make a POST request to this url, which will trigger this script to run, which will trigger the “<a href="http://deploy.sh">deploy.sh</a>” script to run, which will GIT reset and pull the entire directory from your latest change in your repository.</p>
+
+    </main>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+</html>

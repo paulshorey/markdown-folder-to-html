@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link href="/assets/gfx/puzzle.ico" rel="shortcut icon" type="image/x-icon"/>
+
+    <link rel="stylesheet" type="text/css" href="/assets/template.css"/>
+    <link rel="stylesheet" type="text/css" href="/docs/assets/template.css"/>
+</head>
+
+<body>
+<div class="page">
+    <nav class="nav">
+        <ul>
+            <li class="heading">
+                <a class="title-items" href="/docs"><span class="emoji">📝</span><span class="emoji-text">/docs</span></a>
+            </li>
+            <ul class=""><li class="heading isActive"><span>Basics</span></li>
+<ul class=""><li class=""><a href="./../../../Basics/GIT + SSH.html">GIT + SSH</a></li><li class=""><a href="./../../../Basics/CLI.html">CLI</a></li><li class="heading isActive"><span>Front End</span></li>
+<ul class=""><li class="heading "><a href="./../../../Basics/Front End/CSS/index.html">CSS</a></li>
+
+<li class="heading "><a href="./../../../Basics/Front End/JavaScript/index.html">JavaScript</a></li>
+
+</ul>
+</ul>
+<li class="heading isActive"><span>Pro Tips</span></li>
+<ul class=""><li class="heading isActive"><span>Basics</span></li>
+<ul class=""><li class="heading "><a href="./../../../Pro Tips/Basics/CLI/index.html">CLI</a></li>
+<ul class=""><li class=""><a href="./../../../Pro Tips/Basics/CLI/Nice-Editor.html">Nice Editor</a></li></ul>
+<li class="heading "><a href="./../../../Pro Tips/Basics/GIT + SSH/index.html">GIT + SSH</a></li>
+
+<li class="heading "><a href="./../../../Pro Tips/Basics/IDE + Code/index.html">IDE + Code</a></li>
+<ul class=""><li class=""><a href="./../../../Pro Tips/Basics/IDE + Code/edit-over-SSH.html">edit over SSH</a></li><li class=""><a href="./../../../Pro Tips/Basics/IDE + Code/auto-formatting.html">auto formatting</a></li></ul>
+<li class="heading "><a href="./../../../Pro Tips/Basics/RegEx/index.html">RegEx</a></li>
+<ul class=""><li class=""><a href="./../../../Pro Tips/Basics/RegEx/Markdown.html">Markdown</a></li><li class=""><a href="./../../../Pro Tips/Basics/RegEx/Javascript.html">Javascript</a></li><li class=""><a href="./../../../Pro Tips/Basics/RegEx/HTML.html">HTML</a></li><li class=""><a href="./../../../Pro Tips/Basics/RegEx/Basics.html">Basics</a></li></ul>
+</ul>
+<li class="heading isActive"><span>Front End</span></li>
+<ul class=""><li class="heading "><a href="./../../../Pro Tips/Front End/CSS/index.html">CSS</a></li>
+<ul class=""><li class=""><a href="./../../../Pro Tips/Front End/CSS/unusually responsive.html">unusually responsive</a></li><li class=""><a href="./../../../Pro Tips/Front End/CSS/frameworks.html">frameworks</a></li></ul>
+<li class="heading "><a href="./../../../Pro Tips/Front End/JavaScript/index.html">JavaScript</a></li>
+<ul class=""><li class=""><a href="./../../../Pro Tips/Front End/JavaScript/sorting.html">sorting</a></li><li class=""><a href="./../../../Pro Tips/Front End/JavaScript/looping.html">looping</a></li><li class=""><a href="./../../../Pro Tips/Front End/JavaScript/ES6.html">ES6</a></li><li class="heading "><a href="./../../../Pro Tips/Front End/JavaScript/React/index.html">React</a></li>
+
+</ul>
+</ul>
+</ul>
+<li class="heading isActive"><span>SysAdmin</span></li>
+<ul class=""><li class=""><a href="./../../SSL.html">SSL</a></li><li class=""><a href="./../../Ports.html">Ports</a></li><li class="heading isActive"><span>Containers</span></li>
+<ul class=""><li class="heading childIsActive"><a href="./index.html">Docker</a></li>
+<ul class="isActive"><li class=""><a href="./help docker.html">help docker</a></li><li class=""><a href="./help docker-run.html">help docker run</a></li><li class=""><a href="./help docker-compose.html">help docker compose</a></li><li class="isActive"><a href="./docker.html">docker</a></li><li class=""><a href="./docker-compose.html">docker compose</a></li></ul>
+</ul>
+<li class="heading isActive"><span>Linux</span></li>
+<ul class=""><li class=""><a href="./../../Linux/linux-from-scratch.html">linux from scratch</a></li><li class=""><a href="./../../Linux/easy-deployment.html">easy deployment</a></li></ul>
+</ul>
+</ul>
+        </ul>
+    </nav>
+    <main class="content">
+        <script>window.scrollTo(0,document.body.scrollHeight);</script>
+<h1>Dockerfiles and Docker Compose</h1>
+<h2>Commands:</h2>
+<ul>
+<li>
+<p><strong><code>docker container ls</code></strong> see list of running containers</p>
+</li>
+<li>
+<p><strong><code>docker stats</code></strong> see memory/cpu % of each container</p>
+</li>
+<li>
+<p><strong><code>docker build</code></strong> runs <strong><code>docker-compose.yml</code></strong> in the same folder</p>
+</li>
+<li>
+<p><strong><code>docker-compose up</code></strong> runs <strong><code>docker-compose.yml</code></strong> in the same folder</p>
+</li>
+<li>
+<p><strong><code>docker stop $(docker ps -a -q)</code></strong> stop all (or specify container ID)</p>
+</li>
+<li>
+<p><strong><code>docker rm $(docker ps -a -q)</code></strong> remove all (or specify container ID)</p>
+</li>
+<li>
+<p><strong><code>docker rmi $(docker images -a -q)</code></strong> remove all images (or specify image ID)</p>
+</li>
+<li>
+<p><strong><code>docker images -f &quot;dangling=true&quot; -q</code></strong> list all dangling (untagged) images</p>
+</li>
+<li>
+<p><strong><code>docker rmi $(docker images -f &quot;dangling=true&quot; -q)</code></strong> remove all dangling (untagged) images</p>
+</li>
+<li>
+<p><strong>``</strong></p>
+</li>
+</ul>
+<p>$(docker ps -a) can not be done over SSH, because it will be executed in the local terminal.<br>
+<a href="https://coderwall.com/p/ewk0mq/stop-remove-all-docker-containers">coderwall.com/…/stop-remove-all-docker-containers</a></p>
+
+    </main>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+</html>

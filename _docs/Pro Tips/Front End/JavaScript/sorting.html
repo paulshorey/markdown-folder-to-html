@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link href="/assets/gfx/puzzle.ico" rel="shortcut icon" type="image/x-icon"/>
+
+    <link rel="stylesheet" type="text/css" href="/assets/template.css"/>
+    <link rel="stylesheet" type="text/css" href="/docs/assets/template.css"/>
+</head>
+
+<body>
+<div class="page">
+    <nav class="nav">
+        <ul>
+            <li class="heading">
+                <a class="title-items" href="/docs"><span class="emoji">📝</span><span class="emoji-text">/docs</span></a>
+            </li>
+            <ul class=""><li class="heading isActive"><span>Basics</span></li>
+<ul class=""><li class=""><a href="./../../../Basics/GIT + SSH.html">GIT + SSH</a></li><li class=""><a href="./../../../Basics/CLI.html">CLI</a></li><li class="heading isActive"><span>Front End</span></li>
+<ul class=""><li class="heading "><a href="./../../../Basics/Front End/CSS/index.html">CSS</a></li>
+
+<li class="heading "><a href="./../../../Basics/Front End/JavaScript/index.html">JavaScript</a></li>
+
+</ul>
+</ul>
+<li class="heading isActive"><span>Pro Tips</span></li>
+<ul class=""><li class="heading isActive"><span>Basics</span></li>
+<ul class=""><li class="heading "><a href="./../../Basics/CLI/index.html">CLI</a></li>
+<ul class=""><li class=""><a href="./../../Basics/CLI/Nice-Editor.html">Nice Editor</a></li></ul>
+<li class="heading "><a href="./../../Basics/GIT + SSH/index.html">GIT + SSH</a></li>
+
+<li class="heading "><a href="./../../Basics/IDE + Code/index.html">IDE + Code</a></li>
+<ul class=""><li class=""><a href="./../../Basics/IDE + Code/edit-over-SSH.html">edit over SSH</a></li><li class=""><a href="./../../Basics/IDE + Code/auto-formatting.html">auto formatting</a></li></ul>
+<li class="heading "><a href="./../../Basics/RegEx/index.html">RegEx</a></li>
+<ul class=""><li class=""><a href="./../../Basics/RegEx/Markdown.html">Markdown</a></li><li class=""><a href="./../../Basics/RegEx/Javascript.html">Javascript</a></li><li class=""><a href="./../../Basics/RegEx/HTML.html">HTML</a></li><li class=""><a href="./../../Basics/RegEx/Basics.html">Basics</a></li></ul>
+</ul>
+<li class="heading isActive"><span>Front End</span></li>
+<ul class=""><li class="heading "><a href="./../CSS/index.html">CSS</a></li>
+<ul class=""><li class=""><a href="./../CSS/unusually responsive.html">unusually responsive</a></li><li class=""><a href="./../CSS/frameworks.html">frameworks</a></li></ul>
+<li class="heading childIsActive"><a href="./index.html">JavaScript</a></li>
+<ul class="isActive"><li class="isActive"><a href="./sorting.html">sorting</a></li><li class=""><a href="./looping.html">looping</a></li><li class=""><a href="./ES6.html">ES6</a></li><li class="heading "><a href="./React/index.html">React</a></li>
+
+</ul>
+</ul>
+</ul>
+<li class="heading isActive"><span>SysAdmin</span></li>
+<ul class=""><li class=""><a href="./../../../SysAdmin/SSL.html">SSL</a></li><li class=""><a href="./../../../SysAdmin/Ports.html">Ports</a></li><li class="heading isActive"><span>Containers</span></li>
+<ul class=""><li class="heading "><a href="./../../../SysAdmin/Containers/Docker/index.html">Docker</a></li>
+<ul class=""><li class=""><a href="./../../../SysAdmin/Containers/Docker/help docker.html">help docker</a></li><li class=""><a href="./../../../SysAdmin/Containers/Docker/help docker-run.html">help docker run</a></li><li class=""><a href="./../../../SysAdmin/Containers/Docker/help docker-compose.html">help docker compose</a></li><li class=""><a href="./../../../SysAdmin/Containers/Docker/docker.html">docker</a></li><li class=""><a href="./../../../SysAdmin/Containers/Docker/docker-compose.html">docker compose</a></li></ul>
+</ul>
+<li class="heading isActive"><span>Linux</span></li>
+<ul class=""><li class=""><a href="./../../../SysAdmin/Linux/linux-from-scratch.html">linux from scratch</a></li><li class=""><a href="./../../../SysAdmin/Linux/easy-deployment.html">easy deployment</a></li></ul>
+</ul>
+</ul>
+        </ul>
+    </nav>
+    <main class="content">
+        <h1>Sorting Arrays:</h1>
+<p>Array has a built in prototype method <strong>sort</strong>. Use it: <strong><code>myArr.sort(mySortFunction)</code></strong></p>
+<ul>
+<li>mySortFunction takes in a previous and current list item as its first two arguments(a, b)</li>
+<li>it should return a higher number (1) if the <strong>new</strong> item is to be put higher in the list</li>
+<li>return a lower number (-1) if the new item should be placed lower in the sorted list</li>
+<li>return zero (0) if undecided, and let the other items get positioned above/below it</li>
+</ul>
+<pre><code class="language-javascript prettyprint">// simple sort, from longest to shortest string length:
+var mySortFunction = function (a, b) {
+    return a.length - b.length;
+}
+</code></pre>
+<pre><code class="language-javascript prettyprint">// more complicated custom sort, getting a score for each item:
+const mySortFunction = function (a, b) {
+    // rating
+    let rating_a = kw.dict[a].rating;
+    let rating_b = kw.dict[b].rating;
+    // sort by rating
+    if (rating_a &gt; rating_b) {
+        return -1;
+    } else if (rating_a &lt; rating_b) {
+        return 1;
+    } else {
+        // if same rating, prefer shorter strings
+        if (a.length &lt; b.length) {
+            return -1;
+        } else if (a.length &gt; b.length) {
+            return 1;
+        } else {
+            return 0;
+        }
+        return 0;
+    }
+}
+</code></pre>
+<h2>To sort an Object, first convert it to Array:</h2>
+<pre><code class="language-javascript prettyprint">    var myArr_values = Object.values();
+    var myArr_keys = Object.keys();
+    var myArr_pairs = Object.entries();
+</code></pre>
+
+    </main>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link href="/assets/gfx/puzzle.ico" rel="shortcut icon" type="image/x-icon"/>
+
+    <link rel="stylesheet" type="text/css" href="/assets/template.css"/>
+    <link rel="stylesheet" type="text/css" href="/docs/assets/template.css"/>
+</head>
+
+<body>
+<div class="page">
+    <nav class="nav">
+        <ul>
+            <li class="heading">
+                <a class="title-items" href="/docs"><span class="emoji">📝</span><span class="emoji-text">/docs</span></a>
+            </li>
+            <ul class=""><li class="heading isActive"><span>Basics</span></li>
+<ul class=""><li class=""><a href="./../../../Basics/GIT + SSH.html">GIT + SSH</a></li><li class=""><a href="./../../../Basics/CLI.html">CLI</a></li><li class="heading isActive"><span>Front End</span></li>
+<ul class=""><li class="heading "><a href="./../../../Basics/Front End/CSS/index.html">CSS</a></li>
+
+<li class="heading "><a href="./../../../Basics/Front End/JavaScript/index.html">JavaScript</a></li>
+
+</ul>
+</ul>
+<li class="heading isActive"><span>Pro Tips</span></li>
+<ul class=""><li class="heading isActive"><span>Basics</span></li>
+<ul class=""><li class="heading "><a href="./../CLI/index.html">CLI</a></li>
+<ul class=""><li class=""><a href="./../CLI/Nice-Editor.html">Nice Editor</a></li></ul>
+<li class="heading "><a href="./../GIT + SSH/index.html">GIT + SSH</a></li>
+
+<li class="heading childIsActive"><a href="./index.html">IDE + Code</a></li>
+<ul class="isActive"><li class="isActive"><a href="./edit-over-SSH.html">edit over SSH</a></li><li class=""><a href="./auto-formatting.html">auto formatting</a></li></ul>
+<li class="heading "><a href="./../RegEx/index.html">RegEx</a></li>
+<ul class=""><li class=""><a href="./../RegEx/Markdown.html">Markdown</a></li><li class=""><a href="./../RegEx/Javascript.html">Javascript</a></li><li class=""><a href="./../RegEx/HTML.html">HTML</a></li><li class=""><a href="./../RegEx/Basics.html">Basics</a></li></ul>
+</ul>
+<li class="heading isActive"><span>Front End</span></li>
+<ul class=""><li class="heading "><a href="./../../Front End/CSS/index.html">CSS</a></li>
+<ul class=""><li class=""><a href="./../../Front End/CSS/unusually responsive.html">unusually responsive</a></li><li class=""><a href="./../../Front End/CSS/frameworks.html">frameworks</a></li></ul>
+<li class="heading "><a href="./../../Front End/JavaScript/index.html">JavaScript</a></li>
+<ul class=""><li class=""><a href="./../../Front End/JavaScript/sorting.html">sorting</a></li><li class=""><a href="./../../Front End/JavaScript/looping.html">looping</a></li><li class=""><a href="./../../Front End/JavaScript/ES6.html">ES6</a></li><li class="heading "><a href="./../../Front End/JavaScript/React/index.html">React</a></li>
+
+</ul>
+</ul>
+</ul>
+<li class="heading isActive"><span>SysAdmin</span></li>
+<ul class=""><li class=""><a href="./../../../SysAdmin/SSL.html">SSL</a></li><li class=""><a href="./../../../SysAdmin/Ports.html">Ports</a></li><li class="heading isActive"><span>Containers</span></li>
+<ul class=""><li class="heading "><a href="./../../../SysAdmin/Containers/Docker/index.html">Docker</a></li>
+<ul class=""><li class=""><a href="./../../../SysAdmin/Containers/Docker/help docker.html">help docker</a></li><li class=""><a href="./../../../SysAdmin/Containers/Docker/help docker-run.html">help docker run</a></li><li class=""><a href="./../../../SysAdmin/Containers/Docker/help docker-compose.html">help docker compose</a></li><li class=""><a href="./../../../SysAdmin/Containers/Docker/docker.html">docker</a></li><li class=""><a href="./../../../SysAdmin/Containers/Docker/docker-compose.html">docker compose</a></li></ul>
+</ul>
+<li class="heading isActive"><span>Linux</span></li>
+<ul class=""><li class=""><a href="./../../../SysAdmin/Linux/linux-from-scratch.html">linux from scratch</a></li><li class=""><a href="./../../../SysAdmin/Linux/easy-deployment.html">easy deployment</a></li></ul>
+</ul>
+</ul>
+        </ul>
+    </nav>
+    <main class="content">
+        <h1>How To:</h1>
+<h3>Edit remote files over SSH connection</h3>
+<p>…not in the terminal, but using your favorite local IDE!<br>
+<br /><br /></p>
+<h4>On server,</h4>
+<p>Install rsub:</p>
+<pre><code>wget -O /usr/local/bin/rsub \https://raw.github.com/aurora/rmate/master/rmate  
+chmod a+x /usr/local/bin/rsub  
+</code></pre>
+<h4>On local,</h4>
+<p>For <em>SublimeText3</em>, or <em>Textmate</em>, install <strong><code>rsub</code></strong> package.<br>
+Or on <em>VsCode</em>, install <strong><code>remote-vscode</code></strong> package.<br>
+Add proxy:</p>
+<pre><code>echo &quot;RemoteForward 52698 localhost:52698&quot; &gt;&gt; ~/.ssh/config  
+</code></pre>
+<h4>Now you can connect to the server and edit any file:</h4>
+<pre><code>ssh user@hostname  
+rsub ~/.profile  
+</code></pre>
+<p><br /><br /></p>
+<h2>Emacs text editor</h2>
+<p>in addition to simply editing the file, it can act as the connection agent, and the remote filebrowser too ~~ so you can connect, browse, open, and edit files all in Emacs!</p>
+
+    </main>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+</html>

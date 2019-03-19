@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link href="/assets/gfx/puzzle.ico" rel="shortcut icon" type="image/x-icon"/>
+
+    <link rel="stylesheet" type="text/css" href="/assets/template.css"/>
+    <link rel="stylesheet" type="text/css" href="/docs/assets/template.css"/>
+</head>
+
+<body>
+<div class="page">
+    <nav class="nav">
+        <ul>
+            <li class="heading">
+                <a class="title-items" href="/docs"><span class="emoji">📝</span><span class="emoji-text">/docs</span></a>
+            </li>
+            <ul class=""><li class="heading isActive"><span>Basics</span></li>
+<ul class="isActive"><li class=""><a href="./GIT + SSH.html">GIT + SSH</a></li><li class="isActive"><a href="./CLI.html">CLI</a></li><li class="heading isActive"><span>Front End</span></li>
+<ul class=""><li class="heading "><a href="./Front End/CSS/index.html">CSS</a></li>
+
+<li class="heading "><a href="./Front End/JavaScript/index.html">JavaScript</a></li>
+
+</ul>
+</ul>
+<li class="heading isActive"><span>Pro Tips</span></li>
+<ul class=""><li class="heading isActive"><span>Basics</span></li>
+<ul class=""><li class="heading "><a href="./../Pro Tips/Basics/CLI/index.html">CLI</a></li>
+<ul class=""><li class=""><a href="./../Pro Tips/Basics/CLI/Nice-Editor.html">Nice Editor</a></li></ul>
+<li class="heading "><a href="./../Pro Tips/Basics/GIT + SSH/index.html">GIT + SSH</a></li>
+
+<li class="heading "><a href="./../Pro Tips/Basics/IDE + Code/index.html">IDE + Code</a></li>
+<ul class=""><li class=""><a href="./../Pro Tips/Basics/IDE + Code/edit-over-SSH.html">edit over SSH</a></li><li class=""><a href="./../Pro Tips/Basics/IDE + Code/auto-formatting.html">auto formatting</a></li></ul>
+<li class="heading "><a href="./../Pro Tips/Basics/RegEx/index.html">RegEx</a></li>
+<ul class=""><li class=""><a href="./../Pro Tips/Basics/RegEx/Markdown.html">Markdown</a></li><li class=""><a href="./../Pro Tips/Basics/RegEx/Javascript.html">Javascript</a></li><li class=""><a href="./../Pro Tips/Basics/RegEx/HTML.html">HTML</a></li><li class=""><a href="./../Pro Tips/Basics/RegEx/Basics.html">Basics</a></li></ul>
+</ul>
+<li class="heading isActive"><span>Front End</span></li>
+<ul class=""><li class="heading "><a href="./../Pro Tips/Front End/CSS/index.html">CSS</a></li>
+<ul class=""><li class=""><a href="./../Pro Tips/Front End/CSS/unusually responsive.html">unusually responsive</a></li><li class=""><a href="./../Pro Tips/Front End/CSS/frameworks.html">frameworks</a></li></ul>
+<li class="heading "><a href="./../Pro Tips/Front End/JavaScript/index.html">JavaScript</a></li>
+<ul class=""><li class=""><a href="./../Pro Tips/Front End/JavaScript/sorting.html">sorting</a></li><li class=""><a href="./../Pro Tips/Front End/JavaScript/looping.html">looping</a></li><li class=""><a href="./../Pro Tips/Front End/JavaScript/ES6.html">ES6</a></li><li class="heading "><a href="./../Pro Tips/Front End/JavaScript/React/index.html">React</a></li>
+
+</ul>
+</ul>
+</ul>
+<li class="heading isActive"><span>SysAdmin</span></li>
+<ul class=""><li class=""><a href="./../SysAdmin/SSL.html">SSL</a></li><li class=""><a href="./../SysAdmin/Ports.html">Ports</a></li><li class="heading isActive"><span>Containers</span></li>
+<ul class=""><li class="heading "><a href="./../SysAdmin/Containers/Docker/index.html">Docker</a></li>
+<ul class=""><li class=""><a href="./../SysAdmin/Containers/Docker/help docker.html">help docker</a></li><li class=""><a href="./../SysAdmin/Containers/Docker/help docker-run.html">help docker run</a></li><li class=""><a href="./../SysAdmin/Containers/Docker/help docker-compose.html">help docker compose</a></li><li class=""><a href="./../SysAdmin/Containers/Docker/docker.html">docker</a></li><li class=""><a href="./../SysAdmin/Containers/Docker/docker-compose.html">docker compose</a></li></ul>
+</ul>
+<li class="heading isActive"><span>Linux</span></li>
+<ul class=""><li class=""><a href="./../SysAdmin/Linux/linux-from-scratch.html">linux from scratch</a></li><li class=""><a href="./../SysAdmin/Linux/easy-deployment.html">easy deployment</a></li></ul>
+</ul>
+</ul>
+        </ul>
+    </nav>
+    <main class="content">
+        <h4>Common Commands:</h4>
+<p><strong><code>cd</code></strong> enter directory of choice, like this for example:</p>
+<pre><code class="language-bash prettyprint">cd ~  
+cd ..  
+cd /tmp  
+cd Documents  
+cd /Volumes/Media/Photos\ 2018  
+</code></pre>
+<p><strong><code>Ctrl C</code></strong> quit running process (to re-gain control of the CLI)<br>
+<strong><code>fg</code></strong> resume suspended process, after accidentally doing <code>Ctrl X</code><br>
+<br /><br /></p>
+<h4>Files and Folders:</h4>
+<p><strong><code>ls</code></strong> see contents of current directory<br>
+<strong><code>ls -a</code></strong> see all contents, including hidden files/folders</p>
+<p>Editing files inside the terminal:<br>
+<strong><code>vim Filename.txt</code></strong> “vim” is usually the default CLI text editor. Nice Editor is much nicer!<br>
+<strong><code>Esc</code></strong>, then <strong><code>q!</code></strong>, then <strong><code>Enter</code></strong> exit vim without saving<br>
+<strong><code>Esc</code></strong>, then <strong><code>wq</code></strong>, then <strong><code>Enter</code></strong> save changes, and exit</p>
+<p>Alternately, in Nice Editor:<br>
+<strong><code>ne Filename.txt</code></strong><br>
+<strong><code>^s ^q</code></strong> save changes, and exit<br>
+<strong><code>^q</code></strong>, then <strong><code>y</code></strong> to exit without saving changes (y was to confirm prompt)<br>
+<br /><br /></p>
+<p><br /><br /></p>
+
+    </main>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+</html>

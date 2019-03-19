@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link href="/assets/gfx/puzzle.ico" rel="shortcut icon" type="image/x-icon"/>
+
+    <link rel="stylesheet" type="text/css" href="/assets/template.css"/>
+    <link rel="stylesheet" type="text/css" href="/docs/assets/template.css"/>
+</head>
+
+<body>
+<div class="page">
+    <nav class="nav">
+        <ul>
+            <li class="heading">
+                <a class="title-items" href="/docs"><span class="emoji">📝</span><span class="emoji-text">/docs</span></a>
+            </li>
+            <ul class=""><li class="heading isActive"><span>Basics</span></li>
+<ul class=""><li class=""><a href="./../../../Basics/GIT + SSH.html">GIT + SSH</a></li><li class=""><a href="./../../../Basics/CLI.html">CLI</a></li><li class="heading isActive"><span>Front End</span></li>
+<ul class=""><li class="heading "><a href="./../../../Basics/Front End/CSS/index.html">CSS</a></li>
+
+<li class="heading "><a href="./../../../Basics/Front End/JavaScript/index.html">JavaScript</a></li>
+
+</ul>
+</ul>
+<li class="heading isActive"><span>Pro Tips</span></li>
+<ul class=""><li class="heading isActive"><span>Basics</span></li>
+<ul class=""><li class="heading "><a href="./../CLI/index.html">CLI</a></li>
+<ul class=""><li class=""><a href="./../CLI/Nice-Editor.html">Nice Editor</a></li></ul>
+<li class="heading "><a href="./../GIT + SSH/index.html">GIT + SSH</a></li>
+
+<li class="heading childIsActive"><a href="./index.html">IDE + Code</a></li>
+<ul class="isActive"><li class=""><a href="./edit-over-SSH.html">edit over SSH</a></li><li class="isActive"><a href="./auto-formatting.html">auto formatting</a></li></ul>
+<li class="heading "><a href="./../RegEx/index.html">RegEx</a></li>
+<ul class=""><li class=""><a href="./../RegEx/Markdown.html">Markdown</a></li><li class=""><a href="./../RegEx/Javascript.html">Javascript</a></li><li class=""><a href="./../RegEx/HTML.html">HTML</a></li><li class=""><a href="./../RegEx/Basics.html">Basics</a></li></ul>
+</ul>
+<li class="heading isActive"><span>Front End</span></li>
+<ul class=""><li class="heading "><a href="./../../Front End/CSS/index.html">CSS</a></li>
+<ul class=""><li class=""><a href="./../../Front End/CSS/unusually responsive.html">unusually responsive</a></li><li class=""><a href="./../../Front End/CSS/frameworks.html">frameworks</a></li></ul>
+<li class="heading "><a href="./../../Front End/JavaScript/index.html">JavaScript</a></li>
+<ul class=""><li class=""><a href="./../../Front End/JavaScript/sorting.html">sorting</a></li><li class=""><a href="./../../Front End/JavaScript/looping.html">looping</a></li><li class=""><a href="./../../Front End/JavaScript/ES6.html">ES6</a></li><li class="heading "><a href="./../../Front End/JavaScript/React/index.html">React</a></li>
+
+</ul>
+</ul>
+</ul>
+<li class="heading isActive"><span>SysAdmin</span></li>
+<ul class=""><li class=""><a href="./../../../SysAdmin/SSL.html">SSL</a></li><li class=""><a href="./../../../SysAdmin/Ports.html">Ports</a></li><li class="heading isActive"><span>Containers</span></li>
+<ul class=""><li class="heading "><a href="./../../../SysAdmin/Containers/Docker/index.html">Docker</a></li>
+<ul class=""><li class=""><a href="./../../../SysAdmin/Containers/Docker/help docker.html">help docker</a></li><li class=""><a href="./../../../SysAdmin/Containers/Docker/help docker-run.html">help docker run</a></li><li class=""><a href="./../../../SysAdmin/Containers/Docker/help docker-compose.html">help docker compose</a></li><li class=""><a href="./../../../SysAdmin/Containers/Docker/docker.html">docker</a></li><li class=""><a href="./../../../SysAdmin/Containers/Docker/docker-compose.html">docker compose</a></li></ul>
+</ul>
+<li class="heading isActive"><span>Linux</span></li>
+<ul class=""><li class=""><a href="./../../../SysAdmin/Linux/linux-from-scratch.html">linux from scratch</a></li><li class=""><a href="./../../../SysAdmin/Linux/easy-deployment.html">easy deployment</a></li></ul>
+</ul>
+</ul>
+        </ul>
+    </nav>
+    <main class="content">
+        <h1>Important for collaborating:</h1>
+<p>After agreeing on and sticking to <strong>tabs</strong> or 2 spaces or 4 spaces, maybe the most useful thing to do next is:</p>
+<p>Make sure your <strong>and your teammates’</strong> text-editor or IDE will not format your code unexpectedly.</p>
+<h3>If using VS CODE:</h3>
+<ul>
+<li>Install the <strong><code>js beautify</code></strong> plugin</li>
+<li>Add <strong><code>.jsbeautifyrc</code></strong> file to the root of your project, to specify formatting rules.</li>
+<li>By default, it formats every file on save! To turn this off, toggle <strong><code>files.autoSave</code></strong> in Vs Code preferences.</li>
+</ul>
+<h3>If using Sublime Text:</h3>
+<ul>
+<li>Install <code>htmlprettify</code> plugin: <a href="https://github.com/victorporof/Sublime-HTMLPrettify">https://github.com/victorporof/Sublime-HTMLPrettify</a></li>
+<li>Use the same <strong><code>.jsbeautifyrc</code></strong> file as your teammates use for Vs Code.</li>
+<li>Sublime does not format on save by default. Toggle <strong><code>format_on_save</code></strong> in HTMLPrettify plugin options.</li>
+</ul>
+<h3>If using WebStorm:</h3>
+<ul>
+<li><code>Webstorm &gt; Preferences &gt; Editor &gt; Code Style &gt; JavaScript</code> no manually editing a JSON file, use checkboxes/dropdowns</li>
+<li>To auto-format on save, you must create a Macro, which is also different…
+<ol>
+<li><code>Edit &gt; Macros &gt; Start Macro Recording</code></li>
+<li>Press <code>Esc</code>, to clear any selected text, which will affect your formatting</li>
+<li>Press <code>Cmd + Opt + L</code> to format the current file</li>
+<li>Select <code>File &gt; Save All</code> in top bar. Do NOT just hit <code>Cmd + S</code>.</li>
+<li>Click <code>Stop</code> in Macro notification on the bottom, to stop recording.</li>
+<li><code>Webstorm &gt; Preferences &gt; Keymap</code>
+<ul>
+<li>Find your newly created Macro. Right click, and add key binding <code>Cmd + S</code>.</li>
+<li>Agree to un-bind that key from its other function (simple save-all).</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h3>If using something else:</h3>
+<ul>
+<li>Just make sure whatever settings you use matches your teammates’ settings.</li>
+</ul>
+<h3>Otherwise, note:</h3>
+<ul>
+<li>This is a great online code beautifier: <br /><a href="https://www.10bestdesign.com/dirtymarkup/">https://www.10bestdesign.com/dirtymarkup/</a></li>
+<li>Unlike others, this one actually maintains HTML tags hierarchy and indentation</li>
+</ul>
+
+    </main>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+</html>
